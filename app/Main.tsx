@@ -4,41 +4,65 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 6
 
 export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+        {posts.slice(0, 1).map((post) => {
+                const { slug, date, title, summary, tags, images } = post
+                return (
+                  <div className="grid grid-cols-2 gap-4 pb-2">
+                    <div>
+                      <Link href={`/blog/${slug}`} >
+                        <img src={images[0]}></img>
+                      </Link>
+                    </div>
+                    <div>
+                      <article>
+                        <p className="text-1xl font-extrabold text-left pb-1 text-gray-600 dark:text-gray-300">
+                          Latest
+                        </p>
+                        <Link href={`/blog/${slug}`} className="text-3xl font-extrabold no-underline hover:underline">
+                          {title}
+                        </Link>              
+                        <div className="flex flex-wrap pt-2 pb-4">
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
+                        </div>                   
+                        <p className='text-sm'>
+                          {summary}
+                        </p>
+                        <dl>
+                          <dt className="sr-only">Published on</dt>
+                          <dd className="text-right text-sm leading-6 text-gray-500 dark:text-gray-400 pt-3">
+                            <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                          </dd>
+                        </dl>
+                      </article>
+                    </div>
+                  </div>
+                )
+            })}          
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
+          {posts.slice(1, MAX_DISPLAY).map((post) => {
+            const { slug, date, title, summary, tags, images } = post
             return (
               <li key={slug} className="py-12">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                      </dd>
-                    </dl>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="text-gray-900 dark:text-gray-100 no-underline hover:underline"
                             >
                               {title}
                             </Link>
@@ -56,13 +80,24 @@ export default function Home({ posts }) {
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 no-underline hover:underline"
                           aria-label={`Read more: "${title}"`}
                         >
                           Read more &rarr;
                         </Link>
                       </div>
                     </div>
+                    <div className="self-end">
+                      <dl>
+                        <Link href={`/blog/${slug}`}>
+                          <img className="inline-block" src={images && images.length > 0 ? images[0] : "/static/images/placeholder.svg"}></img>
+                        </Link>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-right text-sm leading-6 text-gray-500 dark:text-gray-400 pt-3">
+                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        </dd>
+                      </dl>                      
+                    </div>                    
                   </div>
                 </article>
               </li>
