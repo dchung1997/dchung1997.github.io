@@ -58,3 +58,18 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+
+.chart {
+  background-color: white;
+} 
+
+.area-chart {
+  color: black;
+  padding: 0 10px  0 10px;
+}
+
+.area-chart h2 {
+  color: black !important;
+  font-size: 18px;
+}

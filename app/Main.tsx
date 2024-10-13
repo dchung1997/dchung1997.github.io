@@ -17,7 +17,7 @@ export default function Home({ posts }) {
                   <div className="grid grid-cols-2 gap-4 pb-2">
                     <div>
                       <Link href={`/blog/${slug}`} >
-                        <img src={images[0]}></img>
+                        <img src={images && images.length > 0 ? images[0] : "/static/images/placeholder.svg"}></img>
                       </Link>
                     </div>
                     <div>
