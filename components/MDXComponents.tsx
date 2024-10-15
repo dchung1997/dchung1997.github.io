@@ -6,6 +6,8 @@ import Image from './Image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
 import Beeswarm from './graphics/Beeswarm/Beeswarm'
+import ConsumptionBoxPlot from './graphics/Food-Affordability/ConsumptionBoxPlot'
+import DivergingBoxPlot from './graphics/Food-Affordability/DivergingBoxPlot'
 import LineChart from './graphics/LineChart'
 
 export const components: MDXComponents = {
@@ -16,5 +18,7 @@ export const components: MDXComponents = {
   table: TableWrapper,
   BlogNewsletterForm,
   Beeswarm,
-  LineChart  
+  ConsumptionBoxPlot,
+  DivergingBoxPlot,
+  LineChart
 }

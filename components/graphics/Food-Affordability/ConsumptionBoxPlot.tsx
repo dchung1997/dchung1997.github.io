@@ -1,29 +1,42 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react';
+import * as d3 from 'd3';
 import * as Plot from '@observablehq/plot';
 
-const ConsumptionBoxPlot = ({data, midpoints, bounds, width, height, title, x, y, markers}) => {
+const ConsumptionBoxPlot = ({data, midpoints, bounds, markers, width, height, title, x, y, group}) => {
   const plotRef = useRef();
-  
   useEffect(() => {
     if (data && data.length > 0) {
         const plotWidth = width ? width : 640;
         const plotHeight = height ? height : 640;
+        const costs = markers.map((d) => {
+          return d.cost;
+        })
 
         const plot = Plot.plot({
           label: null,
-          marginLeft: 32,
+          marginLeft: 75,
           height: plotHeight,
           width: plotWidth,
           grid: true,
-          title: title,
-          color: {legend: true},
-          x: { domain: x, type: "log"},
-          y: { domain: y, paddingInner: 0.2 },  
+          title: title, 
+          style: { fontSize: "14px" },
+          color: {
+            legend: true
+          },
+          x: { domain: x, type: "log" },
+          y: { 
+            domain: y, 
+            paddingInner: 0.2,
+            insetTop: 30, 
+          },  
           marks: [
-            Plot.ruleX(markers, {
-              stroke: (d) =>  lineAsiaColorScale(d),
+            Plot.axisX({
+              tickFormat: (d, i)  => (d >= 1 ? d : d.toFixed(1)),
+            }),
+            Plot.ruleX(costs, {
+              stroke: (d, i) => markers[i].color,
               strokeWidth: 2.5, 
               strokeDasharray:"4 6 4"
             }),
@@ -31,7 +44,7 @@ const ConsumptionBoxPlot = ({data, midpoints, bounds, width, height, title, x, y
               x: "avg_welfare", 
               y: "country_code", 
               sort: "avg_welfare", 
-              fill: "sub-region",
+              fill: group,
             }),
             Plot.dot(midpoints, {
               x: { label: 'Median', value: "percentile50" }, 
@@ -42,16 +55,19 @@ const ConsumptionBoxPlot = ({data, midpoints, bounds, width, height, title, x, y
                 'Top 10%': 'percentile90',
                 'Bottom 10%': 'percentile10',
                 'Upper 25%': 'percentile75',
-                'Lower 25%': 'percentile25'
+                'Lower 25%': 'percentile25',
+                'Country': 'name'
               },
               tip: {
                 format:{
+                   'Country':true,
                    y: (d) => `${d}`,
-                  'Top 10%': true,
+                   'Top 10%': true,
                   'Upper 25%': true,
                    x: (d) => `${d}`,
                   'Lower 25%': true,          
                   'Bottom 10%': true,
+
                 }
               }
             }),
@@ -59,19 +75,25 @@ const ConsumptionBoxPlot = ({data, midpoints, bounds, width, height, title, x, y
               x: "avg_welfare", 
               y: "country_code", 
               fill: "#1F305E", 
-              r: 3,
+              r: 5,
             }),    
           ]
         })
 
         plotRef.current.appendChild(plot);
+        
+        // Hack to put swatches at bottom of chart.
+        d3.select(plot)
+        .select("div")
+        .raise() // Places swatch below the plot
+
         return () => {
           if (plotRef.current) {
             plotRef.current.removeChild(plot);
           }
         }
       }
-    }, [data]);
+    }, [data, midpoints, bounds, markers, x, y, width, height, title]);
 
     return (
       <div ref={plotRef} className="box-plot-chart chart"></div>

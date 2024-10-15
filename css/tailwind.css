@@ -73,3 +73,13 @@ input:-webkit-autofill:focus {
   color: black !important;
   font-size: 18px;
 }
+
+.plot-d6a7b5-swatches {
+  text-align: center;
+  display: block;
+  margin-top: 1em;
+}
+
+.box-plot-chart .plot-d6a7b5-figure {
+  margin-top: -1.25em;
+}
