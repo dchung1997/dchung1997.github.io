@@ -42,7 +42,7 @@ const Beeswarm = ({data, extent, radius, x, removeMiddle}) => {
 
       const beeswarm = beeswarmForce()
       .x(d => xScale(d.Median))
-      .y(70)
+      .y(d => 70)
       .r(d => r(parseInt(d.value.replace(/,/g, ''))))   
 
       const tooltip = d3.select("div.tooltip").empty() ? 
@@ -157,7 +157,6 @@ const Beeswarm = ({data, extent, radius, x, removeMiddle}) => {
         // Axis Header
         g.append("text")
           .text("Median Daily Income ($)")      
-          .style('font-size', '14px')
           .style('font-weight', '400')
           .attr("class", "axis-header")
           .attr("x", 920)

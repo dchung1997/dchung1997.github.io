@@ -1,9 +1,9 @@
 import * as d3 from 'd3'
 
 const beeswarmForce = function(){
-    let x = d => d[0];
-    let y = d => d[1];
-    let r = d => d[2];
+    let x: any = d => d[0];
+    let y: any = d => d[1]; // y can accept any type
+    let r: any = d => d[2];
     let ticks = 300;
     
     function beeswarm(data){
@@ -31,6 +31,7 @@ const beeswarmForce = function(){
     beeswarm.r = f => f ? (r = f, beeswarm) : r;
     beeswarm.ticks = n => n ? (ticks = n, beeswarm) : ticks;
     
+    console.log(beeswarm)
     return beeswarm;
   }
 
