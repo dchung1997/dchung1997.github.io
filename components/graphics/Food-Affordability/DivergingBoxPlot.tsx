@@ -44,6 +44,7 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
         grid: true,
         title: 'African Countries Daily Income or Consumption (PPP)',
         subtitle: 'Median Daily Income Difference Between 2000-2020, 5-10+ Years',
+        caption: 'Source: World Bank, Poverty and Inequality Platform, Survey Years Percentiles 2017 PPP Values',
         x: { domain: [-50, 50], type: 'sqrt' },
         y: { domain: order, paddingInner: 0.3 },
         color: {
@@ -126,7 +127,6 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
       })
 
       plotRef.current.appendChild(plot)
-      d3.select(plot).select('div').raise() // Places swatch below the plot
 
       return () => {
         if (plotRef.current) {

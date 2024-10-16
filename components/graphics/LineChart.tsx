@@ -5,7 +5,7 @@ import * as Plot from '@observablehq/plot';
 import * as d3 from 'd3';
 import * as htl from 'htl';
 
-const LineChart = ({data, extent, width, height, title, subtitle, x, y, id}) => {
+const LineChart = ({data, extent, width, height, title, subtitle, caption, x, y, id}) => {
   const plotRef = useRef();
   
   useEffect(() => {
@@ -18,6 +18,7 @@ const LineChart = ({data, extent, width, height, title, subtitle, x, y, id}) => 
             height: plotHeight,
             title: title,
             subtitle: subtitle,
+            caption: caption,
             marks: [
               Plot.ruleY([0], {stroke: "black", strokeWidth: 1.5}),
               Plot.line(data , {

@@ -20,7 +20,7 @@ const ConsumptionBoxPlot = ({data, midpoints, bounds, markers, width, height, ti
           height: plotHeight,
           width: plotWidth,
           grid: true,
-          title: title, 
+          title: title,
           style: { fontSize: "14px" },
           color: {
             legend: true

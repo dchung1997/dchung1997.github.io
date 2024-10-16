@@ -64,20 +64,29 @@ input:-webkit-autofill:focus {
   background-color: white;
 } 
 
-.area-chart {
+.chart {
   color: black;
   padding: 0 10px  0 10px;
 }
 
-.area-chart h2 {
+.chart h2 {
   color: black !important;
   font-size: 18px;
+}
+
+.chart h3 {
+  color: black !important;
+  font-size: 16px;
 }
 
 .plot-d6a7b5-swatches {
   text-align: center;
   display: block;
   margin-top: 1em;
+}
+
+.diverging-box-plot-chart .plot-d6a7b5-swatches {
+  text-align: left;
 }
 
 .box-plot-chart .plot-d6a7b5-figure {
