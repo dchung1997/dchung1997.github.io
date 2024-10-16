@@ -1,9 +1,9 @@
 ---
 title: 'Food Affordability and Undernutrition'
 date: '2024-09-14'
-tags: ['UN', 'Food', 'Undernutrition', 'Child-Mortality']
+tags: ['UN', 'Food', 'Undernutrition', 'Child-Mortality', 'Interactive']
 draft: false
-images: ['/static/images/food-affordabilty.png']
+images: ['/static/images/food-affordability/food-affordabilty.png']
 summary: Undernutrition and Food Affordability are issues that many countries today still deal with. It's estimated that around 381 million people around the world cannot afford an energy sufficient diet. With around 735 million people sufferring from malnutrition in 2023 it can be interesting to think about what it could possibly take to end issues such as undernutrition and obesity. Here we look at the median costs in regions for food affordability.
 ---
 
@@ -127,7 +127,7 @@ For most people undernutrition weakens the immune system, it impacts focus and i
 
 Below we look at the costs and impacts of varying diets in respect to Food Affordability and Undernutrition throughout the world in relation to the impacts it can have on children.
 
-<img alt="Food Affordability Chart" src="/static/images/food-affordabilty.png" className="w-full h-auto"/>
+<img alt="Food Affordability Chart" src="/static/images/food-affordability/food-affordabilty.png" className="w-full h-auto"/>
 
 Link to Interactive: https://observablehq.com/d/834f962f53bbdb86
 
@@ -135,7 +135,7 @@ Link to Interactive: https://observablehq.com/d/834f962f53bbdb86
 
 One of the biggest issues to do with undernutrition is how it impacts current and future generations. Almost 1.54 million child deaths were attributed to Low Birth Weights. While Infant Mortality Rates have gone down due to various things such as the use of medical techniques to assist with birthing issues still remain that often cannot be solved this way. The weight of the mother has an impact on the outcome of the child. While low cost solutions exist to help deal with these issues they aren't perfect. 
 
-<img alt="Undernutrition Deaths Chart" src="/static/images/child-deaths-malnutrition-by-risk.png" className="w-full h-auto"/>
+<img alt="Undernutrition Deaths Chart" src="/static/images/food-affordability/child-deaths-malnutrition-by-risk.png" className="w-full h-auto"/>
 
 Let's briefly go over the types of diets that groups like the Food Administration Organization (FAO) look at and why they matter.
 
@@ -143,7 +143,9 @@ Energy Sufficient Diets deal with extreme undernutrition for issues such as wast
 
 Nutrient Sufficient Diets deal with chronic undernutrition dealing with a deficiency of essential nutrients which impacts how the body grows. Nutrient Sufficient Diets deal with stunting which can have an impact on adult cognition later on in life. It impacts the ability for a child to learn with many children sufferring from stunting having lower cognitive abilities that non-stunted children. Changes to diet at any point in a childs life can significantly reduce the impacts of it on a childs performance.
 
-Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that being able to afford a healthy diet isn't always correlated with better outcomes as obesity is an issue in many places. In the United States for example, households spend around the same amount on groceries as they do eating out.
+<em><b>Note:</b> It's important to note that Nutrient Sufficient Diets are least cost calculations rather than actual meals. As such they aren't reflective of actual meal plans and the UN does not prefer them for the preferred indicator of diet costs. However they can still be valuable in understanding the minimal costs required.</em>
+
+Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that they may not be entirely accurate as they do no account for cultural and dietary restrictions. Along with this being able to afford a healthy diet isn't always correlated with better outcomes as obesity is an issue in many places. In the United States for example, households spend around the same amount on groceries as they do eating out.
 
 Government subsidies and food programs could help households in regards to malnutrition and undernutrition and many countries do exactly that. But its not always a priority for governments and for many it can be unaffordable. Organizations such as the UN Food Program try to help countries in need especially areas that are experiencing crisis and famine.
 
@@ -169,12 +171,21 @@ Europe was the only region to consist of the majority of countries that were abl
 
 The nations that are trailing behind are still relatively new with many being former members of the Eastern Bloc. These are countries such as Moldova and Ukraine in the East to Albania, Bosnia to Montenegro, North Macedonia and Serbia to the South. In Northern Europe Latvia, Lithuania, and Estonia are all former soviet republics as well but the gap between them and other Nordic countries is narrowing.
 
+
+
 <Beeswarm data={asia} extent={extentPercentile} radius={populationExtent}/>
 <ConsumptionBoxPlot data={APSubset} midpoints={APMidpoints} bounds={APBounds} markers={costs.Asia} x={extentPercentile} y={orderAP} group={"sub-region"} width={1100} height={1425}/>
 
 Asia and Oceania is a large subcategory. Encompassing regions such as the Middle East all the way to Polynesia. Median daily income tended to vary though East Asian countries tended to be the wealthiest. Russia also makes an appearance on this however, the accuracy of the results is questionable due to it likely referring to wages on the European side rather than in Siberia.
 
-South Asia also makes a notable cluster and right next to it is another cluster of South East Asian countries that are also experiencing large population growths. These economies tend to be show growth but rural-urban inequalities in these nations like most Asian countries are high.
+West Asia also made a notable appearance. Countries like the UAE, Cyprus, Qatar, and Israel to name a few that were doing well. Similarly in Oceania with Australia and New Zealand, though New Zealand does not make an appearance on this list. 
+
+Most Asian Regions were grouped similarly. Central, South, and South East Asian formed a cluster along with Oceania. While West and East Asia were grouped up together as well. Though there were outliers like previously mentioned but also places like Syria, Yemen, and Malaysia.
+
+For the most part almost all countries dealed with food insecurity in some form. With the majority of regions still unable to afford healthy food. 
+
+
+
 
 <Beeswarm data={africa} extent={extentPercentile} radius={populationExtent}/>
 <ConsumptionBoxPlot data={AfricaSubset} midpoints={AfricaMidpoints} bounds={AfricaBounds} markers={costs.Africa} x={extentPercentile} y={orderAfrica} group={"intermediate-region"} width={1100} height={1425}/>

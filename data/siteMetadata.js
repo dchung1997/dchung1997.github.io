@@ -3,7 +3,7 @@ const siteMetadata = {
   title: '3-1-1',
   author: 'David Chung',
   headerTitle: '3-1-1',
-  description: 'Informative data visualizations aimed at issues facing the world today',
+  description: 'Data visualizations aimed at issues facing the world today',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://dchung1997.github.io',
