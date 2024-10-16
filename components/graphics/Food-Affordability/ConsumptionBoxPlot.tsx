@@ -6,6 +6,11 @@ import * as Plot from '@observablehq/plot';
 
 const ConsumptionBoxPlot = ({data, midpoints, bounds, markers, width, height, title, x, y, group}) => {
   const plotRef = useRef();
+  
+  function formatYear(year) {
+    return new Date(year).getFullYear(); // Extract the year as a number
+  }
+
   useEffect(() => {
     if (data && data.length > 0) {
         const plotWidth = width ? width : 640;
@@ -54,19 +59,23 @@ const ConsumptionBoxPlot = ({data, midpoints, bounds, markers, width, height, ti
               channels: {
                 'Top 10%': 'percentile90',
                 'Bottom 10%': 'percentile10',
+                'Median': 'percentile50',
                 'Upper 25%': 'percentile75',
                 'Lower 25%': 'percentile25',
-                'Country': 'name'
+                'Country': 'name',
+                'Year': 'year'
               },
               tip: {
                 format:{
                    'Country':true,
-                   y: (d) => `${d}`,
+                   'Year':true,
                    'Top 10%': true,
                   'Upper 25%': true,
-                   x: (d) => `${d}`,
+                  'Median':true,
                   'Lower 25%': true,          
                   'Bottom 10%': true,
+                  x: false,
+                  y: false,
 
                 }
               }

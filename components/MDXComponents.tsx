@@ -8,6 +8,7 @@ import TableWrapper from './TableWrapper'
 import Beeswarm from './graphics/Beeswarm/Beeswarm'
 import ConsumptionBoxPlot from './graphics/Food-Affordability/ConsumptionBoxPlot'
 import DivergingBoxPlot from './graphics/Food-Affordability/DivergingBoxPlot'
+import DotChart from './graphics/Food-Affordability/DotChart'
 import LineChart from './graphics/LineChart'
 
 export const components: MDXComponents = {
@@ -20,5 +21,6 @@ export const components: MDXComponents = {
   Beeswarm,
   ConsumptionBoxPlot,
   DivergingBoxPlot,
+  DotChart,
   LineChart
 }

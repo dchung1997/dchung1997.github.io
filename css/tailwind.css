@@ -92,3 +92,12 @@ input:-webkit-autofill:focus {
 .box-plot-chart .plot-d6a7b5-figure {
   margin-top: -1.25em;
 }
+
+.dot-chart svg {
+  font-size: 16px !important;
+}
+
+.dot-chart svg [aria-label="fx-axis tick label"] {
+  font-size: 24px !important;
+  font-weight: bold;
+}

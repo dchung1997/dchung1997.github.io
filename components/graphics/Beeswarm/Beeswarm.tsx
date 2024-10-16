@@ -159,7 +159,7 @@ const Beeswarm = ({data, extent, radius, x, removeMiddle}) => {
           .text("Median Daily Income ($)")      
           .style('font-weight', '400')
           .attr("class", "axis-header")
-          .attr("x", 920)
+          .attr("x", 900)
           .attr("y", 130);    
     }
   }

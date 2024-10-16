@@ -54,7 +54,7 @@ const LineChart = ({data, extent, width, height, title, subtitle, caption, x, y,
     }, [data]);
 
     return (
-      <div ref={plotRef} className="area-chart chart"></div>
+      <div ref={plotRef} className="line-chart chart"></div>
     );
 };
 
