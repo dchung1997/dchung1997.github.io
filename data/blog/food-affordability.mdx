@@ -145,7 +145,7 @@ Nutrient Sufficient Diets deal with chronic undernutrition dealing with a defici
 
 <em><b>Note:</b> It's important to note that Nutrient Sufficient Diets are least cost calculations rather than actual meals. As such they aren't reflective of actual meal plans and the UN does not prefer them for the preferred indicator of diet costs. However they can still be valuable in understanding the minimal costs required.</em>
 
-Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that they may not be entirely accurate as they do no account for cultural and dietary restrictions. Along with this being able to afford a healthy diet isn't always correlated with better outcomes as obesity is an issue in many places. In the United States for example, households spend around the same amount on groceries as they do eating out.
+Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that they may not be entirely accurate as they do no account for cultural and dietary restrictions. 
 
 Government subsidies and food programs could help households in regards to malnutrition and undernutrition and many countries do exactly that. But its not always a priority for governments and for many it can be unaffordable. Organizations such as the UN Food Program try to help countries in need especially areas that are experiencing crisis and famine.
 
@@ -182,7 +182,7 @@ West Asia also made a notable appearance. Countries like the UAE, Cyprus, Qatar,
 
 Most Asian Regions were grouped similarly. Central, South, and South East Asian formed a cluster along with Oceania. While West and East Asia were grouped up together as well. Though there were outliers like previously mentioned but also places like Syria, Yemen, and Malaysia.
 
-For the most part almost all countries dealed with food insecurity in some form. With the majority of regions still unable to afford healthy food. 
+For the most part almost all countries dealed with food insecurity in some form. With the majority of regions still unable to afford healthy food. Most notably in the regions of the Central, South, South-East Asia and Oceania.
 
 
 
@@ -190,9 +190,15 @@ For the most part almost all countries dealed with food insecurity in some form.
 <Beeswarm data={africa} extent={extentPercentile} radius={populationExtent}/>
 <ConsumptionBoxPlot data={AfricaSubset} midpoints={AfricaMidpoints} bounds={AfricaBounds} markers={costs.Africa} x={extentPercentile} y={orderAfrica} group={"intermediate-region"} width={1100} height={1425}/>
 
-Africa is where the problems begin to arise. It's estimated by 2050 that 2 in 5 children will be born on the continent. From 2020 to 2050 it's expected for the population to increase by 50%. But in many parts of Africa real wages have been stagnate for decades.
+Africa is where the problems begin to arise. For many East and Central African countries they struggled with being able to afford Energy Sufficient Diets. With many nations having more than half of their households being spending at least 50% of the income on them. 
+
+But for the majority of African countries being able to afford an Energy Sufficient Diet was still a problem wth at least 25% of households not being able to afford them. Nutrient Sufficient Diets were still largely unaffordable with only the top 10% of households in some nations being able to afford them to some degree.
+
+It's estimated by 2050 that 2 in 5 children will be born on the continent. From 2020 to 2050 it's expected for the population to increase by 50%. But in many parts of Africa real wages have been stagnate for decades.
 
 <DivergingBoxPlot data={income_difference_data} annualDiff={annual_change_data}/>
+
+Economic growth in Africa is largely unequal. While some countries grew overtime others contracted or didn't change. Sometimes countries stopped reporting on varying metrics when used to calculate the median daily consumption (income). What's notable is how West and South African countries grew in comparison to others. But in many cases it seems as though for many countries they stopped reporting information once economic conditions became uncertain.
 
 <LineChart data={parsedDateRelative} extent={extentRelative} width={800} height={400} title={"Annual Average Real Wage"} subtitle={"Africa 2010-2020"} x={"Year"} y={"Growth (%)"} id={"relative"}/>
 

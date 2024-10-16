@@ -31,7 +31,6 @@ const beeswarmForce = function(){
     beeswarm.r = f => f ? (r = f, beeswarm) : r;
     beeswarm.ticks = n => n ? (ticks = n, beeswarm) : ticks;
     
-    console.log(beeswarm)
     return beeswarm;
   }
 
