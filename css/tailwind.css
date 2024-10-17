@@ -99,5 +99,4 @@ input:-webkit-autofill:focus {
 
 .dot-chart svg [aria-label="fx-axis tick label"] {
   font-size: 24px !important;
-  font-weight: bold;
 }

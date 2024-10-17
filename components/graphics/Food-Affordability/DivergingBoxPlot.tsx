@@ -8,7 +8,7 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
   const plotRef = useRef()
   
   useEffect(() => {
-    if (data && data.length > 0) {
+    if (data && plotRef.current && data.length > 0) {
       const order = d3.groupSort(data,
         (g) => d3.max(g, (d) => d["intermediate-region"]),
         (d) => d['country_code']
