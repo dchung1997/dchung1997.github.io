@@ -33,7 +33,7 @@ const LineChart = ({ data, extent, width, height, title, subtitle, caption, x, y
             strokeWidth: 2.5,
           }),
           (_index, { y }) => {
-            if (!_index || !y) {
+            if (!y) {
               return null // Return null if _index or y is undefined
             }
 
