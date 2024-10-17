@@ -11,42 +11,47 @@ export default function Home({ posts }) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        {posts.slice(0, 1).map((post) => {
-                const { slug, date, title, summary, tags, images } = post
-                return (
-                  <div className="grid grid-cols-2 gap-4 pb-2">
-                    <div>
-                      <Link href={`/blog/${slug}`} >
-                        <img src={images && images.length > 0 ? images[0] : "/static/images/placeholder.svg"}></img>
-                      </Link>
+          {posts.slice(0, 1).map((post) => {
+            const { slug, date, title, summary, tags, images } = post
+            return (
+              <div className="grid grid-cols-2 gap-4 pb-2">
+                <div>
+                  <Link href={`/blog/${slug}`}>
+                    <img
+                      src={
+                        images && images.length > 0 ? images[0] : '/static/images/placeholder.svg'
+                      }
+                    ></img>
+                  </Link>
+                </div>
+                <div>
+                  <article>
+                    <p className="text-1xl pb-1 text-left font-extrabold text-gray-600 dark:text-gray-300">
+                      Latest
+                    </p>
+                    <Link
+                      href={`/blog/${slug}`}
+                      className="text-3xl font-extrabold no-underline hover:underline"
+                    >
+                      {title}
+                    </Link>
+                    <div className="flex flex-wrap pb-4 pt-2">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
                     </div>
-                    <div>
-                      <article>
-                        <p className="text-1xl font-extrabold text-left pb-1 text-gray-600 dark:text-gray-300">
-                          Latest
-                        </p>
-                        <Link href={`/blog/${slug}`} className="text-3xl font-extrabold no-underline hover:underline">
-                          {title}
-                        </Link>              
-                        <div className="flex flex-wrap pt-2 pb-4">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>                   
-                        <p className='text-sm'>
-                          {summary}
-                        </p>
-                        <dl>
-                          <dt className="sr-only">Published on</dt>
-                          <dd className="text-right text-sm leading-6 text-gray-500 dark:text-gray-400 pt-3">
-                            <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                          </dd>
-                        </dl>
-                      </article>
-                    </div>
-                  </div>
-                )
-            })}          
+                    <p className="text-sm">{summary}</p>
+                    <dl>
+                      <dt className="sr-only">Published on</dt>
+                      <dd className="pt-3 text-right text-sm leading-6 text-gray-500 dark:text-gray-400">
+                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                      </dd>
+                    </dl>
+                  </article>
+                </div>
+              </div>
+            )
+          })}
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
@@ -62,7 +67,7 @@ export default function Home({ posts }) {
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100 no-underline hover:underline"
+                              className="text-gray-900 no-underline hover:underline dark:text-gray-100"
                             >
                               {title}
                             </Link>
@@ -80,7 +85,7 @@ export default function Home({ posts }) {
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 no-underline hover:underline"
+                          className="text-primary-500 no-underline hover:text-primary-600 hover:underline dark:hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >
                           Read more &rarr;
@@ -90,14 +95,21 @@ export default function Home({ posts }) {
                     <div className="self-end">
                       <dl>
                         <Link href={`/blog/${slug}`}>
-                          <img className="inline-block" src={images && images.length > 0 ? images[0] : "/static/images/placeholder.svg"}></img>
+                          <img
+                            className="inline-block"
+                            src={
+                              images && images.length > 0
+                                ? images[0]
+                                : '/static/images/placeholder.svg'
+                            }
+                          ></img>
                         </Link>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-right text-sm leading-6 text-gray-500 dark:text-gray-400 pt-3">
+                        <dd className="pt-3 text-right text-sm leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                         </dd>
-                      </dl>                      
-                    </div>                    
+                      </dl>
+                    </div>
                   </div>
                 </article>
               </li>

@@ -22,5 +22,5 @@ export const components: MDXComponents = {
   ConsumptionBoxPlot,
   DivergingBoxPlot,
   DotChart,
-  LineChart
+  LineChart,
 }

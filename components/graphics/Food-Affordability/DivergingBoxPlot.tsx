@@ -4,37 +4,43 @@ import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import * as Plot from '@observablehq/plot'
 
-const DivergingBoxPlot = ({data, annualDiff}) => {
-  const plotRef = useRef<HTMLDivElement | null>(null);
-  
+const DivergingBoxPlot = ({ data, annualDiff }) => {
+  const plotRef = useRef<HTMLDivElement | null>(null)
+
   useEffect(() => {
     if (data && plotRef.current && data.length > 0) {
-      const order = d3.groupSort(data,
-        (g) => d3.max(g, (d) => d["intermediate-region"]),
-        (d) => d['country_code']
-      ).reverse();
+      const order = d3
+        .groupSort(
+          data,
+          (g) => d3.max(g, (d) => d['intermediate-region']),
+          (d) => d['country_code']
+        )
+        .reverse()
 
       const medians = data.filter((d) => {
         if (d['percentile'] == 50) {
-          d.Median = d.avg_welfare;
-          d.Country_Code = d.country_code;
-          return d;
+          d.Median = d.avg_welfare
+          d.Country_Code = d.country_code
+          return d
         }
-      });
+      })
 
-      const beforeEnd = data.filter((d) => d.percentile == 90 &&  d.avg_welfare < 0).map((d) => {
-        d.year = "" + d.year;
-        return d;
-      });
+      const beforeEnd = data
+        .filter((d) => d.percentile == 90 && d.avg_welfare < 0)
+        .map((d) => {
+          d.year = '' + d.year
+          return d
+        })
 
-      const afterEnd = data.filter((d) => d.percentile == 90 &&  d.avg_welfare > 0).map((d) => {
-        d.year = "" + d.year;
-        return d;
-      });
+      const afterEnd = data
+        .filter((d) => d.percentile == 90 && d.avg_welfare > 0)
+        .map((d) => {
+          d.year = '' + d.year
+          return d
+        })
 
-      const after = data.filter((d) => d.avg_welfare > 0);
+      const after = data.filter((d) => d.avg_welfare > 0)
       const before = data.filter((d) => d.avg_welfare < 0)
-
 
       const plot = Plot.plot({
         label: null,
@@ -44,7 +50,8 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
         grid: true,
         title: 'African Countries Daily Income or Consumption (PPP)',
         subtitle: 'Median Daily Income Difference Between 2000-2020, 5-10+ Years',
-        caption: 'Source: World Bank, Poverty and Inequality Platform, Survey Years Percentiles 2017 PPP Values',
+        caption:
+          'Source: World Bank, Poverty and Inequality Platform, Survey Years Percentiles 2017 PPP Values',
         x: { domain: [-50, 50], type: 'sqrt' },
         y: { domain: order, paddingInner: 0.3 },
         color: {
@@ -79,9 +86,9 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
             sort: 'Median',
             r: 5,
             tip: {
-                format: {
-                    x: (d) => d < 0 ? `${d.toFixed(2) * -1}` : `${d.toFixed(2)}`,
-                }
+              format: {
+                x: (d) => (d < 0 ? `${d.toFixed(2) * -1}` : `${d.toFixed(2)}`),
+              },
             },
           }),
           Plot.boxX(after, {
