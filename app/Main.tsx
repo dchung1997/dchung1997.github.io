@@ -14,14 +14,14 @@ export default function Home({ posts }) {
           {posts.slice(0, 1).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
-              <div key={'main-article'} className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 pb-2">
+              <div key={'main-article'} className="gap-4 pb-2 sm:grid-cols-1 md:grid-cols">
                 <div>
                   <Link href={`/blog/${slug}`}>
                     <img
                       src={
                         images && images.length > 0 ? images[0] : '/static/images/placeholder.svg'
                       }
-                      className="sm:w-full md:w-auto h-auto object-cover"
+                      className="h-auto object-cover sm:w-full md:w-auto"
                     ></img>
                   </Link>
                 </div>
