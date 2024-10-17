@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import * as Plot from '@observablehq/plot'
 
 const DivergingBoxPlot = ({data, annualDiff}) => {
-  const plotRef = useRef()
+  const plotRef = useRef<HTMLElement | null>(null);
   
   useEffect(() => {
     if (data && plotRef.current && data.length > 0) {
@@ -130,7 +130,7 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
 
       return () => {
         if (plotRef.current) {
-          plotRef.current.removeChild(plot)
+          plotRef.current?.removeChild(plot)
         }
       }
     }
