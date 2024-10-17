@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import * as Plot from '@observablehq/plot'
 
 const DivergingBoxPlot = ({data, annualDiff}) => {
-  const plotRef = useRef<HTMLElement | null>(null);
+  const plotRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
     if (data && plotRef.current && data.length > 0) {
@@ -77,7 +77,7 @@ const DivergingBoxPlot = ({data, annualDiff}) => {
             x: 'Median',
             y: 'Country_Code',
             sort: 'Median',
-            radius: 5,
+            r: 5,
             tip: {
                 format: {
                     x: (d) => d < 0 ? `${d.toFixed(2) * -1}` : `${d.toFixed(2)}`,

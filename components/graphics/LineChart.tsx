@@ -6,10 +6,10 @@ import * as d3 from 'd3';
 import * as htl from 'htl';
 
 const LineChart = ({data, extent, width, height, title, subtitle, caption, x, y, id}) => {
-  const plotRef = useRef();
+  const plotRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
-    if (data && extent && data.length > 0 && extent.length > 0) {
+    if (data && extent && plotRef.current && data.length > 0 && extent.length > 0) {
       const plotWidth = width ? width : 640;
       const plotHeight = height ? height : 640;
       const color = d3.scaleThreshold([-1, 1], ['#C24641', 'gray', '#17B169']);

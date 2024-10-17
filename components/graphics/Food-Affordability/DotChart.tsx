@@ -5,10 +5,10 @@ import * as Plot from '@observablehq/plot';
 import * as d3 from 'd3';
 
 const DotChart = ({data, fx, title, caption, id}) => {
-  const plotRef = useRef();
+    const plotRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
-    if (data && data.length > 0) {
+    if (data && plotRef.current && data.length > 0) {
       const colorScale = d3.scaleDiverging().domain([75, 25, 0]).interpolator(d3.interpolateRdBu)
       const plot = Plot.plot({
             label: null,
