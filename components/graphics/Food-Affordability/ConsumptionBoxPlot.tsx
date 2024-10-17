@@ -5,14 +5,14 @@ import * as d3 from 'd3';
 import * as Plot from '@observablehq/plot';
 
 const ConsumptionBoxPlot = ({data, midpoints, bounds, markers, width, height, title, x, y, group}) => {
-  const plotRef = useRef();
+  const plotRef = useRef<HTMLElement | null>(null);
   
   function formatYear(year) {
     return new Date(year).getFullYear(); // Extract the year as a number
   }
 
   useEffect(() => {
-    if (data && data.length > 0) {
+    if (data && plotRef.current && data.length > 0) {
         const plotWidth = width ? width : 640;
         const plotHeight = height ? height : 640;
         const costs = markers.map((d) => {
