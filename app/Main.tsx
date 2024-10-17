@@ -14,7 +14,7 @@ export default function Home({ posts }) {
           {posts.slice(0, 1).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
-              <div key={title + "-main"} className="grid grid-cols-2 gap-4 pb-2">
+              <div key={'main-article'} className="grid grid-cols-2 gap-4 pb-2">
                 <div>
                   <Link href={`/blog/${slug}`}>
                     <img
