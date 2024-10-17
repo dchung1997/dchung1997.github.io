@@ -126,11 +126,11 @@ export const cleaned_child_mortality_data = child_mortality_data.map((d) => {
 
 
 
-Food Affordability and Undernutrition are issues that many parts of the world are still struggling to deal with. They are common issues that many people face. Undernutrition being a type of malnutrition typically occurs when an individual doesn't have enough to eat. It can happen for a variety of reasons a bad harvest due to drought, interregional conflicts that displace families, and poverty. Often, the causes are beyond the control of the people affected.
+Food Affordability and Undernutrition are issues that many parts of the world are still struggling to deal with. They are common issues that many people face. Undernutrition being a type of malnutrition that typically occurs when an individual doesn't have enough to eat. It can happen for a variety of reasons a bad harvest due to drought, interregional conflicts that displace families, and poverty. Often the causes behind undernutrition are out of the control of the people affected.
 
-One of the most common reasons behind Undernutrition is due to the inability to afford having consistent meals. It's estimated 1.1 billion people around the world cannot afford an energy sufficient diet. With around 735 million people sufferring from undernutrition in 2023. But is it an issue and how does it impact the lives of people who suffer from it?
+One of the most common reasons behind Undernutrition is due to the inability to afford having consistent meals. An estimated 1.1 billion people around the world cannot afford an energy sufficient diet. With around 735 million people sufferring from undernutrition in 2023. But is it an issue and how does it impact the lives of people who suffer from it?
 
-For most people undernutrition weakens the immune system, it impacts focus and increases your risk for injuries. For individuals who end up hospitalized it lengthens the duration of stays. But for people who are pregnant, elderly or young children it can impact them the most. Around half of all child deaths under 5 are attributed to undernutrition.
+For most people undernutrition weakens the immune system, it impacts focus, and increases your risk for injuries. For individuals who end up hospitalized it lengthens the duration of stays. But for people who are pregnant, elderly or young children it can impact them the most. Around half of all child deaths under 5 are attributed to undernutrition.
 
 Below we look at the costs and impacts of varying diets in respect to Food Affordability and Undernutrition throughout the world in relation to the impacts it can have on children.
 
@@ -146,9 +146,7 @@ Energy Sufficient Diets deal with extreme undernutrition for issues such as wast
 
 Nutrient Sufficient Diets deal with chronic undernutrition dealing with a deficiency of essential nutrients which impacts how the body grows. Nutrient Sufficient Diets deal with stunting which can have an impact on adult cognition later on in life. It impacts the ability for a child to learn with many children sufferring from stunting having lower cognitive abilities that non-stunted children. Changes to diet at any point in a childs life can significantly reduce the impacts of it on a childs performance.
 
-<em><b>Note:</b> It's important to note that Nutrient Sufficient Diets are least cost calculations rather than actual meals. As such they aren't reflective of actual meal plans and the UN does not prefer them for the preferred indicator of diet costs. However they can still be valuable in understanding the minimal costs required.</em>
-
-Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that they may not be entirely accurate as they do no account for cultural and dietary restrictions. 
+Finally Healthy Diets. A Healthy Diet can vary depending on the culture, they can be similarly priced to Nutrient Sufficient ones. A Healthy Diet protects against malnutrition in all of its form as well as noncommunicable diseases, including diabetes, heart disease, stroke, and cancer. However it's important to note that they may not be entirely accurate as they do not necessarily account for cultural values or dietary restrictions. 
 
 Government subsidies and food programs could help households in regards to malnutrition and undernutrition and many countries do exactly that. But its not always a priority for governments and for many it can be unaffordable. Organizations such as the UN Food Program try to help countries in need especially areas that are experiencing crisis and famine.
 
@@ -172,7 +170,7 @@ The Bottom 10% of households in the Americas with the exception of North America
 
 Europe was the only region to consist of the majority of countries that were able to afford healthy diets. Parts of East and Southern Europe still had significant portions of their population struggling to afford nutritionally sufficient diets. These countries could benefit from programs to help lower food costs for those in need. Though for most countries, obesity rates in Europe have been on the rise this seems to be more due to an excess of calories. 
 
-The nations that are trailing behind in regions tended to be relatively new with many being former members of the Eastern Bloc. These are countries such as Moldova and Ukraine in the East to Albania, Bosnia to Montenegro, North Macedonia and Serbia to the South. In Northern Europe Latvia, Lithuania, and Estonia are all former soviet republics as well but the gap between them and other Nordic countries is narrowing.
+The nations that are trailing behind in regions tended to be relatively new with many being former members of the Eastern Bloc. These are countries such as Moldova and Ukraine in the East to Albania, Bosnia, Montenegro, North Macedonia and Serbia in the South. In Northern Europe Latvia, Lithuania, and Estonia were all former soviet republics as well. In comparison to other former republics they are fairing better but the gap between them and other Nordic countries is large.
 
 
 
@@ -211,18 +209,27 @@ Over the past decade real wage growth in Africa showed some growth coming into t
 
 It's a problem especially with climate change on the horizon. How the future of Africa is shaped could be a story about the diverging economies of nations and even possibly about the gap and differences between the Rural and Urban populations. But data on this is hard to come by and by the time any changes are made inequality could be embedded deep into these societies.
 
-## Child Mortality
 
-<DotChart data={cleaned_child_mortality_data} fx={"region"} title={"Child Mortality Rate Under 5 by Region"} id={"regional"}/>
+
+## Child Mortality
 
 Malnutrition especially undernutrition is often a comorbidity that worsens infectious diseases such as the common flu to malaria. It does this by weakening the immune system reducing its ability to fight infections. It's especially a problem among young children and elderly individuals and tends to be a common issue in increasing hospitalization of those impacted. 
 
-While both Infant and Child Mortality Rates have and continue to go down due to vaccinations and the promotion of safer medical practices. There are limitations to this. 
+To better understand the issue first let's look at Child Mortality rates over years. For the past three decades Child Mortality rates have gone down. It's a trend seen everywhere and its due to a variety reasons vaccines, medical advancements, and improvements to public infrastructure. Increasing the availability of things such as clean water and vaccines have saved lives.
+
+<DotChart data={cleaned_child_mortality_data} fx={"region"} title={"Child Mortality Rate Under 5 by Region"} id={"regional"}/>
+
+
+While both Infant and Child Mortality Rates have and continue to go down due to vaccinations and the promotion of safer medical and health practices. There are limitations to this. 
 
 <img alt="Infant Death Reduction Vaccine Chart" src="/static/images/food-affordability/infant-mortality-vaccines.png" className="w-full h-auto"/>
 
-Today approximately 1.54 million child deaths attributed to malnutrition being caused due to low birth weights.
+Today approximately 1.54 million child deaths attributed to malnutrition are caused due to low birth weights. They're infants who don't make it past the first year of life and they make up the majority of infant deaths. The issue itself is largely preventable.
 
 <img alt="Undernutrition Deaths Chart" src="/static/images/food-affordability/child-deaths-malnutrition-by-risk.png" className="w-full h-auto"/>
 
-Some things to note are that 
+Some things to note are neonatal preterm birth, neonatal asphyxia & trauma, neonatal sepsis & infection, and congenital birth defects. Neonatal Preterm Birth and Neonatal Asphyxia & Trauma tend to go together. Mothers who suffer from undernutrition can become anemic. Meaning they have low levels of oxygen in their blood. This can be life threatening and can cause issues such as low birth weights and preterm births.
+
+Meanwhile Neonatal Sepsis & Infection and Congenital Birth Defects are often made worse by undernutrition instead of being directly caused by it. About 85% of cases of Neonatal sepsis happen within the first 24 hours of a child being born. In which a low birth weight significantly reduces the odds of survival. Meanwhile some congenital birth defects are caused by undernutrition. 9 out of 10 children born with serious birth defects are in low to middle income countries.
+
+<img alt="Children Under 5 Cause of Death Death" src="/static/images/food-affordability/causes-of-death-in-children-under-5.png" className="w-full h-auto"/>
