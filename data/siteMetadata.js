@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: '3-1-1',
+  title: '311',
   author: 'David Chung',
-  headerTitle: '3-1-1',
+  headerTitle: '311',
   description: 'Data visualizations aimed at issues facing the world today',
   language: 'en-us',
   theme: 'light', // system, dark or light
