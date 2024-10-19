@@ -11,6 +11,7 @@ import DivergingBoxPlot from './graphics/Food-Affordability/DivergingBoxPlot'
 import DotChart from './graphics/Food-Affordability/DotChart'
 import LineChart from './graphics/LineChart'
 
+
 export const components: MDXComponents = {
   Image,
   TOCInline,
