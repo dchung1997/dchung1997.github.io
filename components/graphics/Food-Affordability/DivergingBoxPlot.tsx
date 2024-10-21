@@ -86,8 +86,13 @@ const DivergingBoxPlot = ({ data, annualDiff }) => {
             sort: 'Median',
             r: 5,
             tip: {
+              channels: {
+                "Country Code": 'Country_Code'
+              },
               format: {
+                "Country Code": true,
                 x: (d) => (d < 0 ? `${d.toFixed(2) * -1}` : `${d.toFixed(2)}`),
+                y: false,
               },
             },
           }),

@@ -74,7 +74,7 @@ const ConsumptionBoxPlot = ({
               'Upper 25%': 'percentile75',
               'Lower 25%': 'percentile25',
               Country: 'name',
-              Year: 'year',
+              Year: (d) => `${d.year.toString().replace(/,/g, "")}`,
             },
             tip: {
               format: {
