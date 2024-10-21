@@ -59,14 +59,20 @@ input:-webkit-autofill:focus {
   vertical-align: middle;
 }
 
+body {
+  font-family: system-ui, sans-serif !important;
+}
+
 
 .chart {
   background-color: white;
-} 
-
-.chart {
   color: black;
-  padding: 0 10px  0 10px;
+  padding: 10px 10px  10px 10px;
+}
+
+.chart figure {
+  margin-top: 0 !important; 
+  margin-bottom: 0 !important;
 }
 
 .chart h2 {
@@ -76,7 +82,12 @@ input:-webkit-autofill:focus {
 
 .chart h3 {
   color: black !important;
+  font-weight: 400;
   font-size: 16px;
+}
+
+.chart .box-plot-chart {
+  padding: 0px 10px  0px 10px;
 }
 
 .plot-d6a7b5-swatches {
@@ -90,7 +101,7 @@ input:-webkit-autofill:focus {
 }
 
 .box-plot-chart .plot-d6a7b5-figure {
-  margin-top: -1.25em;
+  margin-top: -1.25em !important; 
 }
 
 .dot-chart svg {
