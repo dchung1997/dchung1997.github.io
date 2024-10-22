@@ -21,7 +21,7 @@ export default function Home({ posts }) {
                       src={
                         images && images.length > 0 ? images[0] : '/static/images/placeholder.svg'
                       }
-                      className="h-auto object-cover sm:w-full md:w-auto"
+                      className="object-cover sm:w-full md:w-auto"
                     ></img>
                   </Link>
                 </div>
