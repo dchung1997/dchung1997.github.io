@@ -111,3 +111,8 @@ body {
 .dot-chart svg [aria-label="fx-axis tick label"] {
   font-size: 24px !important;
 }
+
+span.source {
+  font-size: 12px;
+  color: grey;
+}
