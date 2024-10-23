@@ -115,7 +115,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                       Table of Content
                     </h2>
                     <ul className='list-disc list-inside '>
-                      {sections.map((section) => (
+                      {sections.map((section, i) => (
+                        i == 0 ? <li key={section}>
+                            <a href={'#'}> {section} </a>
+                        </li> :
                         <li key={section}> 
                           <a href={'#' + replaceWhiteSpace(section)}> {section} </a>
                         </li>
