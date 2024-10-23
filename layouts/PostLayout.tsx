@@ -29,8 +29,13 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+  const { filePath, path, slug, date, title, tags, sections } = content
   const basePath = path.split('/')[0]
+
+  function replaceWhiteSpace(str) {
+    const decoded = decodeURIComponent(str).toLowerCase();
+    return decoded.replace(/\s+/g, '-');
+  }
 
   return (
     <SectionContainer>
@@ -103,6 +108,22 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </div>
             </div>
             <footer>
+              <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
+              {sections  && (
+                  <div className="py-4 xl:py-8 table-of-content">
+                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                      Table of Content
+                    </h2>
+                    <ul className='list-disc list-inside '>
+                      {sections.map((section) => (
+                        <li key={section}> 
+                          <a href={'#' + replaceWhiteSpace(section)}> {section} </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
