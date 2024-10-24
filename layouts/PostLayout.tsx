@@ -106,7 +106,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                       <ul className='list-disc list-inside'>
                         {sections.map((section, i) => (
                           i == 0 ? <li key={section}>
-                              <a href={'#' + ""}> {section} </a>
+                              <a href={'#'}> {section} </a>
                           </li> :
                           <li key={section}> 
                             <a href={'#' + replaceWhiteSpace(section)}> {section} </a>
