@@ -40,6 +40,6 @@
     ".contentlayer/generated",
     ".contentlayer/generated/**/*.json",
     ".next/types/**/*.ts"
-  ],
+, "components/graphics/Food-Affordability/ConsumptionBoxPlot.jsx", "components/graphics/Food-Affordability/DivergingBoxPlot.jsx"  ],
   "exclude": ["node_modules"]
 }

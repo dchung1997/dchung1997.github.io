@@ -13,6 +13,13 @@ const DivergingBarChart = ({ data }) => {
         (g) => d3.max(g, (d) => d["intermediate-region"]),
         (d) => d['name']
       )
+      
+      const greaterThan5 = data.filter((d) => {
+        if (d.Sector == "defence") {
+            const element = data.find((e) => e.Sector != d.Sector && e.name == d.name);
+            return element && d.Value - element.Value >= 5; 
+        }
+      });
 
       const plot = Plot.plot({
         x: {label: "Percent of Annual Spending (%)"},
@@ -53,7 +60,14 @@ const DivergingBarChart = ({ data }) => {
                   y: false,
                   fill: false
                 },
-            },            
+            },        
+          }),
+          Plot.dot(greaterThan5, {
+            x: "Value",
+            y: "name",
+            fx: "Sector",
+            fill: "intermediate-region",
+            dx: 5,
           }),
           Plot.ruleX([0]),
         ]
