@@ -63,7 +63,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <dl className="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
               <dt className="sr-only">Authors</dt>
               <dd>
-                <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
+                <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8 xl:border-b xl:border-gray-200 pb-8">
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
                       {author.avatar && (
@@ -96,6 +96,27 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   ))}
                 </ul>
               </dd>
+              <dd>
+                <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
+                {sections  && (
+                    <div className="py-4 xl:py-8 table-of-content">
+                      <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                        Table of Contents
+                      </h2>
+                      <ul className='list-disc list-inside'>
+                        {sections.map((section, i) => (
+                          i == 0 ? <li key={section}>
+                              <a href={'#' + ""}> {section} </a>
+                          </li> :
+                          <li key={section}> 
+                            <a href={'#' + replaceWhiteSpace(section)}> {section} </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
@@ -108,25 +129,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </div>
             </div>
             <footer>
-              <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
-              {sections  && (
-                  <div className="py-4 xl:py-8 table-of-content">
-                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Table of Content
-                    </h2>
-                    <ul className='list-disc list-inside '>
-                      {sections.map((section, i) => (
-                        i == 0 ? <li key={section}>
-                            <a href={'#'}> {section} </a>
-                        </li> :
-                        <li key={section}> 
-                          <a href={'#' + replaceWhiteSpace(section)}> {section} </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
