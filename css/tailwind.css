@@ -91,17 +91,13 @@ body {
 }
 
 .plot-d6a7b5-swatches {
-  text-align: center;
-  display: block;
+  display: block;  
+  text-align: left;
   margin-top: 1em;
 }
 
-.diverging-box-plot-chart .plot-d6a7b5-swatches {
-  text-align: left;
-}
-
-.box-plot-chart .plot-d6a7b5-figure {
-  margin-top: -1.25em !important; 
+.box-plot-chart .plot-d6a7b5-swatches {
+  text-align: center;
 }
 
 .dot-chart svg {
