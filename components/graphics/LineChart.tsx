@@ -20,7 +20,7 @@ const LineChart = ({ data, extent, width, height, title, subtitle, caption, x, y
         subtitle: subtitle,
         caption: caption,
         marks: [
-          Plot.ruleY([0], { stroke: 'black', strokeWidth: 1.5 }),
+          Plot.ruleY([0], { stroke: 'grey', strokeWidth: 1.5, strokeDasharray: "12,12" }),
           Plot.line(data, {
             x: x,
             y: y,
