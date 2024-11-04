@@ -1,0 +1,89 @@
+.prose p {
+    margin-bottom: 1.25em;
+    font-size: 1.25rem;
+}
+
+.prose h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.3333333;
+}
+
+.prose img {
+    margin-bottom: 1.25em;
+    padding: 1em;
+}
+
+.prose :where(table):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: .875em;
+    line-height: 1.7142857;
+}
+
+.prose :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+.prose :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    padding-inline-start: 0;
+}
+
+.prose :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-weight: 600;
+    vertical-align: bottom;
+    padding-inline-end: .5714286em;
+    padding-bottom: .5714286em;
+}
+
+.prose :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+.prose :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    text-align: start;
+}
+
+.prose :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    padding-top: .5714286em;
+    padding-inline-end: .5714286em;
+    padding-bottom: .5714286em;
+}
+
+.prose :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    border-bottom-width: 0;
+}
+
+.prose .chart {
+    padding: 1em;
+}
+
+.prose .chart h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.prose .chart figcaption {
+    font-size: 0.75rem;
+    color:grey;
+}
+
+.centered-swatches {
+    display: block;
+    text-align: center;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.prose .source {
+    font-size: 0.75rem;
+    color: grey;
+}

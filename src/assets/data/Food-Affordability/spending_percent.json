@@ -1,0 +1,610 @@
+[
+  {
+    "name": "Angola",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 1.73
+  },
+  {
+    "name": "Benin",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 4.33
+  },
+  {
+    "name": "Botswana",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "agriculture",
+    "Value": 3.19
+  },
+  {
+    "name": "Burkina Faso",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 5
+  },
+  {
+    "name": "Burundi",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 7.93
+  },
+  {
+    "name": "Cameroon",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 3.47
+  },
+  {
+    "name": "Central African Republic",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 10.81
+  },
+  {
+    "name": "Chad",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 6.12
+  },
+  {
+    "name": "Comoros",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 6.57
+  },
+  {
+    "name": "Congo",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 2.43
+  },
+  {
+    "name": "Djibouti",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": null
+  },
+  {
+    "name": "Eswatini",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "agriculture",
+    "Value": 5.41
+  },
+  {
+    "name": "Ethiopia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 8.4
+  },
+  {
+    "name": "Ghana",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 0.87
+  },
+  {
+    "name": "Guinea",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 3.72
+  },
+  {
+    "name": "Guinea-Bissau",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 5.83
+  },
+  {
+    "name": "Kenya",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 3.85
+  },
+  {
+    "name": "Lesotho",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "agriculture",
+    "Value": 3.34
+  },
+  {
+    "name": "Liberia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 0.84
+  },
+  {
+    "name": "Madagascar",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 6.16
+  },
+  {
+    "name": "Malawi",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 7.74
+  },
+  {
+    "name": "Mali",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 8.64
+  },
+  {
+    "name": "Mauritania",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 6.84
+  },
+  {
+    "name": "Mozambique",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": null
+  },
+  {
+    "name": "Namibia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "agriculture",
+    "Value": 1.9
+  },
+  {
+    "name": "Niger",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 7.22
+  },
+  {
+    "name": "Nigeria",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": null
+  },
+  {
+    "name": "Rwanda",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 3.87
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "agriculture",
+    "Value": 5.6
+  },
+  {
+    "name": "Senegal",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 5.55
+  },
+  {
+    "name": "Sierra Leone",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 4.61
+  },
+  {
+    "name": "Somalia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 0.9
+  },
+  {
+    "name": "South Africa",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "agriculture",
+    "Value": 1.2
+  },
+  {
+    "name": "South Sudan",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 1.82
+  },
+  {
+    "name": "Togo",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "agriculture",
+    "Value": 3.62
+  },
+  {
+    "name": "Uganda",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 4.3
+  },
+  {
+    "name": "Zambia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 4.66
+  },
+  {
+    "name": "Zimbabwe",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "agriculture",
+    "Value": 9.39
+  },
+  {
+    "name": "Angola",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": 3.99
+  },
+  {
+    "name": "Benin",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 3.38
+  },
+  {
+    "name": "Botswana",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "defence",
+    "Value": 8.06
+  },
+  {
+    "name": "Burkina Faso",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 12.02
+  },
+  {
+    "name": "Burundi",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 12.05
+  },
+  {
+    "name": "Cameroon",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": 5.98
+  },
+  {
+    "name": "Central African Republic",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": 8.95
+  },
+  {
+    "name": "Chad",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": 17.2
+  },
+  {
+    "name": "Comoros",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": null
+  },
+  {
+    "name": "Congo",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": 10.25
+  },
+  {
+    "name": "Djibouti",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": null
+  },
+  {
+    "name": "Eswatini",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "defence",
+    "Value": 5.06
+  },
+  {
+    "name": "Ethiopia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 11.91
+  },
+  {
+    "name": "Ghana",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 1.52
+  },
+  {
+    "name": "Guinea",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 12.7
+  },
+  {
+    "name": "Guinea-Bissau",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 6.21
+  },
+  {
+    "name": "Kenya",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 4.73
+  },
+  {
+    "name": "Lesotho",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "defence",
+    "Value": 2.45
+  },
+  {
+    "name": "Liberia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 4.53
+  },
+  {
+    "name": "Madagascar",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 3.96
+  },
+  {
+    "name": "Malawi",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 6.17
+  },
+  {
+    "name": "Mali",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 13.21
+  },
+  {
+    "name": "Mauritania",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 9.86
+  },
+  {
+    "name": "Mozambique",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 3.99
+  },
+  {
+    "name": "Namibia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "defence",
+    "Value": 8.77
+  },
+  {
+    "name": "Niger",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 7.04
+  },
+  {
+    "name": "Nigeria",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 4.64
+  },
+  {
+    "name": "Rwanda",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 5.18
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Middle Africa",
+    "Sector": "defence",
+    "Value": null
+  },
+  {
+    "name": "Senegal",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 6.19
+  },
+  {
+    "name": "Sierra Leone",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 3.3
+  },
+  {
+    "name": "Somalia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 12.38
+  },
+  {
+    "name": "South Africa",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Southern Africa",
+    "Sector": "defence",
+    "Value": 2.48
+  },
+  {
+    "name": "South Sudan",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 15.95
+  },
+  {
+    "name": "Togo",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Western Africa",
+    "Sector": "defence",
+    "Value": 15.94
+  },
+  {
+    "name": "Uganda",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 9.87
+  },
+  {
+    "name": "Zambia",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 3.19
+  },
+  {
+    "name": "Zimbabwe",
+    "region": "Africa",
+    "sub-region": "Sub-Saharan Africa",
+    "intermediate-region": "Eastern Africa",
+    "Sector": "defence",
+    "Value": 11.26
+  }
+]
