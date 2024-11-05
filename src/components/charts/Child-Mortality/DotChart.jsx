@@ -40,6 +40,7 @@ const DotChart = ({ data, fx, title, caption, id }) => {
                 fx: false,
                 y: false,
               },
+              fontSize:18,
             },
           }),
           Plot.axisFx({fontSize: 24 }),

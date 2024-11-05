@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import * as d3 from "d3";
 
 import Header from "../../components/ui/Header/Header";
 import Footer from "../../components/ui/Footer/Footer";
@@ -7,7 +6,7 @@ import ArticleHeader from "../../components/ui/ArticleHeader/ArticleHeader";
 import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
-import DotChart from "../../components/charts/Food-Affordability/DotChart";
+import DotChart from "../../components/charts/Child-Mortality/DotChart";
 import DeathStackedBarChart from "../../components/charts/Child-Mortality/DeathStackedBarChart";
 import NeoNatalDeaths from "../../components/charts/Child-Mortality/NeoNatalDeaths";
 import SouthAsiaNeoNatal from "../../components/charts/Child-Mortality/SouthAsiaNeoNatal";
