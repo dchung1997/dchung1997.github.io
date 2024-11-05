@@ -5,6 +5,7 @@ import Header from "../../components/ui/Header/Header";
 import Footer from "../../components/ui/Footer/Footer";
 import ArticleHeader from "../../components/ui/ArticleHeader/ArticleHeader";
 import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
+import Sources from "../../components/ui/Sources/Sources";
 
 import DotChart from "../../components/charts/Food-Affordability/DotChart";
 import DeathStackedBarChart from "../../components/charts/Child-Mortality/DeathStackedBarChart";
@@ -23,7 +24,7 @@ import neo_natal_india from "../../assets/data/Food-Affordability/Child-Mortalit
 function FoodAffordability() {
   useTitle("Child Mortality & Undernutrition");
 
-  const citedSources = [];
+  const citedSources = ["Test"];
 
   const cleaned_child_mortality_data = child_mortality_data.map((d) => {
     d.Year = new Date(d.Year);
@@ -288,13 +289,15 @@ function FoodAffordability() {
             </p>
 
             <ChartWrapper>
-            <h3 className="ms-4">Neonatal Deaths, South Asia, 1990 to 2020</h3>
+              <h3 className="ms-4 pt-4">
+                Neonatal Deaths, South Asia, 1990 to 2020
+              </h3>
               <div className="w-full">
                 <SouthAsiaNeoNatal
                   data={neo_natal_india}
                   title={"Total Number of Neonatal Deaths"}
-                  subtitle={"India, 2000-2020"}     
-                  width={800}             
+                  subtitle={"India, 2000-2020"}
+                  width={800}
                   id={"India"}
                   color={"blue"}
                 />
@@ -311,7 +314,7 @@ function FoodAffordability() {
                 <SouthAsiaNeoNatal
                   data={neo_natal_pakistan}
                   title={"Total Number of Neonatal Deaths"}
-                  subtitle={"Pakistan, 2000-2020"}                  
+                  subtitle={"Pakistan, 2000-2020"}
                   fSize={14}
                   id={"Pakistan"}
                   color={"green"}
@@ -369,7 +372,8 @@ function FoodAffordability() {
             </p>
 
             <div className="grid grid-cols-8 pt-4 pb-8">
-              <div className="col-start-2 col-span-6">
+              <div className="card col-start-2 col-span-6 p-8">
+                <h3 className="text-xl font-bold">Food Distribution Program Costs</h3>
                 <table className="table-fixed">
                   <thead>
                     <tr>
@@ -502,6 +506,8 @@ function FoodAffordability() {
           </div>
         </div>
       </main>
+
+      <Sources items={citedSources} />
       <Footer />
     </>
   );
