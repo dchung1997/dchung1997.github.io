@@ -8,11 +8,17 @@ import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 
 import DotChart from "../../components/charts/Food-Affordability/DotChart";
 import DeathStackedBarChart from "../../components/charts/Child-Mortality/DeathStackedBarChart";
+import NeoNatalDeaths from "../../components/charts/Child-Mortality/NeoNatalDeaths";
+import SouthAsiaNeoNatal from "../../components/charts/Child-Mortality/SouthAsiaNeoNatal";
 
 import useTitle from "../../hooks/useTitle";
 
 import child_mortality_data from "../../assets/data/Food-Affordability/Child-Mortality/child_mortality.json";
 import child_infant_deaths from "../../assets/data/Food-Affordability/Child-Mortality/child_infant_deaths.json";
+import south_asia_stunting from "../../assets/data/Food-Affordability/Child-Mortality/south_asia_stunting.json";
+import neo_natal_bangladesh from "../../assets/data/Food-Affordability/Child-Mortality/neonatal_bangladesh.json";
+import neo_natal_pakistan from "../../assets/data/Food-Affordability/Child-Mortality/neonatal_pakistan.json";
+import neo_natal_india from "../../assets/data/Food-Affordability/Child-Mortality/neonatal_india.json";
 
 function FoodAffordability() {
   useTitle("Child Mortality & Undernutrition");
@@ -281,11 +287,37 @@ function FoodAffordability() {
               Food Security Policy.
             </p>
 
-            <img
-              alt="Line Chart of Top Neonatal Deaths South Asia 2000 and 2022"
-              src="/static/images/food-affordability/top-neo-natal-deaths-south-asia.png"
-              className="w-full h-auto"
-            />
+            <ChartWrapper>
+            <h3>Neonatal Deaths, South Asia, 1990 to 2020</h3>
+              <div className="w-full">
+                <SouthAsiaNeoNatal
+                  data={neo_natal_india}
+                  title={"Total Number of Neonatal Deaths"}
+                  subtitle={"India, 2000-2020"}     
+                  width={800}             
+                  id={"India"}
+                  color={"blue"}
+                />
+              </div>
+              <div className="display flex">
+                <SouthAsiaNeoNatal
+                  title={"Total Number of Neonatal Deaths"}
+                  subtitle={"Bangladesh, 2000-2020"}
+                  data={neo_natal_bangladesh}
+                  fSize={14}
+                  id={"Bangladesh"}
+                  color={"red"}
+                />
+                <SouthAsiaNeoNatal
+                  data={neo_natal_pakistan}
+                  title={"Total Number of Neonatal Deaths"}
+                  subtitle={"Pakistan, 2000-2020"}                  
+                  fSize={14}
+                  id={"Pakistan"}
+                  color={"green"}
+                />
+              </div>
+            </ChartWrapper>
 
             <p>
               So why is it that both Bangladesh and India halved their neonatal
@@ -311,11 +343,9 @@ function FoodAffordability() {
               meanwhile in India and Pakistan it is far less popular.
             </p>
 
-            <img
-              alt="Stunting South Asia Under 5 Timeline"
-              src="/static/images/food-affordability/stunting-age-5.png"
-              className="w-full h-auto"
-            />
+            <ChartWrapper>
+              <NeoNatalDeaths data={south_asia_stunting} id={"NeoNatal"} />
+            </ChartWrapper>
 
             <p>
               India and Bangladesh show us two very different but similar
@@ -463,6 +493,11 @@ function FoodAffordability() {
               wouldn't be unrealistic to see governments enact food subsidy
               programs based on similar ideas or reselling goods for half the
               cost of procurement.
+            </p>
+            <p>
+              But does it make economic sense for governments to spend large
+              amounts of money to solve issues like hunger and food insecurity?
+              How exac
             </p>
           </div>
         </div>

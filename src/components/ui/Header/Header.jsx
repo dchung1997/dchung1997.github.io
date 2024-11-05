@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <header className='flex items-center w-full justify-between sm:py-1 md:py-3 '>
+    <header className='flex items-center w-full justify-between sm:py-1 md:py-3 border-b'>
       <Link to="/">
         <div className="mr-3">
           <div className="flex items-center justify-between">

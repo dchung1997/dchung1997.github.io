@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Header />
-      <main className="mb-auto">
+      <main className="mb-auto border-b border-gray-400">
         <div className="divide-y divide-gray-200">
           <div className="space-y-2 pb-8 pt-6 md:space-y-5">
             {/* Latest Series Here / Banner / Should Only Link to Series*/}

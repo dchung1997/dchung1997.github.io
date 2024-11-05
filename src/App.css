@@ -69,6 +69,14 @@
     margin-bottom: 0;
 }
 
+.prose .chart-small h2 {
+    font-size: 1rem;
+}
+
+.prose .chart-small h3 {
+    font-size: 0.75rem;
+}
+
 .prose .chart figcaption {
     font-size: 0.75rem;
     color:grey;
