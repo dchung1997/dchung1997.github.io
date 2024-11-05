@@ -24,7 +24,12 @@ import neo_natal_india from "../../assets/data/Food-Affordability/Child-Mortalit
 function FoodAffordability() {
   useTitle("Child Mortality & Undernutrition");
 
-  const citedSources = ["Test"];
+  const citedSources = ["https://data.unicef.org/topic/child-survival/under-five-mortality/", "https://ourworldindata.org/vaccination", "https://ourworldindata.org/child-mortality", 
+  "https://ourworldindata.org/causes-of-death", "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/child-mortality-and-causes-of-death", "https://www.sciencedirect.com/topics/medicine-and-dentistry/newborn-death",
+  "https://ourworldindata.org/fertility-rate", "https://data.unicef.org/resources/data_explorer/unicef_f/", "https://ourworldindata.org/stunting-definition", 
+  "https://www.who.int/news/item/16-08-2016-true-magnitude-of-stillbirths-and-maternal-and-neonatal-deaths-underreported", "https://nfsa.gov.in/portal/PDS_page", "https://nfsa.gov.in/portal/nfsa-act",
+  "https://socialprotection.org/discover/programmes/public-food-distribution-system-pfds", "https://lpr.adb.org/resource/national-food-security-policy-2018-pakistan",
+  "https://pib.gov.in/PressReleasePage.aspx?PRID=1941387", ];
 
   const cleaned_child_mortality_data = child_mortality_data.map((d) => {
     d.Year = new Date(d.Year);
@@ -299,7 +304,7 @@ function FoodAffordability() {
                   subtitle={"India, 2000-2020"}
                   width={800}
                   id={"India"}
-                  color={"blue"}
+                  color={"orange"}
                 />
               </div>
               <div className="display flex">
@@ -309,7 +314,7 @@ function FoodAffordability() {
                   data={neo_natal_bangladesh}
                   fSize={14}
                   id={"Bangladesh"}
-                  color={"red"}
+                  color={"blue"}
                 />
                 <SouthAsiaNeoNatal
                   data={neo_natal_pakistan}
@@ -317,7 +322,7 @@ function FoodAffordability() {
                   subtitle={"Pakistan, 2000-2020"}
                   fSize={14}
                   id={"Pakistan"}
-                  color={"green"}
+                  color={"red"}
                 />
               </div>
             </ChartWrapper>
@@ -326,7 +331,7 @@ function FoodAffordability() {
               So why is it that both Bangladesh and India halved their neonatal
               deaths while Pakistans neonatal death rate only saw a small
               decrease? Can it be fully explained by the food programs above?
-              Not exactly. Droughts are fairly common in Pakistan from 1998-2002
+              Not exactly. Droughts were fairly common in Pakistan from 1998-2002
               there was a persistant drought meanwhile from 2020 to 2022 caused
               substantial damage along with unprecidented rainfall in 2010 and
               2022. Flooding is also becoming more and more common in
