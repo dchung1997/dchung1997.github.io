@@ -288,7 +288,7 @@ function FoodAffordability() {
             </p>
 
             <ChartWrapper>
-            <h3>Neonatal Deaths, South Asia, 1990 to 2020</h3>
+            <h3 className="ms-4">Neonatal Deaths, South Asia, 1990 to 2020</h3>
               <div className="w-full">
                 <SouthAsiaNeoNatal
                   data={neo_natal_india}
