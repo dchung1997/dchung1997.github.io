@@ -114,12 +114,11 @@ function FoodAffordability() {
               Approximately 4 out of the top 10 leading cause of deaths of
               children under the age of 5 are from neonatal related issues.
               These are deaths that occur within the first few days of being
-              born to a week. Adding on to this 8 out of the top 10 causes of
+              born to a week. Adding on to this 9 out of the top 10 causes of
               death were related to malnutrition. In which their condition was
               made significantly worse due to undernutrition. With the exception
-              of meningitis and lower respiratory infections severe
-              undernutrition had the risk of making conditions such as malaria
-              and diarrheal diseases life threatening.
+              of meningitis undernutrition had the risk of making conditions such as 
+              malaria and diarrheal diseases life threatening. 
             </p>
 
             <div className="flex items-center justify-center pb-8">
