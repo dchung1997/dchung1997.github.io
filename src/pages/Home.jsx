@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 import Header from "../components/ui/Header/Header";
 import Footer from "../components/ui/Footer/Footer";
+import Articles from '../components/ui/Series/Articles';
 
 function Home() {
   // Series and Articles.
@@ -43,20 +44,8 @@ function Home() {
                     </dl>
                 </Link>
                 </article>
-                <div className="articles pt-3">
-                  <p className='text-2x1 font-extrabold'>
-                    Articles
-                  </p>
-                  <ul className="list-inside">
-                    <li>Food Affordability</li>
-                    <li>Child Mortality & Undernutrition</li>
-                    <li>Climate Change and The Future</li>
-                    <li>Agricultural Subsidies and Rural Development</li>
-                    <li>Manufacturing and Urban Development</li>
-                  </ul>   
-                </div>                
+                <Articles/>              
               </div>
-              {/* Articles Here. */}
             </div>
 
             {/* 

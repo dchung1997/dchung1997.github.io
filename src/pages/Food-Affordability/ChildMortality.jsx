@@ -28,7 +28,7 @@ function FoodAffordability() {
   "https://ourworldindata.org/fertility-rate", "https://data.unicef.org/resources/data_explorer/unicef_f/", "https://ourworldindata.org/stunting-definition", 
   "https://www.who.int/news/item/16-08-2016-true-magnitude-of-stillbirths-and-maternal-and-neonatal-deaths-underreported", "https://nfsa.gov.in/portal/PDS_page", "https://nfsa.gov.in/portal/nfsa-act",
   "https://socialprotection.org/discover/programmes/public-food-distribution-system-pfds", "https://lpr.adb.org/resource/national-food-security-policy-2018-pakistan",
-  "https://pib.gov.in/PressReleasePage.aspx?PRID=1941387", ];
+  "https://pib.gov.in/PressReleasePage.aspx?PRID=1941387"];
 
   const cleaned_child_mortality_data = child_mortality_data.map((d) => {
     d.Year = new Date(d.Year);
@@ -328,7 +328,7 @@ function FoodAffordability() {
 
             <p>
               So why is it that both Bangladesh and India halved their neonatal
-              deaths while Pakistans neonatal death rate only saw a small
+              deaths while Pakistan's neonatal death rate only saw a small
               decrease? Can it be fully explained by the food programs above?
               Not exactly. Droughts were fairly common in Pakistan from 1998-2002
               there was a persistant drought meanwhile from 2020 to 2022 caused
@@ -475,7 +475,7 @@ function FoodAffordability() {
             </p>
 
             <p>
-              Overall, when we account for the total cost per person India's
+              When we account for the total cost per person India's
               program before the inclusion of free rice it was significantly
               cheaper almost by 50%. This however changes when accounting for
               the free rice that was added recently. What's interesting to note
@@ -505,7 +505,12 @@ function FoodAffordability() {
             <p>
               But does it make economic sense for governments to spend large
               amounts of money to solve issues like hunger and food insecurity?
-              How exac
+              Looking at the data we see that investments into food subsidy programs 
+              can reduce infant and child mortality rates significantly. The method in which countries
+              choose to approach the issue does not matter however costwise giving away 
+              staple grains was significantly cheaper and impacted more households.
+              For many governments this could be a realistic way in dealing with the worst cases of 
+              undernutrtion and food insecurity but can come with a significant cost.
             </p>
           </div>
         </div>

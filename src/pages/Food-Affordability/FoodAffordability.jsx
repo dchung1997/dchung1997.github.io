@@ -25,7 +25,9 @@ import Sources from "../../components/ui/Sources/Sources";
 function FoodAffordability() {
   useTitle("Food Affordability");
 
-  const citedSources = ["https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition", "https://databank.worldbank.org/source/food-prices-for-nutrition", "https://datacatalog.worldbank.org/search/dataset/0063646/-Poverty-and-Inequality-Platform--PIP---Percentiles", "https://population.un.org/wpp/"]
+  const citedSources = ["https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition", "https://databank.worldbank.org/source/food-prices-for-nutrition", 
+  "https://datacatalog.worldbank.org/search/dataset/0063646/-Poverty-and-Inequality-Platform--PIP---Percentiles", "https://population.un.org/wpp/",
+  "https://www.statista.com/statistics/1412269/regional-wage-growth/"]
 
   const data = country_affordability.data;
   const populationExtent = d3.extent(data, (d) =>
