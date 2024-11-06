@@ -23,12 +23,23 @@ import neo_natal_india from "../../assets/data/Food-Affordability/Child-Mortalit
 function FoodAffordability() {
   useTitle("Child Mortality & Undernutrition");
 
-  const citedSources = ["https://data.unicef.org/topic/child-survival/under-five-mortality/", "https://ourworldindata.org/vaccination", "https://ourworldindata.org/child-mortality", 
-  "https://ourworldindata.org/causes-of-death", "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/child-mortality-and-causes-of-death", "https://www.sciencedirect.com/topics/medicine-and-dentistry/newborn-death",
-  "https://ourworldindata.org/fertility-rate", "https://data.unicef.org/resources/data_explorer/unicef_f/", "https://ourworldindata.org/stunting-definition", 
-  "https://www.who.int/news/item/16-08-2016-true-magnitude-of-stillbirths-and-maternal-and-neonatal-deaths-underreported", "https://nfsa.gov.in/portal/PDS_page", "https://nfsa.gov.in/portal/nfsa-act",
-  "https://socialprotection.org/discover/programmes/public-food-distribution-system-pfds", "https://lpr.adb.org/resource/national-food-security-policy-2018-pakistan",
-  "https://pib.gov.in/PressReleasePage.aspx?PRID=1941387"];
+  const citedSources = [
+    "https://data.unicef.org/topic/child-survival/under-five-mortality/",
+    "https://ourworldindata.org/vaccination",
+    "https://ourworldindata.org/child-mortality",
+    "https://ourworldindata.org/causes-of-death",
+    "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/child-mortality-and-causes-of-death",
+    "https://www.sciencedirect.com/topics/medicine-and-dentistry/newborn-death",
+    "https://ourworldindata.org/fertility-rate",
+    "https://data.unicef.org/resources/data_explorer/unicef_f/",
+    "https://ourworldindata.org/stunting-definition",
+    "https://www.who.int/news/item/16-08-2016-true-magnitude-of-stillbirths-and-maternal-and-neonatal-deaths-underreported",
+    "https://nfsa.gov.in/portal/PDS_page",
+    "https://nfsa.gov.in/portal/nfsa-act",
+    "https://socialprotection.org/discover/programmes/public-food-distribution-system-pfds",
+    "https://lpr.adb.org/resource/national-food-security-policy-2018-pakistan",
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1941387",
+  ];
 
   const cleaned_child_mortality_data = child_mortality_data.map((d) => {
     d.Year = new Date(d.Year);
@@ -56,7 +67,7 @@ function FoodAffordability() {
             </p>
             <p>
               To better understand the issue first let's look at Child Mortality
-              rates over years. For the past three decades Child Mortality rates
+              Rates over years. For the past three decades Child Mortality Rates
               have gone down. It's a trend seen everywhere and its due to a
               variety reasons vaccines, medical advancements, and improvements
               to public infrastructure. Increasing the availability of things
@@ -100,10 +111,15 @@ function FoodAffordability() {
               ></img>
             </div>
             <p>
-              Some things to note are neonatal preterm birth, neonatal asphyxia
-              & trauma, neonatal sepsis & infection, and congenital birth
-              defects. Neonatal Preterm Birth and Neonatal Asphyxia & Trauma
-              tend to go together.
+              Approximately 4 out of the top 10 leading cause of deaths of
+              children under the age of 5 are from neonatal related issues.
+              These are deaths that occur within the first few days of being
+              born to a week. Adding on to this 8 out of the top 10 causes of
+              death were related to malnutrition. In which their condition was
+              made significantly worse due to undernutrition. With the exception
+              of meningitis and lower respiratory infections severe
+              undernutrition had the risk of making conditions such as malaria
+              and diarrheal diseases life threatening.
             </p>
 
             <div className="flex items-center justify-center pb-8">
@@ -115,23 +131,28 @@ function FoodAffordability() {
             </div>
 
             <p>
-              In the case of Neonatal Preterm Birth mothers who suffer from
-              undernutrition can become anemic. Meaning they have low levels of
-              oxygen in their blood. This can be life threatening and can cause
-              issues such as low birth weights and preterm births. Meanwhile
-              Neonatal Sepsis & Infection and Congenital Birth Defects are often
-              made worse by undernutrition instead of being directly caused by
-              it. About 85% of deaths of Neonatal Sepsis occur within the first
-              24 hours of a child being born. In which a low birth weight
-              significantly reduces the odds of survival.
+              In the case of neonatal deaths the issues often relied on the
+              current wellbeing of the mothers. For example neonatal preterm
+              birth along with neonatal asphyxia and trauama deaths are caused
+              due to anemia which occurs when the mother is severely
+              malnourished. Anemia itself is a life threatening condition.
+              Mothers who suffer from undernutrition can become anemic. Meaning
+              they have low levels of oxygen in their blood. This can be life
+              threatening and can cause issues such as low birth weights and
+              preterm births.
             </p>
 
             <p>
-              Similarly congenital birth defects are often caused by
-              undernutrition. 9 out of 10 children born with serious birth
-              defects are in low to middle income countries. Though there are
-              other factors as well that contribute such as access to medical
-              health care. Genetics made only a small number of cases.
+              Meanwhile Neonatal Sepsis & Infection and Congenital Birth Defects
+              are often made worse by undernutrition instead of being directly
+              caused by it. About 85% of deaths of Neonatal Sepsis occur within
+              the first 24 hours of a child being born. In which a low birth
+              weight significantly reduces the odds of survival. Similarly
+              congenital birth defects are often caused by undernutrition. 9 out
+              of 10 children born with serious birth defects are in low to
+              middle income countries. Though there are other factors as well
+              that contribute such as access to medical health care. Genetics
+              made only a small number of cases.
             </p>
 
             <p>
@@ -173,7 +194,7 @@ function FoodAffordability() {
               South Asia had 1.14 billion and grew to 1.94 billion.
               Approximately 63.7% of South Asia lived in rural areas in 2023
               while in Sub-Saharan Africa 57% lived in one. Its likely that the
-              number of prenatal deaths aren't being reported on due to the age
+              number of neonatal deaths aren't being reported on due to the age
               of the children while still being counted as a live birth. The
               World Health Organization estimates that the rates could by off by
               30% globally and up to 70% in some countries.
@@ -192,7 +213,7 @@ function FoodAffordability() {
             </p>
 
             <p>
-              Prenatal deaths are an issue and one which mostly originates with
+              Neonatal deaths are an issue and one which mostly originates with
               the mother. Life saving treatments do exist in some form for some
               cases but often, the weight of a child can determine their outcome
               and they may not matter in the short term as 75% of known neonatal
@@ -293,9 +314,9 @@ function FoodAffordability() {
             </p>
 
             <ChartWrapper>
-              <h3 className="ms-4 pt-4">
+              <h4 className="ms-4 pt-4">
                 Neonatal Deaths, South Asia, 1990 to 2020
-              </h3>
+              </h4>
               <div className="w-full">
                 <SouthAsiaNeoNatal
                   data={neo_natal_india}
@@ -330,12 +351,12 @@ function FoodAffordability() {
               So why is it that both Bangladesh and India halved their neonatal
               deaths while Pakistan's neonatal death rate only saw a small
               decrease? Can it be fully explained by the food programs above?
-              Not exactly. Droughts were fairly common in Pakistan from 1998-2002
-              there was a persistant drought meanwhile from 2020 to 2022 caused
-              substantial damage along with unprecidented rainfall in 2010 and
-              2022. Flooding is also becoming more and more common in
-              Bangladesh. Climate change is having a signficiant impact on the
-              region. However, Bangladesh is significantly more prepared for
+              Not exactly. Droughts were fairly common in Pakistan from
+              1998-2002 there was a persistant drought meanwhile from 2020 to
+              2022 caused substantial damage along with unprecidented rainfall
+              in 2010 and 2022. Flooding is also becoming more and more common
+              in Bangladesh. Climate change is having a signficiant impact on
+              the region. However, Bangladesh is significantly more prepared for
               these events that Pakistan is.
             </p>
 
@@ -377,7 +398,9 @@ function FoodAffordability() {
 
             <div className="grid grid-cols-8 pt-4 pb-8">
               <div className="card col-start-2 col-span-6 p-8">
-                <h3 className="text-xl font-bold">Food Distribution Program Costs</h3>
+                <h3 className="text-xl font-bold">
+                  Food Distribution Program Costs
+                </h3>
                 <table className="table-fixed">
                   <thead>
                     <tr>
@@ -475,11 +498,11 @@ function FoodAffordability() {
             </p>
 
             <p>
-              When we account for the total cost per person India's
-              program before the inclusion of free rice it was significantly
-              cheaper almost by 50%. This however changes when accounting for
-              the free rice that was added recently. What's interesting to note
-              is that India's Public Food Distribution Program technically still
+              When we account for the total cost per person India's program
+              before the inclusion of free rice it was significantly cheaper
+              almost by 50%. This however changes when accounting for the free
+              rice that was added recently. What's interesting to note is that
+              India's Public Food Distribution Program technically still
               provides free food.
             </p>
 
@@ -505,12 +528,14 @@ function FoodAffordability() {
             <p>
               But does it make economic sense for governments to spend large
               amounts of money to solve issues like hunger and food insecurity?
-              Looking at the data we see that investments into food subsidy programs 
-              can reduce infant and child mortality rates significantly. The method in which countries
-              choose to approach the issue does not matter however costwise giving away 
-              staple grains was significantly cheaper and impacted more households.
-              For many governments this could be a realistic way in dealing with the worst cases of 
-              undernutrtion and food insecurity but can come with a significant cost.
+              Looking at the data we see that investments into food subsidy
+              programs can reduce infant and child mortality rates
+              significantly. The method in which countries choose to approach
+              the issue does not matter however costwise giving away staple
+              grains was significantly cheaper and impacted more households. For
+              many governments this could be a realistic way in dealing with the
+              worst cases of undernutrtion and food insecurity but can come with
+              a significant cost.
             </p>
           </div>
         </div>
