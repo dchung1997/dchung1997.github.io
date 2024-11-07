@@ -9,6 +9,8 @@ import Sources from "../../components/ui/Sources/Sources";
 import DivergingBoxPlot from "../../components/charts/Food-Affordability/DivergingBoxPlot";
 import YieldGap from "../../components/charts/Child-Mortality/YieldGap";
 import CerealYields from "../../components/charts/Child-Mortality/CerealYields";
+import GrainProduction from "../../components/charts/Child-Mortality/GrainProduction";
+
 import useTitle from "../../hooks/useTitle";
 
 import income_difference from "../../assets/data/Food-Affordability/income_difference.json";
@@ -16,6 +18,7 @@ import annual_change from "../../assets/data/Food-Affordability/annual_change.js
 import cereal_yields_ssa from "../../assets/data/Food-Affordability/Climate-Change/cereal_yields_ssa.json";
 import cereal_yields_ssa_countries from "../../assets/data/Food-Affordability/Climate-Change/cereal_yields_ssa_countries.json";
 import yield_gap from "../../assets/data/Food-Affordability/Climate-Change/yield_gap.json";
+import africa_grain_projection from "../../assets/data/Food-Affordability/Climate-Change/africa-grain-projections.json";
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function ClimateChange() {
@@ -63,6 +66,7 @@ function ClimateChange() {
               <DivergingBoxPlot
                 data={income_difference}
                 annualDiff={annual_change}
+                id={"diverging-box-plot"}
               />
             </ChartWrapper>
 
@@ -116,7 +120,7 @@ function ClimateChange() {
             <ChartWrapper>
               <h2>Yield Gap of Staple Grains</h2>
               <h3>Africa 2022</h3>
-              <YieldGap data={yield_gap} geo={africa_geo} id={"yield_gap"} />
+              <YieldGap data={yield_gap} geo={africa_geo} id={"yield-gap"} />
             </ChartWrapper>
 
             <p>
@@ -156,18 +160,11 @@ function ClimateChange() {
               <CerealYields
                 data={cereal_yields_ssa_countries}
                 cereal_yields={cereal_yields_ssa}
+                id={"cereal-yields"}
               />
-              <p className="source">
-                <span>
-                  Source: Food and Agriculture Organization of the United
-                  Nations (2023) – with major processing by Our World in Data
-                </span>
-                <br />
-                <span>
-                  {" "}
-                  Note: Cereals include wheat, rice, maize, barley, oats, rye,
-                  millet, sorghum, buckwheat, and mixed grains.
-                </span>
+              <p className="source ms-4">
+                Note: Cereals include wheat, rice, maize, barley, oats, rye,
+                millet, sorghum, buckwheat, and mixed grains.
               </p>
             </ChartWrapper>
 
@@ -195,6 +192,30 @@ function ClimateChange() {
               for other african countries it can show us what the future could
               look like if countries don't continue to invest in improvements to
               agriculture.
+            </p>
+
+            <ChartWrapper>
+              <h2>
+                Unchanged Total Production of Grains to Increased Population
+              </h2>
+              <h3>Sub-Saharan Africa, 2021 to 2050</h3>
+              <GrainProduction
+                data={africa_grain_projection}
+                geo={africa_geo}
+                id={"grain-production"}
+              />
+            </ChartWrapper>
+            <p>
+              For African countries there is still a lot which they can do. But
+              the cost involved are out of the budget of many African countries.
+              Here are three staple crops within Africa and the yield gaps which
+              exist today. While a lot of data is missing it shows us the
+              progress that has yet to be made.
+            </p>
+            <p>
+              While these issues like would not be solved by the end of the
+              decade. Considerable progress can be made and investing more would
+              push us towards equitable solutions.
             </p>
           </div>
         </div>

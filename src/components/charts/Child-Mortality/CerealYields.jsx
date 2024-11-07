@@ -14,6 +14,7 @@ const CerealYields = ({ data, cereal_yields, id }) => {
         x: {label: null},
         fx: {label: null},
         y: {label:null},
+        caption: "Source: Food and Agriculture Organization of the United Nations (2023) – with major processing by Our World in Data",
         marks: [
           Plot.lineY(filteredData, {x: "Year", y: "Cereals", z:"Entity", fx: "intermediate-region", stroke: "grey", opacity: 0.5}),
           Plot.lineY(cereal_yields, {x: "Year", y: "yield", fx: "Country", stroke: "Country", strokeWidth: 2.5, tip: {
@@ -46,7 +47,7 @@ const CerealYields = ({ data, cereal_yields, id }) => {
     }
   }, [data])
 
-  return <div ref={plotRef} className="neo-natal-linechart chart-small chart" id={id}></div>
+  return <div ref={plotRef} className="cereal-yields-linechart chart-small chart" id={id}></div>
 }
 
 export default CerealYields

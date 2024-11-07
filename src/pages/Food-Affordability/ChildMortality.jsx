@@ -223,7 +223,7 @@ function FoodAffordability() {
             <ChartWrapper>
               <DeathStackedBarChart
                 data={child_infant_deaths}
-                id={"DeathsStacked"}
+                id={"Deaths-Stacked"}
               />
             </ChartWrapper>
 
@@ -371,7 +371,7 @@ function FoodAffordability() {
             </p>
 
             <ChartWrapper>
-              <NeoNatalDeaths data={south_asia_stunting} id={"NeoNatal"} />
+              <NeoNatalDeaths data={south_asia_stunting} id={"Neo-Natal"} />
             </ChartWrapper>
 
             <p>

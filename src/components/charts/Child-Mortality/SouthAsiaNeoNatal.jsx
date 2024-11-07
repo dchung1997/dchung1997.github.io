@@ -29,7 +29,7 @@ const NeoNatalDeaths = ({ data, id, width, title, subtitle, fSize, color }) => {
     }
   }, [data])
 
-  return <div ref={plotRef} className="neo-natal-linechart chart-small chart" id={id}></div>
+  return <div ref={plotRef} className="south-asia-areachart chart-small chart" id={id}></div>
 }
 
 export default NeoNatalDeaths
