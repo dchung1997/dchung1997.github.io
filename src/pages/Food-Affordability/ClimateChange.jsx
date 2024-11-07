@@ -7,11 +7,16 @@ import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
 import DivergingBoxPlot from "../../components/charts/Food-Affordability/DivergingBoxPlot";
-
+import YieldGap from "../../components/charts/Child-Mortality/YieldGap";
+import CerealYields from "../../components/charts/Child-Mortality/CerealYields";
 import useTitle from "../../hooks/useTitle";
 
 import income_difference from "../../assets/data/Food-Affordability/income_difference.json";
 import annual_change from "../../assets/data/Food-Affordability/annual_change.json";
+import cereal_yields_ssa from "../../assets/data/Food-Affordability/Climate-Change/cereal_yields_ssa.json";
+import cereal_yields_ssa_countries from "../../assets/data/Food-Affordability/Climate-Change/cereal_yields_ssa_countries.json";
+import yield_gap from "../../assets/data/Food-Affordability/Climate-Change/yield_gap.json";
+import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function ClimateChange() {
   useTitle("Climate Change & Beyond");
@@ -108,13 +113,20 @@ function ClimateChange() {
               as much as 10-30% by 2050.
             </p>
 
-            <p> Placeholder for yield gap here. </p>
+            <ChartWrapper>
+              <h2>Yield Gap of Staple Grains</h2>
+              <h3>Africa 2022</h3>
+              <YieldGap data={yield_gap} geo={africa_geo} id={"yield_gap"} />
+            </ChartWrapper>
 
             <p>
               There's a lot of naunce lost especially considering how different
-              the climate can be in parts of Africa. However the goal of the
-              studies themselves attempt to show that the attainable yields for
-              countries is still significantly higher than the potential loses.
+              the climate can be in parts of Africa. However the main point is
+              to show that the attainable yields for countries is still
+              significantly higher than the potential loses. But this is only in
+              specific cases when extreme climate events do not occur. Which
+              given what climate change is doing will likely increase in
+              frequency over the years.
             </p>
 
             <p>
@@ -122,9 +134,10 @@ function ClimateChange() {
               parts of Africa this can differ between drought, flash flooding,
               and extreme heat. Countries can do a lot to prevent the loss of
               lives due to these disasters but things like crops can still be
-              destroyed due to these disasters.
+              destroyed due to these disasters. Having a stable supply of crops
+              is a necessity to prepare for these events to prevent famine and
+              food shortages.
             </p>
-
 
             <p>
               It's important to note that while food affordability is only one
@@ -137,13 +150,26 @@ function ClimateChange() {
               where the population is expected to grow to 2.1 billion.
             </p>
 
-            <div className="flex items-center justify-center pb-8">
-              <img
-                alt="Cereal Yields Annual Per Hecta Acre, Sub Saharan Africa"
-                src="/src/assets/images/series/climate-change/cereal-yields-annual.PNG"
-                className="object-cover w-3/4 card"
-              ></img>
-            </div>
+            <ChartWrapper>
+              <h2>Annual Yield Per Hecta Acre, Cereal Yields</h2>
+              <h3>Sub-Saharan Africa 1990-2020</h3>
+              <CerealYields
+                data={cereal_yields_ssa_countries}
+                cereal_yields={cereal_yields_ssa}
+              />
+              <p className="source">
+                <span>
+                  Source: Food and Agriculture Organization of the United
+                  Nations (2023) – with major processing by Our World in Data
+                </span>
+                <br />
+                <span>
+                  {" "}
+                  Note: Cereals include wheat, rice, maize, barley, oats, rye,
+                  millet, sorghum, buckwheat, and mixed grains.
+                </span>
+              </p>
+            </ChartWrapper>
 
             <p>
               Data released by the UN FAO showcases the stagnant growth of
