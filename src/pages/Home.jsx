@@ -9,12 +9,12 @@ function Home() {
     {
       title: "Food Affordability",
       link: "/food-affordability",
-      time: "10m",
+      time: "6m",
     },
     {
       title: "Child Mortality & Undernutrition",
       link: "/food-affordability/child-mortality",
-      time: "10m",
+      time: "8m",
     },
     {
       title: "Climate Change & Beyond",

@@ -118,8 +118,8 @@ function ClimateChange() {
             </p>
 
             <ChartWrapper>
-              <h2>Yield Gap of Staple Grains</h2>
-              <h3>Africa 2022</h3>
+              <h2 className="ms-4">Yield Gap of Staple Grains</h2>
+              <h3 className="ms-4">Africa 2022</h3>
               <YieldGap data={yield_gap} geo={africa_geo} id={"yield-gap"} />
             </ChartWrapper>
 
@@ -155,8 +155,10 @@ function ClimateChange() {
             </p>
 
             <ChartWrapper>
-              <h2>Annual Yield Per Hecta Acre, Cereal Yields</h2>
-              <h3>Sub-Saharan Africa 1990-2020</h3>
+              <h2 className="ms-4">
+                Annual Yield Per Hecta Acre, Cereal Yields
+              </h2>
+              <h3 className="ms-4">Sub-Saharan Africa 1990-2020</h3>
               <CerealYields
                 data={cereal_yields_ssa_countries}
                 cereal_yields={cereal_yields_ssa}
@@ -179,9 +181,10 @@ function ClimateChange() {
 
             <p>
               So why is this happening? Subsistence farming continues to be the
-              dominant form of farming in most nations. Investments in rural
-              development and agriculture were put aside by most countries that
-              has largely been neglected since the 2010s by most nations.
+              dominant form of farming in most nations. For the most part
+              investments in rural development and agriculture were put aside by
+              most countries that has largely been neglected since the 2010s by
+              most nations.
             </p>
 
             <p>
@@ -195,10 +198,10 @@ function ClimateChange() {
             </p>
 
             <ChartWrapper>
-              <h2>
+              <h2 className="ms-4">
                 Unchanged Total Production of Grains to Increased Population
               </h2>
-              <h3>Sub-Saharan Africa, 2021 to 2050</h3>
+              <h3 className="ms-4">Sub-Saharan Africa, 2021 to 2050</h3>
               <GrainProduction
                 data={africa_grain_projection}
                 geo={africa_geo}
