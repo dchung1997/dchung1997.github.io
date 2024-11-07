@@ -1,35 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Articles = () => {
-  const articles = [
-    {
-      title: "Food Affordability",
-      link: "/food-affordability",
-      time: "10m",
-    },
-    {
-      title: "Child Mortality & Undernutrition",
-      link: "/food-affordability/child-mortality",
-      time: "10m",
-    },
-    {
-      title: "Climate Change & Beyond",
-      link: "/food-affordability/child-mortality",
-      time: "10m",
-    },
-    {
-      title: "Agricultural Subsidies & Rural Development",
-      link: "/food-affordability/child-mortality",
-      time: "10m",
-    },
-    {
-      title: "Manufacturing & Urban Development",
-      link: "/food-affordability/child-mortality",
-      time: "10m",
-    },
-  ];
-
+const Articles = ({articles}) => {
   return (
     <div className="articles pt-3">
       <p className="text-2x1 font-extrabold ml-1 pt-2 pb-2">Articles</p>

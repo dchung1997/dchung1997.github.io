@@ -5,6 +5,34 @@ import Footer from "../components/ui/Footer/Footer";
 import Articles from '../components/ui/Series/Articles';
 
 function Home() {
+  const articles = [
+    {
+      title: "Food Affordability",
+      link: "/food-affordability",
+      time: "10m",
+    },
+    {
+      title: "Child Mortality & Undernutrition",
+      link: "/food-affordability/child-mortality",
+      time: "10m",
+    },
+    {
+      title: "Climate Change & Beyond",
+      link: "/food-affordability/climate-change",
+      time: "10m",
+    },
+    {
+      title: "Agricultural Subsidies & Rural Development",
+      link: "/food-affordability/child-mortality",
+      time: "10m",
+    },
+    {
+      title: "Manufacturing & Urban Development",
+      link: "/food-affordability/child-mortality",
+      time: "10m",
+    },
+  ];
+
   // Series and Articles.
   return (
     <>
@@ -44,7 +72,7 @@ function Home() {
                     </dl>
                 </Link>
                 </article>
-                <Articles/>              
+                <Articles articles={articles}/>              
               </div>
             </div>
 
