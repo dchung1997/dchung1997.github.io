@@ -188,13 +188,50 @@ function ClimateChange() {
             </p>
 
             <p>
-              Let's look at an example where yields for grains do not change and
-              that the total number of hectacres farmed by subsistence farmers
-              remains largely unchanged. While its unlikely for some countries
-              like Ethopia and South Africa to see a decrease in productivity
-              for other african countries it can show us what the future could
-              look like if countries don't continue to invest in improvements to
-              agriculture.
+              Under the Marputo Declartation members of the African Union
+              pledged to allocate 10% of the budget every year towards
+              agricultural and rural development. But for a majority of
+              countries that never happened.
+            </p>
+
+            <p>
+              In the year 2022, only one country had allocated at least 10% of
+              their national spending towards agriculture and rural development.
+              While only 14 Sub-Saharan African countries had at least 5% of
+              their national budget allocated towards Agriculture.
+            </p>
+
+            <p>Graphic Placeholder here. </p>
+
+            <p>
+              In comparison the defense budgets of African countries 13
+              countries had 10% or more of their budget allocated for defense
+              purposes. Overall, 9 countries had a difference of more than 5%
+              from their agriculture budgets to defense. Two of them Somalia and
+              South Sudan are active warzones. Of the remaining five were within
+              the top 25 fragile states most notably for security issues.
+            </p>
+
+            <p>
+              For some countries increases to agricultural development wasn't a
+              priority. This is especially strange considering how the issues
+              the region is facing. A rising population and climate change. The
+              current trajectory doesn't show any real changes from the
+              potential train wreck in the making. So what could happen if
+              nothing is changed?
+            </p>
+
+            <p>
+              Maybe for example in Kenya where the number of land being
+              cultivated has increased but yields have been stagnant for
+              decades. What if the rest of Africa experiences similar issues in
+              the decades to come? Let's look at an example where yields for
+              grains do not change and that the total number of hectacres farmed
+              by subsistence farmers remains largely unchanged. While its
+              unlikely for some countries like Ethopia and South Africa to see a
+              decrease in productivity for other african countries it can show
+              us what the future could look like if countries don't continue to
+              invest in improvements to agriculture.
             </p>
 
             <ChartWrapper>
