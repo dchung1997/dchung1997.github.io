@@ -7,11 +7,14 @@ import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
 import Beeswarm from "../../components/charts/Beeswarm/Beeswarm";
+import AnnualExpenditures from "../../components/charts/Agriculture/AnnualExpenditures";
 
 import useTitle from "../../hooks/useTitle";
 
 import country_affordability from "../../assets/data/Food-Affordability/country_affordability_data.json";
 import income_consumption_data from "../../assets/data/Food-Affordability/income_consumption_data.json";
+import agriculture_expenditures from "../../assets/data/Food-Affordability/Agriculture/agricultural_expenditures.json";
+import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function Agricultural() {
   useTitle("Agriculture Subsidies & Rural Development");
@@ -52,9 +55,7 @@ function Agricultural() {
                 <h3 className="ms-5">
                   Diet Cost by Percentage of Daily Income (2017 PPP){" "}
                 </h3>
-                <img
-                  src="/src/assets/images/series/agriculture/legend.png"
-                ></img>
+                <img src="/src/assets/images/series/agriculture/legend.png"></img>
                 <Beeswarm
                   data={africa}
                   extent={extentPercentile}
@@ -88,13 +89,20 @@ function Agricultural() {
               decrease.
             </p>
             <p>
-              Parts of Africa increased agricultural spending when they could
-              while others fell into a slump. But by the COVID-19 Pandemic most
-              countries felt the strain on their economies as money began to dry
-              up.
+              Parts of Africa increased agricultural spent when they could while
+              others fell into a slump. But by the COVID-19 Pandemic most
+              countries felt the strain on their economies as money and
+              financial options began to dry up.
             </p>
 
-            <p>Placeholder</p>
+            <ChartWrapper>
+              <h2>Average Annual Agricultural Expenditure</h2>
+              <h3>4 Year Period, Africa 2000 to 2020</h3>
+              <AnnualExpenditures
+                data={agriculture_expenditures}
+                geo={africa_geo}
+              />
+            </ChartWrapper>
 
             <p>
               Fairly recently under the Nairobi Declaration the African Union
