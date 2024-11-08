@@ -69,6 +69,9 @@
     margin-bottom: 0;
 }
 
+.prose .chart img {
+    margin-bottom: 0;
+}
 
 .prose .chart-small h2 {
     font-size: 1rem;

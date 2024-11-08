@@ -23,12 +23,12 @@ function Home() {
     },
     {
       title: "Agricultural Subsidies & Rural Development",
-      link: "/food-affordability/child-mortality",
-      time: "10m",
+      link: "/food-affordability/agriculture",
+      time: "5m",
     },
     {
       title: "Manufacturing & Urban Development",
-      link: "/food-affordability/child-mortality",
+      link: "/food-affordability/manufacturing",
       time: "10m",
     },
   ];

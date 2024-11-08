@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import beeswarmForce from './Force'
 
-const Beeswarm = ({ data, extent, radius, x, removeMiddle }) => {
+const Beeswarm = ({ data, extent, radius, x, removeMiddle, removeTitle }) => {
   const svgRef = useRef(null)
   const margin = { top: 20, right: 20, bottom: 20, left: 10 }
   const chartWidth = 1100
@@ -72,7 +72,7 @@ const Beeswarm = ({ data, extent, radius, x, removeMiddle }) => {
         : existingG
 
       // Title
-      if (svg.select('g.title').empty()) {
+      if (svg.select('g.title').empty() && !removeTitle) {
         g.append('g')
           .attr('class', 'title')
           .append('text')
@@ -176,7 +176,7 @@ const Beeswarm = ({ data, extent, radius, x, removeMiddle }) => {
           .attr('y', 130)
       }
     }
-  }, [data, extent, radius, x, removeMiddle])
+  }, [data, extent, radius, x, removeMiddle, removeTitle])
 
   return <svg ref={svgRef} viewBox={`0 0 ${chartWidth} ${chartHeight}`} className="chart w-auto"></svg>
 }

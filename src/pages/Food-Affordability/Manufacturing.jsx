@@ -8,7 +8,7 @@ import Sources from "../../components/ui/Sources/Sources";
 
 import useTitle from "../../hooks/useTitle";
 
-function ClimateChange() {
+function Manufacturing() {
   useTitle("Climate Change");
 
   const citedSources = [""];
@@ -19,7 +19,7 @@ function ClimateChange() {
       <Header />
       <main className="mb-auto border-b border-gray-400">
         <ArticleHeader
-          title="Climate Change & Beyond"
+          title="Manufacturing & Urban Development"
           date={new Date("2024-11-01")}
         />
         <div className="divide-y divide-gray-200">
@@ -35,4 +35,4 @@ function ClimateChange() {
   );
 }
 
-export default ClimateChange;
+export default Manufacturing;
