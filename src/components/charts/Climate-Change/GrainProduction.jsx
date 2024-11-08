@@ -37,7 +37,20 @@ const GrainProduction = ({ data, geo, id }) => {
             strokeOpacity: 0.5,
             strokeWidth: 0.5,
             fx: "Year",
-            tip: true,
+            tip: {
+              channels:{
+                'Year': "Year",
+                "Grain Per Capita": "Value",
+                "Country": "Country"
+              },
+              format:{
+                fx: false,
+                fill: false,
+                "Year": true,
+                "Country": true,
+                "Grain Per Capita": true,
+              }
+            },
           })),
         ]
       })
