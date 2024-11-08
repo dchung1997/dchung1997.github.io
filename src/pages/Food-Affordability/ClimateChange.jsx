@@ -7,9 +7,10 @@ import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
 import DivergingBoxPlot from "../../components/charts/Food-Affordability/DivergingBoxPlot";
-import YieldGap from "../../components/charts/Child-Mortality/YieldGap";
-import CerealYields from "../../components/charts/Child-Mortality/CerealYields";
-import GrainProduction from "../../components/charts/Child-Mortality/GrainProduction";
+import YieldGap from "../../components/charts/Climate-Change/YieldGap";
+import CerealYields from "../../components/charts/Climate-Change/CerealYields";
+import GrainProduction from "../../components/charts/Climate-Change/GrainProduction";
+import SectorSpending from "../../components/charts/Climate-Change/SectorSpending";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -19,6 +20,7 @@ import cereal_yields_ssa from "../../assets/data/Food-Affordability/Climate-Chan
 import cereal_yields_ssa_countries from "../../assets/data/Food-Affordability/Climate-Change/cereal_yields_ssa_countries.json";
 import yield_gap from "../../assets/data/Food-Affordability/Climate-Change/yield_gap.json";
 import africa_grain_projection from "../../assets/data/Food-Affordability/Climate-Change/africa-grain-projections.json";
+import sector_spending_africa from "../../assets/data/Food-Affordability/Climate-Change/sector_spending_africa.json";
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function ClimateChange() {
@@ -117,12 +119,6 @@ function ClimateChange() {
               as much as 10-30% by 2050.
             </p>
 
-            <ChartWrapper>
-              <h2 className="ms-4">Yield Gap of Staple Grains</h2>
-              <h3 className="ms-4">Africa 2022</h3>
-              <YieldGap data={yield_gap} geo={africa_geo} id={"yield-gap"} />
-            </ChartWrapper>
-
             <p>
               There's a lot of naunce lost especially considering how different
               the climate can be in parts of Africa. However the main point is
@@ -132,6 +128,12 @@ function ClimateChange() {
               given what climate change is doing will likely increase in
               frequency over the years.
             </p>
+
+            <ChartWrapper>
+              <h2 className="ms-4">Yield Gap of Staple Grains</h2>
+              <h3 className="ms-4">Africa 2022</h3>
+              <YieldGap data={yield_gap} geo={africa_geo} id={"yield-gap"} />
+            </ChartWrapper>
 
             <p>
               Climate change will make extreme weather events more common. In
@@ -201,37 +203,42 @@ function ClimateChange() {
               their national budget allocated towards Agriculture.
             </p>
 
-            <p>Graphic Placeholder here. </p>
+            <ChartWrapper>
+              <h2 className="ms-4">Planned Total Percent Spending of Countries</h2>
+              <h3 className="ms-4">Sub-Saharan Africa Agriculture vs Education, 2022</h3>
+              <SectorSpending data={sector_spending_africa} />
+            </ChartWrapper>
 
             <p>
-              In comparison the defense budgets of African countries 13
-              countries had 10% or more of their budget allocated for defense
-              purposes. Overall, 9 countries had a difference of more than 5%
-              from their agriculture budgets to defense. Two of them Somalia and
-              South Sudan are active warzones. Of the remaining five were within
-              the top 25 fragile states most notably for security issues.
+              So what have countries been spending their budgets on? One area
+              that stands out is education. 35 countries had education budgets
+              of more than 10% with over 20 countries were spending more than
+              three times their annual budgets for agriculture on education.
             </p>
 
             <p>
-              For some countries increases to agricultural development wasn't a
-              priority. This is especially strange considering how the issues
-              the region is facing. A rising population and climate change. The
-              current trajectory doesn't show any real changes from the
-              potential train wreck in the making. So what could happen if
-              nothing is changed?
+              However, where and how these funds were allocated often excluded
+              rural regions. With ISS African Futures stating that public
+              schools in rural areas, have poor infrastructure, are underfunded
+              and understaffed. With children from wealthier families
+              benefitting as much as 12 times more than counterparts. Rural
+              Development has largely been sidelined in favor of Africa's
+              growing urban population. But this is problematic due to climate
+              chang and Africa's rising population.
             </p>
 
             <p>
-              Maybe for example in Kenya where the number of land being
-              cultivated has increased but yields have been stagnant for
-              decades. What if the rest of Africa experiences similar issues in
-              the decades to come? Let's look at an example where yields for
-              grains do not change and that the total number of hectacres farmed
-              by subsistence farmers remains largely unchanged. While its
-              unlikely for some countries like Ethopia and South Africa to see a
-              decrease in productivity for other african countries it can show
-              us what the future could look like if countries don't continue to
-              invest in improvements to agriculture.
+              For many countries increasing agriculture expenditures still isn't
+              an immediate priority. But what could happen if yield growth rates
+              remain stagnant in parts of Africa? Let's look at an example where
+              yields for grains do not change and that the total number of
+              hectacres farmed by farmers remains largely unchanged.
+            </p>
+            <p>
+              While its unlikely for some countries like Ethopia and South
+              Africa to see a decrease in productivity for other african
+              countries it can show us what the future could look like if
+              countries don't continue to invest in improvements to agriculture.
             </p>
 
             <ChartWrapper>
@@ -253,9 +260,14 @@ function ClimateChange() {
               progress that has yet to be made.
             </p>
             <p>
-              While these issues like would not be solved by the end of the
-              decade. Considerable progress can be made and investing more would
-              push us towards equitable solutions.
+              While these issues may not be solved by the end of the decade.
+              Considerable progress can be made and investing more would push us
+              towards equitable solutions. But by the time that these solutions
+              will be needed the costs involved could be significantly higher
+              than if countries made the investments now. That being said for
+              many governments making these investments in favour of others may
+              not be financially sound as they are often juggling with a variety
+              of issues.
             </p>
           </div>
         </div>

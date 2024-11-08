@@ -19,7 +19,7 @@ function Home() {
     {
       title: "Climate Change & Beyond",
       link: "/food-affordability/climate-change",
-      time: "10m",
+      time: "5m",
     },
     {
       title: "Agricultural Subsidies & Rural Development",
