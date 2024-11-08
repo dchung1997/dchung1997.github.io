@@ -344,6 +344,10 @@ function FoodAffordability() {
                   color={"red"}
                 />
               </div>
+
+              <span className="source">
+                Source: UNICEF Data Warehouse
+              </span>
             </ChartWrapper>
 
             <p>

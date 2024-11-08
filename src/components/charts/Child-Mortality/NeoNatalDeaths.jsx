@@ -12,7 +12,7 @@ const NeoNatalDeaths = ({ data, id }) => {
         x: {grid: true, tickFormat: (d) => d.toString().replace(/,/g, ""), label: "",  ticks: 10 },
         title: "Children Stunted Under 5",
         subtitle: "South Asia 2000-2020",
-        caption: "Source: Our World in Data",
+        caption: "Source: UNICEF; World Health Organization; World Bank – processed by Our World in Data",
         color: {
           legend: true
         },

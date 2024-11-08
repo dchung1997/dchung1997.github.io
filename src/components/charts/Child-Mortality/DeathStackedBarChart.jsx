@@ -12,7 +12,7 @@ const DeathStackedBarChart = ({ data, id }) => {
           marginLeft: 33,
           title: "Total Number of Child Deaths Under 5 to Total Infant Deaths",
           subtitle: "UNICEF Global 2000-2022",
-          caption: "Source: UNICEF Data",
+          caption: "Source: UNICEF Data Warehouse",
           x: {label: null},
           y: {
             label: "Deaths (Millions)",
