@@ -72,6 +72,7 @@
 .prose .chart img {
     margin-bottom: 0;
     padding-top: 0;
+    padding-bottom: 0;
 }
 
 .prose .chart-small h2 {

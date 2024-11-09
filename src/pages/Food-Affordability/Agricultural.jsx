@@ -10,6 +10,7 @@ import Beeswarm from "../../components/charts/Beeswarm/Beeswarm";
 import AnnualExpenditures from "../../components/charts/Agriculture/AnnualExpenditures";
 import AnnualYieldFertilizer from "../../components/charts/Agriculture/AnnualYieldFertilizer";
 import AnnualProductionPerCapita from "../../components/charts/Agriculture/AnnualProductionPerCapita";
+import FertilizerUsage from "../../components/charts/Agriculture/FertilizerUsage";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -20,6 +21,7 @@ import kenya_yield from "../../assets/data/Food-Affordability/Agriculture/kenya_
 import kenya_fertilizer from "../../assets/data/Food-Affordability/Agriculture/kenya_fertilizer.json";
 import annual_production_3 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top3.json";
 import annual_production_6 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top6.json";
+import fertilizer_usage from "../../assets/data/Food-Affordability/Agriculture/fertilizer-use-per-hectare-of-cropland.json";
 
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
@@ -144,7 +146,10 @@ function Agricultural() {
             </p>
 
             <ChartWrapper>
-              <AnnualYieldFertilizer yieldData={kenya_yield} fertilizerData={kenya_fertilizer} /> 
+              <AnnualYieldFertilizer
+                yieldData={kenya_yield}
+                fertilizerData={kenya_fertilizer}
+              />
             </ChartWrapper>
 
             <p>
@@ -161,7 +166,7 @@ function Agricultural() {
               increased due to the amount of people being born there is less
               food per person. Increasing fertilizer usage alone isn't enough to
               increase the yields of crops.
-            </p>         
+            </p>
 
             <p>
               On the same note increasing fertilizer production does not
@@ -171,8 +176,11 @@ function Agricultural() {
             </p>
 
             <ChartWrapper>
-              <AnnualProductionPerCapita firstThree={annual_production_3} lastThree={annual_production_6} />
-            </ChartWrapper>   
+              <AnnualProductionPerCapita
+                firstThree={annual_production_3}
+                lastThree={annual_production_6}
+              />
+            </ChartWrapper>
 
             <p>
               More needs to be done to address these issues but countries are
@@ -214,7 +222,15 @@ function Agricultural() {
               rotation of crops to manage soil as needed.
             </p>
 
-            <p>Placeholder</p>
+            <ChartWrapper>
+              <h2>Total Fertilizer Usage per Hectacre of Cropland</h2>
+              <h3>Africa 1970 to 2020</h3>
+              <FertilizerUsage
+                data={fertilizer_usage}
+                geo={africa_geo}
+                id={"fertilizer-usage"}
+              />
+            </ChartWrapper>
 
             <p>
               Along with this, governments can start public works projects to
