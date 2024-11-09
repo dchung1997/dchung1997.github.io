@@ -8,12 +8,19 @@ import Sources from "../../components/ui/Sources/Sources";
 
 import Beeswarm from "../../components/charts/Beeswarm/Beeswarm";
 import AnnualExpenditures from "../../components/charts/Agriculture/AnnualExpenditures";
+import AnnualYieldFertilizer from "../../components/charts/Agriculture/AnnualYieldFertilizer";
+import AnnualProductionPerCapita from "../../components/charts/Agriculture/AnnualProductionPerCapita";
 
 import useTitle from "../../hooks/useTitle";
 
 import country_affordability from "../../assets/data/Food-Affordability/country_affordability_data.json";
 import income_consumption_data from "../../assets/data/Food-Affordability/income_consumption_data.json";
 import agriculture_expenditures from "../../assets/data/Food-Affordability/Agriculture/agricultural_expenditures.json";
+import kenya_yield from "../../assets/data/Food-Affordability/Agriculture/kenya_yields.json";
+import kenya_fertilizer from "../../assets/data/Food-Affordability/Agriculture/kenya_fertilizer.json";
+import annual_production_3 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top3.json";
+import annual_production_6 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top6.json";
+
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function Agricultural() {
@@ -31,7 +38,6 @@ function Agricultural() {
     (d) => d["avg_welfare"]
   );
 
-  // Series and Articles.
   return (
     <>
       <Header />
@@ -137,7 +143,9 @@ function Agricultural() {
               consider how much food countries are producing per year.
             </p>
 
-            <p>Placeholder</p>
+            <ChartWrapper>
+              <AnnualYieldFertilizer yieldData={kenya_yield} fertilizerData={kenya_fertilizer} /> 
+            </ChartWrapper>
 
             <p>
               Per Capita Production of Grains has consistently decreased since
@@ -153,7 +161,7 @@ function Agricultural() {
               increased due to the amount of people being born there is less
               food per person. Increasing fertilizer usage alone isn't enough to
               increase the yields of crops.
-            </p>
+            </p>         
 
             <p>
               On the same note increasing fertilizer production does not
@@ -162,7 +170,9 @@ function Agricultural() {
               distribution of fertilizer to small scale farmers.
             </p>
 
-            <p> Placeholder </p>
+            <ChartWrapper>
+              <AnnualProductionPerCapita firstThree={annual_production_3} lastThree={annual_production_6} />
+            </ChartWrapper>   
 
             <p>
               More needs to be done to address these issues but countries are
@@ -216,7 +226,12 @@ function Agricultural() {
               and region.
             </p>
 
-            <p>Placeholder</p>
+            <div className="flex items-center justify-center pb-8">
+              <img
+                src="/src/assets/images/series/agriculture/average-precipitation-per-year.png"
+                className="object-cover w-3/4 card"
+              ></img>
+            </div>
 
             <p>
               The issues to deal with water rights and distribution are a bit

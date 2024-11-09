@@ -24,7 +24,7 @@ function Home() {
     {
       title: "Agricultural Subsidies & Rural Development",
       link: "/food-affordability/agriculture",
-      time: "5m",
+      time: "6m",
     },
     {
       title: "Manufacturing & Urban Development",
