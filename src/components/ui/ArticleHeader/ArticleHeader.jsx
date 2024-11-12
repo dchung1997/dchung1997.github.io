@@ -1,5 +1,6 @@
 const ArticleHeader = ({ title, date }) => {
-  
+    const imagePath = import.meta.env.VITE_IMAGE_PATH;
+
     const formattedDate = date.toLocaleDateString("en-US", {
     weekday: 'long',        
     month: "long",
@@ -34,7 +35,7 @@ const ArticleHeader = ({ title, date }) => {
                 decoding="async"
                 data-nimg="1"
                 className="h-10 w-10 rounded-full border border-gray-300 "
-                src="/src/assets/images/avatar.png"
+                src={`${imagePath}/avatar.png`}
               />
               <dl className="whitespace-nowrap text-sm font-medium leading-5">
                 <dt className="sr-only">Name</dt>

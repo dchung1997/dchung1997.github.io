@@ -27,6 +27,7 @@ import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/afri
 
 function Agricultural() {
   useTitle("Agriculture Subsidies & Rural Development");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
 
   const citedSources = [""];
 
@@ -63,7 +64,7 @@ function Agricultural() {
                 <h3 className="ms-5">
                   Diet Cost by Percentage of Daily Income (2017 PPP){" "}
                 </h3>
-                <img src="/src/assets/images/series/agriculture/legend.png"></img>
+                <img src={`${imagePath}/series/agriculture/legend.png`}></img>
                 <Beeswarm
                   data={africa}
                   extent={extentPercentile}
@@ -89,6 +90,9 @@ function Agricultural() {
               member states only a few countries consistently achieved that
               target from 2000 to 2020.
             </p>
+
+            <p> Graphic Here </p>
+
             <p>
               In the recent history of the Marputo Declaration investments by
               countries have varied quite significantly. While many countries
@@ -127,7 +131,7 @@ function Agricultural() {
               recommit towards making the changes necessary to end issues like
               food insecurity and hunger. The Nairobi Declaration could be a way
               for countries to make that change. But for many countries the
-              money just isn't there.
+              Nairobi Declaration was a cry for help as countries asked for more foreign aid.
             </p>
 
             <p>
@@ -199,6 +203,16 @@ function Agricultural() {
               problem that countries will likely need to solve at the same time.
             </p>
 
+            <ChartWrapper>
+              <h2>Total Fertilizer Usage per Hectacre of Cropland</h2>
+              <h3>Africa 1970 to 2020</h3>
+              <FertilizerUsage
+                data={fertilizer_usage}
+                geo={africa_geo}
+                id={"fertilizer-usage"}
+              />
+            </ChartWrapper>            
+
             <p>
               Having a central government offer a stable market rate in which
               farmers can sell goods to can provide a stable and consistent
@@ -222,16 +236,6 @@ function Agricultural() {
               rotation of crops to manage soil as needed.
             </p>
 
-            <ChartWrapper>
-              <h2>Total Fertilizer Usage per Hectacre of Cropland</h2>
-              <h3>Africa 1970 to 2020</h3>
-              <FertilizerUsage
-                data={fertilizer_usage}
-                geo={africa_geo}
-                id={"fertilizer-usage"}
-              />
-            </ChartWrapper>
-
             <p>
               Along with this, governments can start public works projects to
               create irrigation systems and ensure access to tools such as
@@ -244,7 +248,7 @@ function Agricultural() {
 
             <div className="flex items-center justify-center pb-8">
               <img
-                src="/src/assets/images/series/agriculture/average-precipitation-per-year.png"
+                src={`${imagePath}/series/agriculture/average-precipitation-per-year.png`}
                 className="object-cover w-3/4 card"
               ></img>
             </div>

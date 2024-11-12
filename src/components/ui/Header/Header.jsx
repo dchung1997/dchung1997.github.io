@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
+
 import NewsletterSignup from '../../forms/Newsletter';
 
 import './Header.css';
 
 const Header = () => {
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
   return (
     <header className='flex items-center w-full justify-between sm:py-1 md:py-3 border-b'>
       <Link to="/">
         <div className="mr-3">
           <div className="flex items-center justify-between">
-            <img src="/src/assets/images/logo.svg" alt="Logo" />
+            <img src={`${imagePath}/logo.svg`} alt="Logo" />
           </div>
         </div>
       </Link>

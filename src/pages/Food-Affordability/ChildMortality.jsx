@@ -22,6 +22,7 @@ import neo_natal_india from "../../assets/data/Food-Affordability/Child-Mortalit
 
 function FoodAffordability() {
   useTitle("Child Mortality & Undernutrition");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
 
   const citedSources = [
     "https://data.unicef.org/topic/child-survival/under-five-mortality/",
@@ -91,7 +92,7 @@ function FoodAffordability() {
 
             <div className="flex items-center justify-center pb-8">
               <img
-                src="/src/assets/images/series/child-mortality/infant-mortality-vaccines.png"
+                src={`${imagePath}/series/child-mortality/infant-mortality-vaccines.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
@@ -106,7 +107,7 @@ function FoodAffordability() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Undernutrition Deaths Chart"
-                src="/src/assets/images/series/child-mortality/child-deaths-malnutrition-by-risk.png"
+                src={`${imagePath}/series/child-mortality/child-deaths-malnutrition-by-risk.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
@@ -124,7 +125,7 @@ function FoodAffordability() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Children Under 5 Cause of Death Death"
-                src="/src/assets/images/series/child-mortality/causes-of-death-in-children-under-5.png"
+                src={`${imagePath}/series/child-mortality/causes-of-death-in-children-under-5.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
@@ -174,7 +175,7 @@ function FoodAffordability() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Neonatal Deaths by Region"
-                src="/src/assets/images/series/child-mortality/neonatal-deaths-by-region.png"
+                src={`${imagePath}/series/child-mortality/neonatal-deaths-by-region.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
@@ -244,7 +245,7 @@ function FoodAffordability() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Timeline of Annual Total Births by Region"
-                src="/src/assets/images/series/child-mortality/annual-number-of-births-by-world-region.png"
+                src={`${imagePath}/series/child-mortality/annual-number-of-births-by-world-region.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
@@ -258,7 +259,7 @@ function FoodAffordability() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Neonatal Deaths Barchart 1990 and 2022"
-                src="/src/assets/images/series/child-mortality/neonatal-deaths-barchart.png"
+                src={`${imagePath}/series/child-mortality/neonatal-deaths-barchart.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>

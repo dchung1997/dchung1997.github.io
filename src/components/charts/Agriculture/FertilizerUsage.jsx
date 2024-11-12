@@ -114,7 +114,7 @@ const FertilizerUsage = ({ data, geo, id }) => {
       <div ref={plotRef} className="fertilizer-usage-chart chart" id={id}></div>
       <div
         ref={plotRefBottom}
-        className="fertilizer-usage-chart"
+        className="fertilizer-usage-chart chart"
         id={id + "-bottom"}
       ></div>
     </>

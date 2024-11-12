@@ -24,6 +24,7 @@ import Sources from "../../components/ui/Sources/Sources";
 
 function FoodAffordability() {
   useTitle("Food Affordability");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
 
   const citedSources = ["https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition", "https://databank.worldbank.org/source/food-prices-for-nutrition", 
   "https://datacatalog.worldbank.org/search/dataset/0063646/-Poverty-and-Inequality-Platform--PIP---Percentiles", "https://population.un.org/wpp/",
@@ -229,7 +230,7 @@ function FoodAffordability() {
             </p>
             <div className="flex items-center justify-center ">
               <img
-                src="/src/assets/images/series/food-affordabilty-diet.png"
+                src={`${imagePath}/series/food-affordabilty-diet.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>

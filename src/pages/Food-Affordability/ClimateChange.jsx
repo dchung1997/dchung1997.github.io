@@ -25,6 +25,7 @@ import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/afri
 
 function ClimateChange() {
   useTitle("Climate Change & Beyond");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
 
   const citedSources = ["https://datacatalog.worldbank.org/search/dataset/0063646/-Poverty-and-Inequality-Platform--PIP---Percentiles", "https://ourworldindata.org/will-climate-change-affect-crop-yields-future", "https://www.fao.org/faostat/", "https://www.nature.com/articles/nature11420", "https://www.economicsandpeace.org/wp-content/uploads/2020/09/Ecological-Threat-Register-Press-Release-27.08-FINAL.pdf", "https://www.worldbank.org/en/news/press-release/2021/09/13/climate-change-could-force-216-million-people-to-migrate-within-their-own-countries-by-2050", "https://wmo.int/news/media-centre/africa-faces-disproportionate-burden-from-climate-change-and-adaptation-costs", "https://ourworldindata.org/grapher/cereal-yield", "https://www.governmentspendingwatch.net/", "https://futures.issafrica.org/thematic/06-education/" ,"https://population.un.org/wpp/"];
 
@@ -95,7 +96,7 @@ function ClimateChange() {
             <div className="flex items-center justify-center pb-8">
               <img
                 alt="Yield Gaps in Food Systems, Kenya, Maize"
-                src="/src/assets/images/series/climate-change/kenya-maize-climate_1350.png"
+                src={`${imagePath}/series/climate-change/kenya-maize-climate_1350.png`} 
                 className="object-cover w-3/4 card"
               ></img>
             </div>
