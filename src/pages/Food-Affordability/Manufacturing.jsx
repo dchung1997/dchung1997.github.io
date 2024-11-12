@@ -7,6 +7,8 @@ import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
 import Urbanization from "../../components/charts/Manufacturing/Urbanization";
+import ChildObesity from "../../components/charts/Manufacturing/ChildObesity";
+import ExtremePoverty from "../../components/charts/Manufacturing/ExtremePoverty";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -19,7 +21,7 @@ import geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outl
 function Manufacturing() {
   useTitle("Climate Change");
 
-  const citedSources = [""];
+  const citedSources = ["https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355"];
 
   // Series and Articles.
   return (
@@ -65,11 +67,9 @@ function Manufacturing() {
               not the main priority for people who live in these areas.
             </p>
 
-            <img
-              alt="Share of Population Extreme Poverty, Africa, 2018 to 2024."
-              src="/static/images/food-affordability/population-extreme-poverty.png"
-              className="w-full h-auto"
-            />
+            <ChartWrapper>
+              <ExtremePoverty/>
+            </ChartWrapper>
 
             <p>
               Obesity is a growing problem in African countries while its not as
@@ -282,11 +282,9 @@ function Manufacturing() {
               children were overweight or obese with only 8.4% in rural areas.
             </p>
 
-            <img
-              alt="Overweight and Obese Children Ages 5 to 11."
-              src="/static/images/food-affordability/overweight-obese-africa.png"
-              className="w-full h-auto"
-            />
+            <ChartWrapper>
+              <ChildObesity/>
+            </ChartWrapper>
 
             <p>
               Something as simple as canned foods could greatly increase the

@@ -14,6 +14,7 @@ const Urbanization = ({ firstData, lastData, noData, geo, id }) => {
         marginRight: 0,
         title: "Urbanization of Africa",
         subtitle: "Percentage of Population living in Urban Areas, 1960 to 2050",
+        width:1100,
         fx: { label:null},
         projection: { 
           type:"mercator",
@@ -27,7 +28,7 @@ const Urbanization = ({ firstData, lastData, noData, geo, id }) => {
           domain: [0,100]
         },
         marks: [
-          Plot.axisFx({ fontSize: 14, tickFormat: (d) => d.toString().replace(",", ""), dx: -15 }),    
+          Plot.axisFx({ fontSize: 18, tickFormat: (d) => d.toString().replace(",", ""), dx: -15 }),    
           Plot.geo(geo, {strokeOpacity: 0.5, stroke: "grey"}),
           Plot.geo(noData, {fill: "grey",fillOpacity: 0.4}),
           Plot.geo(firstData, Plot.centroid({
@@ -56,6 +57,7 @@ const Urbanization = ({ firstData, lastData, noData, geo, id }) => {
         marginLeft: 0,
         marginRight: 0,
         caption: "Source: UN Population Division, World Urbanization Prospects",
+        width:1100,
         fx: { label:null},
         projection: { 
           type:"mercator",
@@ -69,7 +71,7 @@ const Urbanization = ({ firstData, lastData, noData, geo, id }) => {
           domain: [0,100]
         },
         marks: [
-          Plot.axisFx({ fontSize: 14, tickFormat: (d) => d.toString().replace(",", ""), dx: -15 }),    
+          Plot.axisFx({ fontSize: 18, tickFormat: (d) => d.toString().replace(",", ""), dx: -15 }),    
           Plot.geo(geo, {strokeOpacity: 0.5, stroke: "grey"}),
           Plot.geo(noData, {fill: "grey",fillOpacity: 0.4}),
           Plot.geo(lastData, Plot.centroid({
