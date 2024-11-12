@@ -69,6 +69,7 @@
     margin-bottom: 0;
 }
 
+
 .prose .chart img {
     margin-bottom: 0;
     padding-top: 0;
@@ -81,7 +82,10 @@
 
 .prose .chart-small h3 {
     font-size: 0.75rem;
-    margin-left: 0.175rem;
+}
+
+.prose .chart-small figure h3 {
+    margin-left: 0;
 }
 
 .prose .chart figcaption {

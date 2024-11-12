@@ -127,7 +127,21 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               strokeOpacity: 0.5,
               strokeWidth: 0.5,
               fx: "Year",
-              tip: true,
+              tip: {
+                channels: {
+                    Country: "Country",
+                    Year: "Year",
+                    Spending: "Value"
+                },
+                format: {
+                    Country: true,
+                    Year: true,
+                    Spending: true,
+                    fx:false,
+                    fill: false,
+                }
+                
+              },
               dx:-15
             })
           ),
@@ -181,6 +195,21 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               strokeOpacity: 0.5,
               strokeWidth: 0.5,
               fx: "Year",
+              tip: {
+                channels: {
+                    Country: "Country",
+                    Year: "Year",
+                    Spending: "Value"
+                },
+                format: {
+                    Country: true,
+                    Year: true,
+                    Spending: true,
+                    fx:false,
+                    fill: false,
+                }
+                
+              },              
               dx:-15
             })
           ),

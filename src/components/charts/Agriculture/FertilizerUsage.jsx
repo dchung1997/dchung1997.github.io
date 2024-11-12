@@ -67,7 +67,6 @@ const FertilizerUsage = ({ data, geo, id }) => {
       });
 
       const plotBottom = Plot.plot({
-        caption: "Source: UN FAO, FAOSTAT",
         fx: { label:null},
         projection: { 
           type:"mercator",

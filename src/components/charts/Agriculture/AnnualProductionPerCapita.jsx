@@ -29,7 +29,7 @@ const AnnualProductionPerCapita = ({ firstThree, lastThree, id }) => {
 
       const plotBottom =  Plot.plot({
         style: "overflow: visible;",
-        caption: "Source: UN FAO",
+        caption: "Source: Food and Agriculture Organization of the United Nations (2023) – with major processing by Our World in Data",
         height: 250,
         width: 1300,
         color: {

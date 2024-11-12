@@ -32,7 +32,20 @@ function Agricultural() {
   useTitle("Agriculture Subsidies & Rural Development");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
 
-  const citedSources = [""];
+  const citedSources = [
+    "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition",
+    "https://databank.worldbank.org/source/food-prices-for-nutrition",
+    "https://datacatalog.worldbank.org/search/dataset/0063646/-Poverty-and-Inequality-Platform--PIP---Percentiles",
+    "https://www.nepad.org/caadp/publication/au-2003-maputo-declaration-agriculture-and-food-security",
+    "https://www.resakss.org/node/11",
+    "https://www.afdb.org/sites/default/files/2023/09/08/the_african_leaders_nairobi_declaration_on_climate_change-rev-eng.pdf",
+    "https://population.un.org/wpp/",
+    "https://apnews.com/article/kenya-agriculture-farming-soil-acidic-93a2d59e54cf39f9aff972d6c8599285",
+    "https://www.fao.org/faostat/",
+    "https://ourworldindata.org/crop-yields",
+    "https://ourworldindata.org/fertilizers",
+    "https://ourworldindata.org/water-use-stress",
+  ];
 
   const data = country_affordability.data;
   const populationExtent = d3.extent(data, (d) =>
@@ -113,8 +126,8 @@ function Agricultural() {
               decrease.
             </p>
             <p>
-              Parts of Africa increased agricultural spent when they could while
-              others fell into a slump. But by the COVID-19 Pandemic most
+              Parts of Africa increased agricultural spending when they could
+              while others fell into a slump. But by the COVID-19 Pandemic most
               countries felt the strain on their economies as money and
               financial options began to dry up.
             </p>
@@ -167,6 +180,10 @@ function Agricultural() {
                 yieldData={kenya_yield}
                 fertilizerData={kenya_fertilizer}
               />
+              <span className="source">
+                Source: Food and Agriculture Organization of the United Nations
+                (2023) – with major processing by Our World in Data
+              </span>
             </ChartWrapper>
 
             <p>
@@ -189,7 +206,8 @@ function Agricultural() {
               On the same note increasing fertilizer production does not
               necessarily make fertilizer more affordable for small scale
               farmers. A key issue missing from the Nairobi Declaration was the
-              distribution of fertilizer to small scale farmers.
+              distribution of fertilizer to small scale farmers and if it would
+              happen at all.
             </p>
 
             <ChartWrapper>
@@ -218,12 +236,16 @@ function Agricultural() {
 
             <ChartWrapper>
               <h2>Total Fertilizer Usage per Hectacre of Cropland</h2>
-              <h3>Africa 1970 to 2020</h3>
+              <h3 className="ms-1">Africa 1970 to 2020</h3>
               <FertilizerUsage
                 data={fertilizer_usage}
                 geo={africa_geo}
                 id={"fertilizer-usage"}
               />
+              <span className="source">
+                Source: Food and Agriculture Organization of the United Nations
+                (2023) – with major processing by Our World in Data
+              </span>
             </ChartWrapper>
 
             <p>
@@ -253,10 +275,12 @@ function Agricultural() {
               Along with this, governments can start public works projects to
               create irrigation systems and ensure access to tools such as
               sprinklers and proper maintanence of fields. Systems like these
-              were developed in South Asia throughout the 1900s. In many ways
-              many parts of Sub-Saharan Africa are very similar to conditions
-              seen in South Asia, though they do vary to some degree by country
-              and region.
+              were developed in South Asia throughout the 1900s. With both
+              fertilizer and irrigation being large reasons behind the yield
+              gaps seen in many African countries. In many ways many parts of
+              Sub-Saharan Africa the geographic and ecological conditions are
+              very similar to those seen in Southern Asia, though they do vary
+              to some degree by country and region.
             </p>
 
             <div className="flex items-center justify-center pb-8">

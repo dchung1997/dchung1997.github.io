@@ -14,7 +14,7 @@ const AnnualSpending = ({ countries, spending, id }) => {
         y: {label:null},
         caption: "Source: ReSAKSS: Tracking Indicators, Level-3 Government Agricultural Spending (% of Total Expenditures).",
         marks: [
-          Plot.lineY(countries, {x: "Year", y: "Spending", z:"Country", fx: "intermediate-region", stroke: "grey", tip: true, opacity: 0.5}),
+          Plot.lineY(countries, {x: "Year", y: "Spending", z:"Country", fx: "intermediate-region", stroke: "grey", opacity: 0.5}),
           Plot.lineY(spending, {x: "Year", y: "Spending", fx: "Country", stroke: "Country", strokeWidth: 2.5 }),   
           Plot.ruleY([10], {strokeDasharray: "4,4", stroke:"black"}),
           Plot.axisFx({ fontSize: 14 }),
