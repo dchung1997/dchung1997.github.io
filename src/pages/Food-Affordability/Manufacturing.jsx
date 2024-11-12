@@ -6,7 +6,15 @@ import ArticleHeader from "../../components/ui/ArticleHeader/ArticleHeader";
 import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
+import Urbanization from "../../components/charts/Manufacturing/Urbanization";
+
 import useTitle from "../../hooks/useTitle";
+
+import urbanization_data from "../../assets/data/Food-Affordability/Manufacturing/urbanization_data.json";
+import urbanization_data_after from "../../assets/data/Food-Affordability/Manufacturing/urbanization_data_after.json";
+import urbanization_no_data from "../../assets/data/Food-Affordability/Manufacturing/urbanization_no_data.json";
+
+import geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function Manufacturing() {
   useTitle("Climate Change");
@@ -32,11 +40,14 @@ function Manufacturing() {
               to include these urban centers.
             </p>
 
-            <img
-              alt="Africa Urbanization, 1960 to 2020."
-              src="/static/images/food-affordability/africa-urbanization.png"
-              className="w-full h-auto"
-            />
+            <ChartWrapper>
+              <Urbanization
+                firstData={urbanization_data}
+                lastData={urbanization_data_after}
+                noData={urbanization_no_data}
+                geo={geo}
+              />
+            </ChartWrapper>
 
             <p>
               More often than not the policy makers behind these decisions need
@@ -89,176 +100,178 @@ function Manufacturing() {
               known as food deserts.
             </p>
 
-            <h3 className="font-bold text-2xl">Staple Foods</h3>
+            <ChartWrapper>
+              <h3 className="font-bold text-2xl">Staple Foods</h3>
 
-            <table className="table-fixed">
-              <thead>
-                <tr>
-                  <th>Crop</th>
-                  <th>Environment</th>
-                  <th>Temperature</th>
-                  <th>Humidity</th>
-                  <th>Storage Life</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cassava (fresh) </td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>85%-90%</td>
-                  <td>2-3 days</td>
-                </tr>
-                <tr>
-                  <td>Cassava (dried) </td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>85%-90%</td>
-                  <td>5-6 months</td>
-                </tr>
-                <tr>
-                  <td>Beets</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>4-10 months</td>
-                </tr>
-                <tr>
-                  <td>Potatoes</td>
-                  <td>Humid</td>
-                  <td>45°F</td>
-                  <td>95%</td>
-                  <td>2-9 months</td>
-                </tr>
-                <tr>
-                  <td>Carrots</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>5-6 months</td>
-                </tr>
-                <tr>
-                  <td>Radishes</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>3-4 weeks</td>
-                </tr>
-                <tr>
-                  <td>Sweet Potatoes</td>
-                  <td>Warm and Humid</td>
-                  <td>50-60°F</td>
-                  <td>90-95%</td>
-                  <td>6-9 months</td>
-                </tr>
-              </tbody>
-            </table>
+              <table className="table-fixed">
+                <thead>
+                  <tr>
+                    <th>Crop</th>
+                    <th>Environment</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Storage Life</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cassava (fresh) </td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>85%-90%</td>
+                    <td>2-3 days</td>
+                  </tr>
+                  <tr>
+                    <td>Cassava (dried) </td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>85%-90%</td>
+                    <td>5-6 months</td>
+                  </tr>
+                  <tr>
+                    <td>Beets</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>4-10 months</td>
+                  </tr>
+                  <tr>
+                    <td>Potatoes</td>
+                    <td>Humid</td>
+                    <td>45°F</td>
+                    <td>95%</td>
+                    <td>2-9 months</td>
+                  </tr>
+                  <tr>
+                    <td>Carrots</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>5-6 months</td>
+                  </tr>
+                  <tr>
+                    <td>Radishes</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>3-4 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Sweet Potatoes</td>
+                    <td>Warm and Humid</td>
+                    <td>50-60°F</td>
+                    <td>90-95%</td>
+                    <td>6-9 months</td>
+                  </tr>
+                </tbody>
+              </table>
 
-            <h3 className="font-bold text-2xl">Vegetables</h3>
-            <table className="table-fixed">
-              <thead>
-                <tr>
-                  <th>Crop</th>
-                  <th>Environment</th>
-                  <th>Temperature</th>
-                  <th>Humidity</th>
-                  <th>Storage Life</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Asparagus</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>2-3 weeks</td>
-                </tr>
-                <tr>
-                  <td>Broccoli</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>2-3 weeks</td>
-                </tr>
-                <tr>
-                  <td>Cabbage</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>1-6 months</td>
-                </tr>
-                <tr>
-                  <td>Lettuce and Other Greens</td>
-                  <td>Cool and Humid</td>
-                  <td>32-36°F</td>
-                  <td>95-98%</td>
-                  <td>1-2 weeks</td>
-                </tr>
-                <tr>
-                  <td>Onions (Bulbs)</td>
-                  <td>Cool and Dry</td>
-                  <td>32-40°F</td>
-                  <td>65%</td>
-                  <td>6-9 months</td>
-                </tr>
-              </tbody>
-            </table>
+              <h3 className="font-bold text-2xl">Vegetables</h3>
+              <table className="table-fixed">
+                <thead>
+                  <tr>
+                    <th>Crop</th>
+                    <th>Environment</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Storage Life</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Asparagus</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>2-3 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Broccoli</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>2-3 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Cabbage</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>1-6 months</td>
+                  </tr>
+                  <tr>
+                    <td>Lettuce and Other Greens</td>
+                    <td>Cool and Humid</td>
+                    <td>32-36°F</td>
+                    <td>95-98%</td>
+                    <td>1-2 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Onions (Bulbs)</td>
+                    <td>Cool and Dry</td>
+                    <td>32-40°F</td>
+                    <td>65%</td>
+                    <td>6-9 months</td>
+                  </tr>
+                </tbody>
+              </table>
 
-            <h3 className="font-bold text-2xl">Fruits</h3>
+              <h3 className="font-bold text-2xl">Fruits</h3>
 
-            <table className="table-fixed">
-              <thead>
-                <tr>
-                  <th>Crop</th>
-                  <th>Environment</th>
-                  <th>Temperature</th>
-                  <th>Humidity</th>
-                  <th>Storage Life</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Eggplants</td>
-                  <td>Warm and Humid</td>
-                  <td>50-54°F</td>
-                  <td>90-95%</td>
-                  <td>1-2 weeks</td>
-                </tr>
-                <tr>
-                  <td>Peppers</td>
-                  <td>Humid</td>
-                  <td>45°F</td>
-                  <td>95%</td>
-                  <td>2-3 weeks</td>
-                </tr>
-                <tr>
-                  <td>Squash (Summer)</td>
-                  <td>Humid</td>
-                  <td>45°F</td>
-                  <td>95%</td>
-                  <td>1-2 weeks</td>
-                </tr>
-                <tr>
-                  <td>Tomatoes</td>
-                  <td>Warm and Humid</td>
-                  <td>50-60°F</td>
-                  <td>90-95%</td>
-                  <td>2-14 days</td>
-                </tr>
-                <tr>
-                  <td>Watermelon</td>
-                  <td>Warm and Humid</td>
-                  <td>50-60°F</td>
-                  <td>90-95%</td>
-                  <td>2-3 weeks</td>
-                </tr>
-              </tbody>
-            </table>
-            <span className="source">
-              {" "}
-              Source: South Dakota State, Storage Life of Vegetables, Rhoda
-              Burrows{" "}
-            </span>
+              <table className="table-fixed">
+                <thead>
+                  <tr>
+                    <th>Crop</th>
+                    <th>Environment</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Storage Life</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eggplants</td>
+                    <td>Warm and Humid</td>
+                    <td>50-54°F</td>
+                    <td>90-95%</td>
+                    <td>1-2 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Peppers</td>
+                    <td>Humid</td>
+                    <td>45°F</td>
+                    <td>95%</td>
+                    <td>2-3 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Squash (Summer)</td>
+                    <td>Humid</td>
+                    <td>45°F</td>
+                    <td>95%</td>
+                    <td>1-2 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Tomatoes</td>
+                    <td>Warm and Humid</td>
+                    <td>50-60°F</td>
+                    <td>90-95%</td>
+                    <td>2-14 days</td>
+                  </tr>
+                  <tr>
+                    <td>Watermelon</td>
+                    <td>Warm and Humid</td>
+                    <td>50-60°F</td>
+                    <td>90-95%</td>
+                    <td>2-3 weeks</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span className="source">
+                {" "}
+                Source: South Dakota State, Storage Life of Vegetables, Rhoda
+                Burrows{" "}
+              </span>
+            </ChartWrapper>
 
             <p>
               Often the existence of food deserts can increase the rate of

@@ -129,12 +129,11 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               tip: {
                 channels: {
                     Country: "country",
-                    Year: "Year",
-                    Spending: "Value"
+                    "Spending (%)": "Value"
                 },
                 format: {
                     Country: true,
-                    Spending: true,
+                    "Spending (%)": true,
                     Year: true,
                     fx:false,
                     fill: false,
@@ -197,12 +196,11 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               tip: {
                 channels: {
                     Country: "country",
-                    Year: "Year",
-                    Spending: "Value"
+                    "Spending (%)": "Value"
                 },
                 format: {
                     Country: true,
-                    Spending: true,
+                    "Spending (%)": true,
                     Year: true,
                     fx:false,
                     fill: false,
