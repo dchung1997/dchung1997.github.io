@@ -54,7 +54,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 const NewsletterSignup = () => {
   return (
-    <>
+    <div>
       <ToastContainer />  {/* Ensure ToastContainer is rendered */}
       <MailchimpSubscribe
       url={url}
@@ -65,7 +65,7 @@ const NewsletterSignup = () => {
           onValidated={formData => subscribe(formData)}
         />
       )}/>
-    </>
+    </div>
   );
 };
 
