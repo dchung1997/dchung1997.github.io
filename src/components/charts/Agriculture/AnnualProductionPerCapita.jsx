@@ -21,6 +21,7 @@ const AnnualProductionPerCapita = ({ firstThree, lastThree, id }) => {
         marks: [
           Plot.lineY(firstThree, {x: "Year", y: "Production per capita (kg)", fx: "Country", stroke: "Country"}),
           Plot.areaY(firstThree, {x: "Year", y: "Production per capita (kg)", fx: "Country", fill: "Country", fillOpacity: 0.7}),
+          Plot.tip(firstThree, Plot.pointerX({x: "Year", y: "Production per capita (kg)", fontSize: 18 })),
           Plot.axisX({ fontSize: 14, tickFormat: (d) => d.toString().replace(",", ""), label:null }),
           Plot.axisFx({ fontSize: 14, label:null, tickFormat: null}),  
           Plot.axisY({ ticks: 5, fontSize: 14, label:null }),
@@ -39,6 +40,7 @@ const AnnualProductionPerCapita = ({ firstThree, lastThree, id }) => {
         marks: [
           Plot.lineY(lastThree, {x: "Year", y: "Production per capita (kg)", fx: "Country", stroke: "Country"}),
           Plot.areaY(lastThree, {x: "Year", y: "Production per capita (kg)", fx: "Country", fill: "Country", fillOpacity: 0.7}),
+          Plot.tip(lastThree, Plot.pointerX({x: "Year", y: "Production per capita (kg)", fontSize: 18 })),
           Plot.axisX({ fontSize: 14, tickFormat: (d) => d.toString().replace(",", ""), label:null }),
           Plot.axisFx({ fontSize: 14, label:null, tickFormat: null}),  
           Plot.axisY({ ticks: 5, fontSize: 14, label:null })  

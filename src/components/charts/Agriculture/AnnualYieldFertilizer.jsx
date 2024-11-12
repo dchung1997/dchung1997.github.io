@@ -21,6 +21,7 @@ const AnnualYieldFertilizer = ({ yieldData, fertilizerData, id }) => {
         marks: [
           Plot.lineY(yieldData, {x: "Year", y: "Yield (t/ha)", stroke: "Country"}),
           Plot.areaY(yieldData, {x: "Year", y: "Yield (t/ha)", fill: "Country", opacity:0.7}),
+          Plot.tip(yieldData, Plot.pointerX({x: "Year", y: "Yield (t/ha)", fontSize: 18 })),
           Plot.axisX({ fontSize: 12, tickFormat: (d) => d.toString().replace(",", ""), label:null }),
           Plot.axisY({ ticks: 5, fontSize: 12})  
         ]
@@ -38,6 +39,7 @@ const AnnualYieldFertilizer = ({ yieldData, fertilizerData, id }) => {
         marks: [
           Plot.lineY(fertilizerData, {x: "Year", y: "All fertilizers use per area of cropland", stroke: "Entity"}),
           Plot.areaY(fertilizerData, {x: "Year", y: "All fertilizers use per area of cropland", fill: "Entity", opacity:0.7}),
+          Plot.tip(fertilizerData, Plot.pointerX({x: "Year", y: "All fertilizers use per area of cropland", fontSize: 18})),
           Plot.axisX({ fontSize: 12, tickFormat: (d) => d.toString().replace(",", "") }),
           Plot.axisY({ domain: [0,3], ticks: 10, fontSize: 12 })  
         ]

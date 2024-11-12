@@ -62,7 +62,6 @@ const AnnualExpenditures = ({ data, geo, id }) => {
       const lastThree = calculate4YearAverages(data).filter(
         (d) => d.Year % 4 == 0 && d.Year > 2010
       );
-
       const firstData = firstThree
         .filter((d) => {
           const element = geo.features.find(
@@ -129,14 +128,14 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               fx: "Year",
               tip: {
                 channels: {
-                    Country: "Country",
+                    Country: "country",
                     Year: "Year",
                     Spending: "Value"
                 },
                 format: {
                     Country: true,
-                    Year: true,
                     Spending: true,
+                    Year: true,
                     fx:false,
                     fill: false,
                 }
@@ -197,14 +196,14 @@ const AnnualExpenditures = ({ data, geo, id }) => {
               fx: "Year",
               tip: {
                 channels: {
-                    Country: "Country",
+                    Country: "country",
                     Year: "Year",
                     Spending: "Value"
                 },
                 format: {
                     Country: true,
-                    Year: true,
                     Spending: true,
+                    Year: true,
                     fx:false,
                     fill: false,
                 }

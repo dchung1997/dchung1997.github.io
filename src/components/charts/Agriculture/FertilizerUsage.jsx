@@ -60,8 +60,22 @@ const FertilizerUsage = ({ data, geo, id }) => {
             strokeOpacity: 0.5,
             strokeWidth: 0.5,
             fx: "Year",
-            tip: true,
-            dx: -15
+            dx: -15,
+            tip: {
+              channels: {
+                  Country: "Country",
+                  Year: "Year",
+                  "Fertilizer Usage (kg/ha)": "Value"
+              },
+              format: {
+                  Country: true,
+                  "Fertilizer Usage (kg/ha)": true,
+                  Year: true,
+                  fx:false,
+                  fill: false,
+              }
+              
+            },             
           })),
         ]
       });
@@ -90,8 +104,22 @@ const FertilizerUsage = ({ data, geo, id }) => {
             strokeOpacity: 0.5,
             strokeWidth: 0.5,
             fx: "Year", 
-            dx: -15
-            
+            dx: -15,
+            tip: {
+              channels: {
+                  Country: "Country",
+                  Year: "Year",
+                  "Fertilizer Usage (kg/ha)": "Value"
+              },
+              format: {
+                  Country: true,
+                  "Fertilizer Usage (kg/ha)": true,
+                  Year: true,
+                  fx:false,
+                  fill: false,
+              }
+              
+            },   
           })),
         ]
       });
