@@ -151,7 +151,7 @@ const AnnualExpenditures = ({ data, geo, id }) => {
       const plotBottom = Plot.plot({
         marginLeft: 0,
         marginRight: 0,
-        caption: "Source: UN FAO, FAOSTAT",
+        caption: "Source: ReSAKSS: Tracking Indicators, Level-3 Government Agricultural Spending (% of Total Expenditures).",
         fx: { label: null },
         projection: {
           type: "mercator",

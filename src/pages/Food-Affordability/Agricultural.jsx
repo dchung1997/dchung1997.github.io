@@ -11,6 +11,7 @@ import AnnualExpenditures from "../../components/charts/Agriculture/AnnualExpend
 import AnnualYieldFertilizer from "../../components/charts/Agriculture/AnnualYieldFertilizer";
 import AnnualProductionPerCapita from "../../components/charts/Agriculture/AnnualProductionPerCapita";
 import FertilizerUsage from "../../components/charts/Agriculture/FertilizerUsage";
+import AnnualSpending from "../../components/charts/Agriculture/AnnualSpending";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -22,6 +23,8 @@ import kenya_fertilizer from "../../assets/data/Food-Affordability/Agriculture/k
 import annual_production_3 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top3.json";
 import annual_production_6 from "../../assets/data/Food-Affordability/Agriculture/annual-production-africa-top6.json";
 import fertilizer_usage from "../../assets/data/Food-Affordability/Agriculture/fertilizer-use-per-hectare-of-cropland.json";
+import spending_countries from "../../assets/data/Food-Affordability/Agriculture/spending-countries.json";
+import spending_regions from "../../assets/data/Food-Affordability/Agriculture/spending-region.json";
 
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
@@ -91,7 +94,16 @@ function Agricultural() {
               target from 2000 to 2020.
             </p>
 
-            <p> Graphic Here </p>
+            <ChartWrapper>
+              <h2 className="ms-5">
+                Annual Agricultural Spending, Total Budget
+              </h2>
+              <h3 className="ms-5">Sub-Saharan Africa 2000-2020</h3>
+              <AnnualSpending
+                spending={spending_regions}
+                countries={spending_countries}
+              />
+            </ChartWrapper>
 
             <p>
               In the recent history of the Marputo Declaration investments by
@@ -131,7 +143,8 @@ function Agricultural() {
               recommit towards making the changes necessary to end issues like
               food insecurity and hunger. The Nairobi Declaration could be a way
               for countries to make that change. But for many countries the
-              Nairobi Declaration was a cry for help as countries asked for more foreign aid.
+              Nairobi Declaration was a cry for help as countries asked for more
+              foreign aid.
             </p>
 
             <p>
@@ -211,7 +224,7 @@ function Agricultural() {
                 geo={africa_geo}
                 id={"fertilizer-usage"}
               />
-            </ChartWrapper>            
+            </ChartWrapper>
 
             <p>
               Having a central government offer a stable market rate in which

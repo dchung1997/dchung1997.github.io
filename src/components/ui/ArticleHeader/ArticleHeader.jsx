@@ -15,7 +15,7 @@ const ArticleHeader = ({ title, date }) => {
           <div>
             <dt className="sr-only">Published on</dt>
             <dd className="text-base font-medium leading-6 text-gray-500">
-              <time datetime="2024-10-31T00:00:00.000Z">
+              <time dateTime="2024-10-31T00:00:00.000Z">
                     {formattedDate}
               </time>
             </dd>
