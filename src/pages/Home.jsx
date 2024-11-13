@@ -31,7 +31,7 @@ function Home() {
     {
       title: "Manufacturing & Urban Development",
       link: "/food-affordability/manufacturing",
-      time: "10m",
+      time: "5m",
     },
   ];
 

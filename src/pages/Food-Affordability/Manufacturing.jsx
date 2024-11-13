@@ -9,6 +9,7 @@ import Sources from "../../components/ui/Sources/Sources";
 import Urbanization from "../../components/charts/Manufacturing/Urbanization";
 import ChildObesity from "../../components/charts/Manufacturing/ChildObesity";
 import ExtremePoverty from "../../components/charts/Manufacturing/ExtremePoverty";
+import Accessibility from "../../components/charts/Manufacturing/Accessibility";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -21,7 +22,11 @@ import geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outl
 function Manufacturing() {
   useTitle("Climate Change");
 
-  const citedSources = ["https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355"];
+  const citedSources = [
+    "https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355",
+    "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
+    "https://www.sciencedirect.com/science/article/pii/S221462962100164X",
+  ];
 
   // Series and Articles.
   return (
@@ -68,7 +73,7 @@ function Manufacturing() {
             </p>
 
             <ChartWrapper>
-              <ExtremePoverty/>
+              <ExtremePoverty />
             </ChartWrapper>
 
             <p>
@@ -76,9 +81,10 @@ function Manufacturing() {
               severe in other regions like the Americas its still an issue.
               Malnutrition still remains a problem even in urban households for
               most of Africa. Issues like stunting still remain even as
-              housholds have more access to calorically dense food. What's often
-              neglected are fruits and vegetables in many cases even though
-              issues like extreme poverty have ended food is still unaffordable.
+              households have more access to calorically dense food. What's
+              often neglected are fruits and vegetables in many cases even
+              though issues like extreme poverty have ended food is still
+              unaffordable.
             </p>
 
             <p>
@@ -283,43 +289,78 @@ function Manufacturing() {
             </p>
 
             <ChartWrapper>
-              <ChildObesity/>
+              <ChildObesity />
             </ChartWrapper>
 
             <p>
               Something as simple as canned foods could greatly increase the
-              available of healthy and nutritious meals in households. Today
-              nearly four in five Africans cook over open fires and biomass
-              stoves spending on average five hours a day on tasks related to
-              cooking. If instead the average household only needed to spend an
-              hour a day on these tasks it would allow people especially women
-              to spend more time on other things.
+              available of healthy and nutritious meals in households. This can
+              be especially important as refrigeration and electricity are often
+              inaccessible to rural areas where infrastructure is expensive and
+              unaffordable. Canned fruits and vegetables could greatly increase
+              the lifespan of these ingredients and make them affordable and
+              available to households.
             </p>
 
             <p>
-              This however goes beyond a typical food distribution systems but
-              in places like Bangladesh they've recently begun to roll out
-              vegetable sales. It might not be so far to see the inclusion of
-              the manufacturing sector whether as government owned corporations
-              or private industry. Canned fruits and vegetables would greatly
-              increase the lifespan of these ingredients and make them
-              affordable and available to households.
+              In the case of Sub-Saharan Africa manufacturing is even more
+              important due to the lack of refrigeration in most rural areas. By
+              the year 2050 its estimated that 1.2 billion Africans will be
+              without any form of electricity. On the same note 920 million
+              Africans lack access to clean cooking. That also could double to
+              1.8 billion people.
+            </p>
+
+            <ChartWrapper>
+              <Accessibility/>
+            </ChartWrapper>
+
+            <p>
+              Manufacturing is not only a core step in increasing food security
+              for African households. But also in the practice of cleaner
+              cooking practices. It might not be unreasonable to take this a
+              step further and distribute these goods as premade meals to
+              households. From soups to packaged meals. In many areas access to
+              safe drinking water is limited these same systems could be used to
+              distribute these goods.
             </p>
 
             <p>
-              It might not be unreasonable to take this a step further and
-              distribute these goods as premade meals to households. From soups
-              to packaged meals. In many areas access to safe drinking water is
-              limited these same systems could be used to readily distribute
-              these goods as well.
+              This would also significantly save the amount of time rural
+              households would spend on a variety of issues. Approximately 4 in 5 African
+              households spend an average of 5 hours per day oncooking related
+              tasks. If the time the average African spent was reduced from 5
+              hours a day on cooking to 1 hour it would free up the schedule for
+              many African household keepers to spend on more economically productive tasks. This could
+              possibly allow for an increased role of women in society for
+              places such as businesses. Allowing for increased economic
+              mobility of households.
             </p>
+
+            <p> Graphic here on time saved for households over time. </p>
 
             <p>
               Along with this the additional procurement of fruits and
               vegetables allows a government to better allow for the management
               of fields and soil. As fields cannot consistently output the same
               crops and maintain the health of the soil. Crop rotations are
-              important to maintain and preserve top soil.
+              important to maintain and preserve top soil. This could allow
+              farmers to reduce deforestation especially in vulnerable areas
+              like the Congo Rainforest while also allowing for a consistent and
+              reliable source of income for farmers. Giving them the ability to
+              participate economically and not just subsist.
+            </p>
+
+            <p>
+              This would allow for governments to better manage food security as
+              another issue that is often overlooked is when farmers choose to
+              farm more profitable crops over less profitable ones. Crop
+              rotations can be ignored for more profitable practices in the
+              short term even at the harm of future crop yields. As the majority
+              of small scale farmers do not have advanced degrees they often
+              have limited knowledge on these issues. On the same note It could
+              also potentially allow for farmers to be paid for the usage of
+              cover crops when needed to preserve yield quality.
             </p>
 
             <img
@@ -332,13 +373,22 @@ function Manufacturing() {
             </span>
 
             <p>
-              Government run operations could allow for the to urbanization of
-              areas and create new cities. It could potentially lay the
-              groundwork for future industries as well. For companies areas
-              where there are already skilled individuals and already developed
-              infrastructure make for ideal locations to start businesses. As
-              these programs scale up they would likely provide tens of millions
-              of jobs throughout Africa alone.
+              Government planning could allow for the to urbanization of areas
+              and create new cities. It could potentially lay the groundwork for
+              future industries as well. For companies areas where there are
+              already skilled individuals and already developed infrastructure
+              make for ideal locations to start businesses. As these programs
+              scale up they would likely provide tens of millions of jobs
+              throughout Africa alone.
+            </p>
+
+            <p>
+              This could help control the urban sprawl in many countries and
+              allow for controlled city planning and development of
+              manufacturing and distribution networks to support them. As
+              heatwaves increase the need for city planning is becoming
+              increasingly more important manufacturing could open the door for
+              increased development and infrastructure for rural areas.
             </p>
 
             <p>
@@ -347,7 +397,8 @@ function Manufacturing() {
               development of Africa in the decades to come while also allowing
               for the upward mobility of those that exist today. The issues that
               Africa faces today are ones that need to be dealt with
-              simultaneously.
+              simultaneously. But more often than not for governments there
+              isn't enough funding to allow for this.
             </p>
           </div>
         </div>
