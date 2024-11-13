@@ -10,6 +10,7 @@ import Urbanization from "../../components/charts/Manufacturing/Urbanization";
 import ChildObesity from "../../components/charts/Manufacturing/ChildObesity";
 import ExtremePoverty from "../../components/charts/Manufacturing/ExtremePoverty";
 import Accessibility from "../../components/charts/Manufacturing/Accessibility";
+import TimeSaved from "../../components/charts/Manufacturing/TimeSaved";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -25,7 +26,7 @@ function Manufacturing() {
   const citedSources = [
     "https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355",
     "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
-    "https://www.sciencedirect.com/science/article/pii/S221462962100164X",
+    "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary"
   ];
 
   // Series and Articles.
@@ -337,7 +338,9 @@ function Manufacturing() {
               mobility of households.
             </p>
 
-            <p> Graphic here on time saved for households over time. </p>
+            <ChartWrapper>
+              <TimeSaved/>
+            </ChartWrapper>
 
             <p>
               Along with this the additional procurement of fruits and
