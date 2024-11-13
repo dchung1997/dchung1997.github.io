@@ -34,7 +34,6 @@ const Accessibility = () => {
         x: { label: null, type: "band" },
         fx: { label: null },
         y: {
-          tickFormat: "s",
           grid: true,
           label: "Population",
           domain: [0, 2000000000],

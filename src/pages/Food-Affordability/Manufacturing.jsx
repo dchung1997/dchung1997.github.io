@@ -21,12 +21,12 @@ import urbanization_no_data from "../../assets/data/Food-Affordability/Manufactu
 import geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 
 function Manufacturing() {
-  useTitle("Climate Change");
+  useTitle("Manufacturing and Urban Development");
 
   const citedSources = [
     "https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355",
     "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
-    "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary"
+    "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary",
   ];
 
   // Series and Articles.
@@ -313,7 +313,7 @@ function Manufacturing() {
             </p>
 
             <ChartWrapper>
-              <Accessibility/>
+              <Accessibility />
             </ChartWrapper>
 
             <p>
@@ -328,18 +328,18 @@ function Manufacturing() {
 
             <p>
               This would also significantly save the amount of time rural
-              households would spend on a variety of issues. Approximately 4 in 5 African
-              households spend an average of 5 hours per day oncooking related
-              tasks. If the time the average African spent was reduced from 5
-              hours a day on cooking to 1 hour it would free up the schedule for
-              many African household keepers to spend on more economically productive tasks. This could
-              possibly allow for an increased role of women in society for
-              places such as businesses. Allowing for increased economic
-              mobility of households.
+              households would spend on a variety of issues. Approximately 4 in
+              5 African households spend an average of 5 hours per day oncooking
+              related tasks. If the time the average African spent was reduced
+              from 5 hours a day on cooking to 1 hour it would free up the
+              schedule for many African household keepers to spend on more
+              economically productive tasks. This could possibly allow for an
+              increased role of women in society for places such as businesses.
+              Allowing for increased economic mobility of households.
             </p>
 
             <ChartWrapper>
-              <TimeSaved/>
+              <TimeSaved />
             </ChartWrapper>
 
             <p>
@@ -364,6 +364,18 @@ function Manufacturing() {
               have limited knowledge on these issues. On the same note It could
               also potentially allow for farmers to be paid for the usage of
               cover crops when needed to preserve yield quality.
+            </p>
+
+            <p>
+              Crop rotations also have varying different types and kinds
+              depending on the crop and climate. For example in a tropical
+              climate crops can grow year round. Meaning that instead of a
+              yearly basis for crop rotations it is instead a continual process.
+              This however does not necessarily mean that complex crop rotations
+              are happening if they are happening at all. An example would be a
+              one year rotation for example Corn and Soybeans that overtime will
+              result in long term issues such as topsoil erosion, reduced
+              yields, and weeds.
             </p>
 
             <img
