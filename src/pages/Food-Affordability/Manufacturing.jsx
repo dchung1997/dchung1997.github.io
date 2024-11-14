@@ -27,6 +27,7 @@ function Manufacturing() {
     "https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355",
     "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
     "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary",
+    "https://www.fao.org/plant-production-protection/",
   ];
 
   // Series and Articles.
@@ -376,6 +377,18 @@ function Manufacturing() {
               one year rotation for example Corn and Soybeans that overtime will
               result in long term issues such as topsoil erosion, reduced
               yields, and weeds.
+            </p>
+
+            <p>
+              Every year up to 40 percent of crops are lost due to plant pests
+              and diseases. Crop Rotations are important to prevent the worst
+              case scenarios for farmers in which they loss a significant
+              portion or a majority of their harvest. For example in a 1 year
+              crop rotation if pests or disease impact 1 type of crop up to 50%
+              of the crops are impacted. Multi-year crop rotations allow for
+              better management of pests and disease while offsetting loses for
+              farmers. However, these can get complex quickly and access to
+              seeds often leave large barriers to entry.
             </p>
 
             <img

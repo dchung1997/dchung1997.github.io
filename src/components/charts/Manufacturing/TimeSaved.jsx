@@ -28,7 +28,7 @@ const TimeSaved = () => {
           domain: [0,8]
         },
         color: { scheme: "RdYlGn", legend: true, type: "ordinal",  reverse: true},
-        title: "Time Spent on Cooking Related Tasks, Africa",
+        title: "Time Spent on Cooking Related Tasks",
         caption:
           "Source: A Vision for Clean Cooking Access for All, IEA",
         marks: [

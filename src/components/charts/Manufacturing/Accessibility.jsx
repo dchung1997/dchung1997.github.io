@@ -48,8 +48,8 @@ const Accessibility = () => {
           ticks: 5,
         },
         color: { scheme: "BuRd", legend: true, type: "ordinal" },
-        title: "People without Access to Basic Needs, Africa",
-        subtitle: "Total Number of People without Access to Electricity or Clean Cooking",
+        title: "People without Basic Needs, Africa",
+        subtitle: "Total Number of People without Electricity or Clean Cooking",
         caption:
           "Source: Green energy in Africa presents significant investment opportunities. Mckinsey & Company",
         marks: [

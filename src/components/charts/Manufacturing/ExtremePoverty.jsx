@@ -84,7 +84,7 @@ const ExtremePoverty = () => {
         x: {axis: null},
         fx: {label: null,  tickFormat: (d) => d.toString().replace(",","")},
         y: {grid: true, domain: [0, 60], label: "Share of Population (%)"},
-        title: "Share Of Population Living In Extreme Poverty",
+        title: "Share Of Population In Extreme Poverty",
         subtitle: "Africa, 2018-2024",
         caption: "Source: Statista, Extreme poverty headcount ratio in Africa 2018-2024, by area of residence, Saifaddin Galal",
         height: 500,

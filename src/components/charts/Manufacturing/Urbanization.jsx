@@ -13,7 +13,7 @@ const Urbanization = ({ firstData, lastData, noData, geo, id }) => {
         marginLeft: 0,
         marginRight: 0,
         title: "Urbanization of Africa",
-        subtitle: "Percentage of Population living in Urban Areas, 1960 to 2050",
+        subtitle: "Percentage of Population in Urban Areas, 1960 to 2050",
         width:1100,
         fx: { label:null},
         projection: { 
