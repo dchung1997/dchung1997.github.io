@@ -417,9 +417,9 @@ function Manufacturing() {
               <table className="table-fixed">
                 <thead>
                   <tr>
-                    <th>Management system</th>
-                    <th>Weed management</th>
-                    <th>Nutrient application</th>
+                    <th>Type</th>
+                    <th>Weed Control</th>
+                    <th>Nutrients</th>
                     <th>2 Year Rotation</th>
                     <th>4 Year Rotation</th>
                     <th>Percent Change</th>
