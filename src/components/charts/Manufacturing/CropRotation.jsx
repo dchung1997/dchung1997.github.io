@@ -39,19 +39,9 @@ function CropRotation() {
     const lossArea = [0, 0.1, 0.3, 0.5, 1];
     const numOnes = [10, 6, 4, 4, 2];
 
-    const g = svg.append("g").attr("transform", `translate(${[150, 175]})`);
-
-    const gTitle = g.append("g");
+    const g = svg.append("g").attr("transform", `translate(${[150, 50]})`);
     const gText = g.append("g");
     const gCrops = g.append("g");
-
-    gTitle
-      .append("text")
-      .attr("x", 75)
-      .attr("y", -50)
-      .attr("font-size", "2rem")
-      .attr("font-weight", "bold")
-      .text("Crop Rotations and Projected Losses of Main Crop");
 
     gText
       .selectAll("text.xLabel")
@@ -142,7 +132,7 @@ function CropRotation() {
     }
   }, []);
 
-  return <svg ref={svgRef} viewBox="0 0 1200 750"></svg>;
+  return <svg ref={svgRef} viewBox="0 0 1200 600"></svg>;
 }
 
 export default CropRotation;
