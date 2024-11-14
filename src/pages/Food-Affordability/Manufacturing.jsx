@@ -11,6 +11,7 @@ import ChildObesity from "../../components/charts/Manufacturing/ChildObesity";
 import ExtremePoverty from "../../components/charts/Manufacturing/ExtremePoverty";
 import Accessibility from "../../components/charts/Manufacturing/Accessibility";
 import TimeSaved from "../../components/charts/Manufacturing/TimeSaved";
+import CropRotation from "../../components/charts/Manufacturing/CropRotation";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -391,14 +392,12 @@ function Manufacturing() {
               seeds often leave large barriers to entry.
             </p>
 
-            <img
-              alt="Crop Rotation Plan"
-              src="/static/images/food-affordability/crop-rotation.svg"
-              className="w-full h-auto"
-            />
-            <span className="source">
-              Crop Rotation Plans By: Lizzie Harper, lizzieharper.co.uk{" "}
-            </span>
+            <ChartWrapper>
+              <CropRotation/>
+              <span className="source ms-12">Note: This is only meant to be used for illustrative purposes.</span>
+              <br/>
+              <span className="source ms-12"> Actual crop rotations and loses may vary</span>
+            </ChartWrapper>
 
             <p>
               Government planning could allow for the to urbanization of areas
