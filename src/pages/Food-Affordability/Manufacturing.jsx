@@ -399,11 +399,7 @@ function Manufacturing() {
             <ChartWrapper>
               <CropRotation />
               <span className="source ms-12">
-                Note: This is only meant to be used for illustrative purposes.
-              </span>
-              <br />
-              <span className="source ms-12">
-                Actual crop rotations may vary
+                Note: For illustrative purposes. Actual crop rotations may vary
               </span>
             </ChartWrapper>
 
