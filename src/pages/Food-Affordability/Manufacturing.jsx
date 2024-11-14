@@ -29,6 +29,7 @@ function Manufacturing() {
     "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
     "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary",
     "https://www.fao.org/plant-production-protection/",
+    "https://doi.org/10.2134/agronj2010.0211",
   ];
 
   // Series and Articles.
@@ -375,9 +376,9 @@ function Manufacturing() {
               yearly basis for crop rotations it is instead a continual process.
               This however does not necessarily mean that complex crop rotations
               are happening if they are happening at all. An example would be a
-              one year rotation for example Corn and Soybeans that overtime will
-              result in long term issues such as topsoil erosion, reduced
-              yields, and weeds.
+              one year rotation or 2 crop rotation for example Corn and Soybeans
+              that overtime will result in long term issues such as topsoil
+              erosion, reduced yields, and weeds.
             </p>
 
             <p>
@@ -393,11 +394,90 @@ function Manufacturing() {
             </p>
 
             <ChartWrapper>
-              <CropRotation/>
-              <span className="source ms-12">Note: This is only meant to be used for illustrative purposes.</span>
-              <br/>
-              <span className="source ms-12"> Actual crop rotations and loses may vary</span>
+              <CropRotation />
+              <span className="source ms-12">
+                Note: This is only meant to be used for illustrative purposes.
+              </span>
+              <br />
+              <span className="source ms-12">
+                Actual crop rotations may vary
+              </span>
             </ChartWrapper>
+
+            <p>
+              A study from the University of Minnesota found that crop rotations
+              could increase yields for small scale farmers by as much as 41%
+              for corn yields. This however doesn't necessarily mean that it
+              results in large yield increases but in many cases can increase
+              yields where soil otherwise may be improperly managed.
+            </p>
+
+            <ChartWrapper>
+              <h2>Average Corn Yields with Crop Rotations</h2>
+              <table className="table-fixed">
+                <thead>
+                  <tr>
+                    <th>Management system</th>
+                    <th>Weed management</th>
+                    <th>Nutrient application</th>
+                    <th>2 Year Rotation</th>
+                    <th>4 Year Rotation</th>
+                    <th>Percent Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Organic</td>
+                    <td>Tillage only</td>
+                    <td>Manure</td>
+                    <td>113 bushels per acre</td>
+                    <td>142 bushels per acre</td>
+                    <td>25%</td>
+                  </tr>
+                  <tr>
+                    <td>Zero-input</td>
+                    <td>Tillage only</td>
+                    <td>None</td>
+                    <td>55 bushels per acre</td>
+                    <td>77 bushels per acre</td>
+                    <td>41%</td>
+                  </tr>
+                  <tr>
+                    <td>High-input</td>
+                    <td>Tillage + broadcast herbicide</td>
+                    <td>Broadcast fertilizer</td>
+                    <td>151 bushels per acre</td>
+                    <td>146 bushels per acre</td>
+                    <td>0%*</td>
+                  </tr>
+                  <tr>
+                    <td>Low-input</td>
+                    <td>Tillage + banded herbicide</td>
+                    <td>Banded fertilizer</td>
+                    <td>123 bushels per acre</td>
+                    <td>139 bushels per acre</td>
+                    <td>13%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span className="source">
+                Source: Agronomic Performance of Cropping Systems with
+                Contrasting Crop Rotations and External Inputs, ASA{" "}
+              </span>
+              <br />
+              <span className="source">
+                Note: * Not statistically significant.{" "}
+              </span>
+            </ChartWrapper>
+
+            <p>
+              Something as simple as government subsidies could incentivize
+              farmers to make changes towards these practices. However, more
+              often than not there are issues due to lack of transportation and
+              existing infrastructure that results in spoilage of many of these
+              crops during transportation are the reason why this isn't
+              possible.
+            </p>
 
             <p>
               Government planning could allow for the to urbanization of areas
@@ -415,7 +495,8 @@ function Manufacturing() {
               manufacturing and distribution networks to support them. As
               heatwaves increase the need for city planning is becoming
               increasingly more important manufacturing could open the door for
-              increased development and infrastructure for rural areas.
+              increased development and infrastructure for rural areas. Which
+              currently is not happening nor is it expected to.
             </p>
 
             <p>
