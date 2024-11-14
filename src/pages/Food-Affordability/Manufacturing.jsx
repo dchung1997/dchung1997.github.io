@@ -397,7 +397,7 @@ function Manufacturing() {
             </p>
 
             <ChartWrapper>
-              <h2 className="text-center">Crop Rotations and Projected Losses of Main Crop</h2>
+              <h2 className="text-center">Crop Rotations and Losses of Main Crop</h2>
               <CropRotation />
               <span className="source ms-12">
                 Note: For illustrative purposes. Actual crop rotations may vary
