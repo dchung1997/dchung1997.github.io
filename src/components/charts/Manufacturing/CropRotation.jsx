@@ -133,8 +133,8 @@ function CropRotation() {
             .append("rect")
             .attr("x", xScale(x) + Math.floor(index / 2) * 25)
             .attr("y", yScale(y) + (index % 2) * 25)
-            .attr("width", Math.sqrt(lossArea[x] * 25 * 25))
-            .attr("height", Math.sqrt(lossArea[x] * 25 * 25))
+            .attr("width", Math.sqrt(((lossArea[x] * numOnes[y]) % 1) * 25 * 25))
+            .attr("height", Math.sqrt(((lossArea[x] * numOnes[y]) % 1) * 25 * 25))
             .attr("stroke", "black")
             .attr("fill", "gainsboro");
         }
