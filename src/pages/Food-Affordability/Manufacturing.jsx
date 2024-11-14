@@ -25,9 +25,12 @@ function Manufacturing() {
   useTitle("Manufacturing and Urban Development");
 
   const citedSources = [
-    "https://onlinelibrary.wiley.com/doi/full/10.1002/osp4.355",
+    "https://population.un.org/wpp/",
+    "https://www.statista.com/statistics/1254364/poverty-headcount-ratio-in-africa-by-area-of-residence/",
+    "https://extension.sdstate.edu/storage-life-vegetables",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6819980/",
     "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-energy-in-africa-presents-significant-investment-opportunities",
-    "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all/executive-summary",
+    "https://www.iea.org/reports/a-vision-for-clean-cooking-access-for-all",
     "https://www.fao.org/plant-production-protection/",
     "https://doi.org/10.2134/agronj2010.0211",
   ];
