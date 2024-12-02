@@ -4,9 +4,12 @@ import Header from "../components/ui/Header/Header";
 import Footer from "../components/ui/Footer/Footer";
 import Articles from "../components/ui/Series/Articles";
 
-function Home() {
-  const imagePath = import.meta.env.VITE_IMAGE_PATH;
+import useTitle from "../hooks/useTitle";
 
+
+function Home() {
+  useTitle("311");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
   const articles = [
     {
       title: "Food Affordability",
@@ -33,6 +36,11 @@ function Home() {
       link: "/food-affordability/manufacturing",
       time: "5m",
     },
+    {
+      title: "Debt & Future Development",
+      link: "/food-affordability/debt",
+      time: "5m",
+    },    
   ];
 
   // Series and Articles.

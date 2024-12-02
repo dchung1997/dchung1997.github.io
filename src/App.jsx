@@ -5,6 +5,7 @@ import ChildMortality from "./pages/Food-Affordability/ChildMortality";
 import ClimateChange from "./pages/Food-Affordability/ClimateChange";
 import Agricultural from "./pages/Food-Affordability/Agricultural";
 import Manufacturing from "./pages/Food-Affordability/Manufacturing";
+import Debt from "./pages/Food-Affordability/Debt";
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="climate-change" element={<ClimateChange/>} />
           <Route path="agriculture" element={<Agricultural/>} />
           <Route path="manufacturing" element={<Manufacturing/>} />
+          <Route path="debt" element={<Debt/>} />
         </Route>
       </Routes>
     </BrowserRouter>
