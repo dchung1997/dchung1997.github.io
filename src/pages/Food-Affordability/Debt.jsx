@@ -6,16 +6,20 @@ import ArticleHeader from "../../components/ui/ArticleHeader/ArticleHeader";
 import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
-import ServicingAndExpenditures from "../../components/charts/Agriculture/ServicingAndExpenditures";
-import Undernutrition from "../../components/charts/Agriculture/Undernutrition";
-import TotalAgricultureSpending from "../../components/charts/Agriculture/TotalAgriculturalSpending";
+import ServicingAndExpenditures from "../../components/charts/Debt/ServicingAndExpenditures";
+import Undernutrition from "../../components/charts/Debt/Undernutrition";
+import TotalAgricultureSpending from "../../components/charts/Debt/TotalAgriculturalSpending";
+import GDPDebt from "../../components/charts/Debt/GDPDebt";
+
 
 import useTitle from "../../hooks/useTitle";
 
-import debtServicing from "../../assets/data/Food-Affordability/Agriculture/debt-servicing-expenditures.json";
-import undernutritionPrevalence from  "../../assets/data/Food-Affordability/Agriculture/undernutrition_prevalence_africa.json";
-import percentExpenditureAgriculture from "../../assets/data/Food-Affordability/Agriculture/percentage_expenditure_agriculture_africa.json";
+import debtServicing from "../../assets/data/Food-Affordability/Debt/debt-servicing-expenditures.json";
+import undernutritionPrevalence from  "../../assets/data/Food-Affordability/Debt/undernutrition_prevalence_africa.json";
+import percentExpenditureAgriculture from "../../assets/data/Food-Affordability/Debt/percentage_expenditure_agriculture_africa.json";
+import gdpDebt from "../../assets/data/Food-Affordability/Debt/gdp-debt.json";
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
+import world_geo from "../../assets/data/Food-Affordability/Debt/world.json";
 
 
 function Debt() {
@@ -32,6 +36,10 @@ function Debt() {
         />
         <div className="divide-y divide-gray-200">
           <div className="prose max-w-none pb-8 pt-10">
+            <ChartWrapper>
+              <GDPDebt data={gdpDebt} geo={world_geo} />
+            </ChartWrapper>
+
             <p>
               Debt is an issue that has been a persistent for many countries and
               their growth. Since the pandemic many nations have faced even
@@ -45,7 +53,6 @@ function Debt() {
 
             <ChartWrapper>
               <h2>Credit Rating African Countries</h2>
-
               <div class="overflow-x-auto scroll-table">
                 <table className="table-fixed overflow-auto min-w-full">
                   <tbody>
@@ -359,8 +366,6 @@ function Debt() {
             <ChartWrapper>
               <TotalAgricultureSpending data={percentExpenditureAgriculture} geo={africa_geo} id={"agri-spending"}/>
             </ChartWrapper>
-
-            <p>Graphic showing Investment Rates Historic.</p>
 
             <p>
               The changes needed for future generations are happening too slowly
