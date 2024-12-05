@@ -22,7 +22,13 @@ import world_geo from "../../assets/data/Food-Affordability/Debt/world.json";
 
 function Debt() {
   useTitle("Debt & Future Development");
-  const citedSources = ["https://www.imf.org/external/datamapper/datasets/GDD", "https://data.one.org/topics/african-debt/", "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and", "https://www.fao.org/faostat/en/#data/FS", "https://www.resakss.org/node/11"];
+  const citedSources = [
+    "https://www.imf.org/external/datamapper/datasets/GDD",
+    "https://data.one.org/topics/african-debt/",
+    "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+    "https://www.fao.org/faostat/en/#data/FS",
+    "https://www.resakss.org/node/11",
+  ];
 
   // Series and Articles.
   return (
@@ -345,9 +351,14 @@ function Debt() {
               2.5 billion. Without improvements to food systems 350 million
               Africans are expected to be undernourished. As it stands currently
               the number of people sufferring from these conditions is
-              increasing even if the proportion of them is decreasing. Though,
-              it's hard to call it progress as in the recent decade large
-              amounts of progress has reversed.
+              increasing though it was decreasing until fairly recently. This is
+              likely because of the historic underreporting of undernutrition.
+              As more data has become available over the years and the methods
+              for which the data is collected improves it isn't too suprising to
+              see. So we can assume that overall, undernutrition rates were
+              likely significantly higher and have been gradually decreasing to
+              some degree. However funding has remained a constant issue in regards
+              to this.
             </p>
 
             <p>
@@ -371,7 +382,7 @@ function Debt() {
             </ChartWrapper>
 
             <p>
-              The changes needed for future generations are happening too slowly
+              The changes needed for future generations are often happening too slowly
               if they happening at all. African countries are hesitant to invest
               in agriculture due to the costs involved and the uncertain
               outcomes that will come with many issues like climate change. In
