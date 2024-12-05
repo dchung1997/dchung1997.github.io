@@ -33,6 +33,7 @@ const GDPDebt = ({ data, geo, id }) => {
           scheme: "BrBG",
           legend: true,
           type: "quantile",
+          label: "GDP to Central Government Debt (%)",
           domain: [0, 125],
           reverse: true,
         },
