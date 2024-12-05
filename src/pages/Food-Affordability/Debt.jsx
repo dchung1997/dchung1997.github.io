@@ -22,6 +22,7 @@ import world_geo from "../../assets/data/Food-Affordability/Debt/world.json";
 
 function Debt() {
   useTitle("Debt & Future Development");
+  const citedSources = ["https://www.imf.org/external/datamapper/datasets/GDD", "https://data.one.org/topics/african-debt/", "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and", "https://www.fao.org/faostat/en/#data/FS", "https://www.resakss.org/node/11"];
 
   // Series and Articles.
   return (
@@ -398,7 +399,7 @@ function Debt() {
         </div>
       </main>
 
-      {/* <Sources items={citedSources} /> */}
+      <Sources items={citedSources} />
       <Footer />
     </>
   );
