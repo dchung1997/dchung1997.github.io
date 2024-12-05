@@ -51,7 +51,17 @@ const GDPDebt = ({ data, geo, id }) => {
               stroke: "black",
               strokeOpacity: 0.5,
               strokeWidth: 0.5,
-              tip: true,
+              tip: {
+                channels: {
+                  "GDP to Debt Ratio (%)": "Value",
+                  "Country": "Country"
+                },
+                format: {
+                  "Country": true,
+                  "GDP to Debt Ratio": true,
+                  fill: false
+                }
+              },
             })
           ),
           Plot.sphere(),

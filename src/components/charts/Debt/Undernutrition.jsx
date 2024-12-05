@@ -22,7 +22,18 @@ const Undernutrition = ({ data, id }) => {
         subtitle: "Africa, 2000-2024",
         caption: "Source: FAO | FAOSTAT | Prevalence of Undernutrition.",
         marks: [
-          Plot.lineY(data, {x: "Year", y: "Value", stroke: "Area", strokeOpacity: 1, strokeWidth: 2.5, curve: "catmull-rom"}),
+          Plot.lineY(data, {x: "Year", y: "Value", stroke: "Area", strokeOpacity: 1, strokeWidth: 2.5, curve: "catmull-rom", tip: {
+              channels: {
+                "Total Undernourished (%)": "Value",
+              },
+              format: {
+                "Area": true, 
+                "Total Undernourished (%)": true, 
+                "Year": true,
+                y: false
+              }
+            }
+          }),
           Plot.dot(data, Plot.selectLast({x: "Year", y: "Value", z: "Area", text: "Area", textAnchor: "start", fill: "Area", fontWeight: "bold"})),
           Plot.text(data, Plot.selectLast({x: "Year", y: "Value", z: "Area", text: "Area", textAnchor: "start", dx: 5, fill: "Area", fontWeight: "bold", fontSize: 14})),
       

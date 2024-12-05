@@ -39,7 +39,7 @@ function Home() {
     {
       title: "Debt & Future Development",
       link: "/food-affordability/debt",
-      time: "5m",
+      time: "4m",
     },    
   ];
 

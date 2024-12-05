@@ -85,7 +85,18 @@ const TotalAgricultureSpending = ({ data, geo, id }) => {
               strokeOpacity: 0.5,
               strokeWidth: 0.5,
               fx: "Year",
-              tip: true,
+              tip: {
+                channels: {
+                  "Expenditures (%)": "Value",
+                  "Year": "Year",
+                },
+                format: {
+                  "Expenditures (%)": true,
+                  "Year": true,
+                  fx: false,
+                  fill:false
+                },
+              },
               dx:15
 
             })

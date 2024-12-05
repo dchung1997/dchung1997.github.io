@@ -24,10 +24,20 @@ const ServicingAndExpenditures = ({ data, id }) => {
         subtitle: "Africa (Median), 2009-2024",
         caption: "Source: Africa One, International Debt Statistics (IDS), UNESCO Institute for Statistics, WHO GHED, IMF WEO",
         marks: [
-          Plot.lineY(data, {x: "Year", y: "Expenditure", stroke: "Expenditure Type", strokeOpacity: 1, strokeWidth: 2.5, curve: "catmull-rom"}),
+          Plot.lineY(data, {x: "Year", y: "Expenditure", stroke: "Expenditure Type", strokeOpacity: 1, strokeWidth: 2.5, curve: "catmull-rom", tip: {
+            channels: {
+              "Annual Expenditure (%)": "Expenditure",
+            },
+            format: {
+              "Expenditure Type": true, 
+              "Annual Expenditure (%)": true, 
+              "Year": true,
+              y: false
+            }
+          }
+        }),
           Plot.dot(data, Plot.selectLast({x: "Year", y: "Expenditure", z: "Expenditure Type", text: "Expenditure Type", textAnchor: "start", fill: "Expenditure Type", fontWeight: "bold"})),
           Plot.text(data, Plot.selectLast({x: "Year", y: "Expenditure", z: "Expenditure Type", text: "Expenditure Type", textAnchor: "start", dx: 5, dy:15, fill: "Expenditure Type", fontWeight: "bold", fontSize: 14})),
-      
         ]
       });
 
