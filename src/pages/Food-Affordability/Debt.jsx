@@ -11,16 +11,14 @@ import Undernutrition from "../../components/charts/Debt/Undernutrition";
 import TotalAgricultureSpending from "../../components/charts/Debt/TotalAgriculturalSpending";
 import GDPDebt from "../../components/charts/Debt/GDPDebt";
 
-
 import useTitle from "../../hooks/useTitle";
 
 import debtServicing from "../../assets/data/Food-Affordability/Debt/debt-servicing-expenditures.json";
-import undernutritionPrevalence from  "../../assets/data/Food-Affordability/Debt/undernutrition_prevalence_africa.json";
+import undernutritionPrevalence from "../../assets/data/Food-Affordability/Debt/undernutrition_prevalence_africa.json";
 import percentExpenditureAgriculture from "../../assets/data/Food-Affordability/Debt/percentage_expenditure_agriculture_africa.json";
 import gdpDebt from "../../assets/data/Food-Affordability/Debt/gdp-debt.json";
 import africa_geo from "../../assets/data/Food-Affordability/Climate-Change/africa_outline_with_countries.json";
 import world_geo from "../../assets/data/Food-Affordability/Debt/world.json";
-
 
 function Debt() {
   useTitle("Debt & Future Development");
@@ -346,9 +344,9 @@ function Debt() {
               2.5 billion. Without improvements to food systems 350 million
               Africans are expected to be undernourished. As it stands currently
               the number of people sufferring from these conditions is
-              increasing even if the proportion of them is decreasing. Though, it's hard
-              to call it progress as in the recent decade large amounts of
-              progress has reversed.
+              increasing even if the proportion of them is decreasing. Though,
+              it's hard to call it progress as in the recent decade large
+              amounts of progress has reversed.
             </p>
 
             <p>
@@ -364,7 +362,11 @@ function Debt() {
             </p>
 
             <ChartWrapper>
-              <TotalAgricultureSpending data={percentExpenditureAgriculture} geo={africa_geo} id={"agri-spending"}/>
+              <TotalAgricultureSpending
+                data={percentExpenditureAgriculture}
+                geo={africa_geo}
+                id={"agri-spending"}
+              />
             </ChartWrapper>
 
             <p>
@@ -378,6 +380,19 @@ function Debt() {
               to prevent the deaths of tens if not hundreds of millions of
               people. But funding for these issues often does not exist at the
               scale required to make these changes.
+            </p>
+
+            <p>
+              It's uncertain what the future can hold. But if nothing is done to
+              help improve the conditions in many developing countries. With an
+              increasing population and an unchanged or even possible a worsened
+              landscape, many countries will run into issues that they will not
+              be able to recover from without help. COP29 tells us a lot about
+              the current financial landscape in the world in regards to the
+              developing world, it is far from enough and large parts of the
+              developed world are largely uninterested towards progressing it
+              any further. But there is still time for change and move away from
+              the current trajectory we're following.
             </p>
           </div>
         </div>
