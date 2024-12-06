@@ -6,7 +6,6 @@ import Articles from "../components/ui/Series/Articles";
 
 import useTitle from "../hooks/useTitle";
 
-
 function Home() {
   useTitle("311");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
@@ -40,7 +39,15 @@ function Home() {
       title: "Debt & Future Development",
       link: "/food-affordability/debt",
       time: "4m",
-    },    
+    },
+  ];
+
+  const meatSeries = [
+    {
+      title: "Animal Emissions",
+      link: "/meat",
+      time: "6m",
+    },
   ];
 
   // Series and Articles.
@@ -96,6 +103,52 @@ function Home() {
               Series One Main Image then Articles 
               Similar to before except with a list of articles on topics and read times.
           */}
+
+            {/* Latest Series Here / Banner / Should Only Link to Series*/}
+            <div className="py-24 gap-4 grid">
+              {/* Image left then details right. */}
+              <div>
+                <article>
+                  <p className="text-1xl pb-1 text-left font-extrabold text-gray-600">
+                    Interactive Series
+                  </p>
+                  <Link to="/meat" className="hover:underline">
+                    <p className="text-2xl font-extrabold">
+                      Animal Emissions & Meat
+                    </p>
+                    <p className="pt-2 text-sm">
+                      Globally, livestock and animals are responsible for 37% of
+                      all human-caused methane emissions. One of the most
+                      significant causes of non-CO2 emissions are methane gases.
+                      Those that tended to do with the practice of farming
+                      animals and livestock. These practices alone contribute
+                      more than enough to surpass the limits required by the
+                      Paris Accords of increasing the average global temperature
+                      by 1.5ºC. Reducing these emissions is a crucial step
+                      towards to greener and cleaner world. But, the issues
+                      regarding this are complex. And for many people stuck
+                      working in livestock it can be the difference between life
+                      or death.
+                    </p>
+                    <dl>
+                      <dt className="sr-only">Published on</dt>
+                      <dd className="pt-3 text-right text-sm leading-6 text-gray-500">
+                        2024-12-06
+                      </dd>
+                    </dl>
+                  </Link>
+                </article>
+                <Link to="/meat">
+                  <img
+                    src={`${imagePath}/series/food-affordabilty-diet.png`}
+                    className="object-cover md:w-auto"
+                  ></img>
+                </Link>
+              </div>
+              <div>
+                <Articles articles={meatSeries} />
+              </div>
+            </div>
 
             {/* Something on the side of other shorts? */}
           </div>
