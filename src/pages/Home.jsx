@@ -58,7 +58,7 @@ function Home() {
         <div className="divide-y divide-gray-200">
           <div className="space-y-2 pb-8 pt-6 md:space-y-5">
             {/* Latest Series Here / Banner / Should Only Link to Series*/}
-            <div className="py-24 gap-4 grid">
+            <div className="py-8 gap-4 grid">
               {/* Image left then details right. */}
               <div>
                 <article>
@@ -109,7 +109,7 @@ function Home() {
 
             <hr/>
 
-            <div className="py-24 gap-4 grid sm:grid-cols-1 md:grid-cols-2">
+            <div className="py-8 gap-4 grid sm:grid-cols-1 md:grid-cols-2">
               {/* Image left then details right. */}
               <div>
                 <Link to="/food-affordability">
