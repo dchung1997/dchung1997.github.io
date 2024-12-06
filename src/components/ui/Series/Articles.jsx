@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Articles = ({articles}) => {
   return (
-    <div className="articles pt-3">
-      <p className="text-2x1 font-extrabold ml-1 pt-2 pb-2">Articles</p>
+    <div className="articles">
+      <p className="text-2x1 font-extrabold ml-1 pb-2">Articles</p>
       <ul className="list-inside">
         {articles.map((article, index) => (
           <li

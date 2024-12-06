@@ -112,24 +112,37 @@ function Home() {
                   <p className="text-1xl pb-1 text-left font-extrabold text-gray-600">
                     Interactive Series
                   </p>
-                  <Link to="/meat" className="hover:underline">
-                    <p className="text-2xl font-extrabold">
+                  <Link to="/meat">
+                    <p className="text-2xl font-extrabold hover:underline" >
                       Animal Emissions & Meat
                     </p>
-                    <p className="pt-2 text-sm">
-                      Globally, livestock and animals are responsible for 37% of
-                      all human-caused methane emissions and 65% of all
-                      agriculturally related nitrogen emissions. Two of the most
-                      significant causes of non-CO2 greenhouse emissions are
-                      methane and nitrogren emissions. Those that tended to do
-                      with the practice of farming animals and livestock along
-                      with the feeding of livestock. These practices alone
-                      contribute more than enough to surpass the limits required
-                      by the Paris Accords of increasing the average global
-                      temperature by 1.5ºC. Reducing these emissions is a
-                      crucial step towards to greener and cleaner world. But,
-                      the issues regarding this are complex.
-                    </p>
+                    <div className="pt-8 pb-8">
+                      <img
+                        src={`${imagePath}/series/emissions.png`}
+                        className="object-cover md:w-auto"
+                      ></img>
+                    </div>
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2">
+                      <div>
+                      <p className="text-2x1 font-extrabold">Summary</p>
+                      <p className="pt-2 text-sm hover:underline mr-4">
+                        Globally, livestock and animals are responsible for 37%
+                        of all human-caused methane emissions and 65% of all
+                        agriculturally related nitrogen emissions. Two of the
+                        most significant causes of non-CO2 greenhouse emissions
+                        are methane and nitrogren emissions. Those that tended
+                        to do with the practice of farming animals and livestock
+                        along with the feeding of livestock. These practices
+                        alone contribute more than enough to surpass the limits
+                        required by the Paris Accords of increasing the average
+                        global temperature by 1.5ºC. Reducing these emissions is
+                        a crucial step towards to greener and cleaner world.
+                        But, the issues regarding this are complex.
+                      </p>
+                      </div>
+                      <Articles articles={meatSeries} />
+                    </div>
+
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="pt-3 text-right text-sm leading-6 text-gray-500">
@@ -138,15 +151,6 @@ function Home() {
                     </dl>
                   </Link>
                 </article>
-                <Link to="/meat">
-                  <img
-                    src={`${imagePath}/series/emissions.png`}
-                    className="object-cover md:w-auto"
-                  ></img>
-                </Link>
-              </div>
-              <div>
-                <Articles articles={meatSeries} />
               </div>
             </div>
 
