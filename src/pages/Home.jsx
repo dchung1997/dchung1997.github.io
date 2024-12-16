@@ -48,11 +48,7 @@ function Home() {
       link: "/meat",
       time: "6m",
     },
-    {
-      title: "Meat Consumption",
-      link: "/meat/consumption",
-      time: "5m",
-    }
+
   ];
 
   // Series and Articles.

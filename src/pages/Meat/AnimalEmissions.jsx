@@ -27,7 +27,7 @@ function AnimalEmissions() {
     <>
       <Header />
       <main className="mb-auto border-b border-gray-400">
-        <ArticleHeader title="Animal Emissions" date={new Date("1999-99-99")} />
+        <ArticleHeader title="Animal Emissions" date={new Date("2024-12-16")} />
         <div className="divide-y divide-gray-200">
           <div className="prose max-w-none pb-8 pt-10">
             <div id="system">
