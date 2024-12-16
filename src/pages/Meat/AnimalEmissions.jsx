@@ -15,6 +15,7 @@ import useTitle from "../../hooks/useTitle";
 function AnimalEmissions() {
   useTitle("Animal Emissions");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
+  const citedSources = ["https://ourworldindata.org/food-ghg-emissions", "https://www.science.org/doi/10.1126/science.aaq0216", "https://ourworldindata.org/environmental-impacts-of-food", "https://www.pnas.org/doi/10.1073/pnas.1308149110"]
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
 
   const onStepEnter = ({ data }) => {
@@ -221,12 +222,13 @@ function AnimalEmissions() {
                 times the amount of emissions.
               </p>
 
-              <div className="flex items-center justify-center pb-8">
+              <ChartWrapper>
+                <h2>Greenhouse Gas Emissions Beef Production </h2>
                 <img
                   src={`${imagePath}/series/animal-emissions/beef-emissions.png`}
-                  className="object-cover w-3/4 card"
                 ></img>
-              </div>
+                <span className="source">Source: Herrero et al., 2013 PNAS 110: 20888-20893</span>
+              </ChartWrapper>
 
               <p>
                 Issues like these are important to point out especially
@@ -245,12 +247,23 @@ function AnimalEmissions() {
                 issues such as sampling biases and to note that the study in
                 question is more than a decade old now.
               </p>
+
+              <p>
+                These are issues that currently are being ignored or looked over
+                as the majority of the focus by most organizations is on the
+                reduction of fossil fuel based green house emissions. Which are
+                very important and make up a significant portion of greenhouse
+                emissions. But food emissions is still an issue even if it can
+                be hard to talk about given that for many countries it can be
+                about their future development in dealing with issues such as
+                hunger and food insecurity.
+              </p>
             </div>
           </div>
         </div>
       </main>
 
-      {/* <Sources items={citedSources} /> */}
+      <Sources items={citedSources} />
       <Footer />
     </>
   );
