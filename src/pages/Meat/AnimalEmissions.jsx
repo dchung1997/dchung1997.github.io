@@ -37,7 +37,7 @@ function AnimalEmissions() {
                   <Step data={0} key={0}>
                     <div
                       style={{
-                        padding: "60vh 0",
+                        padding: "10vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -56,6 +56,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
+                        margin: "65vh 0",
                         opacity: 0.99,
                       }}
                     >
