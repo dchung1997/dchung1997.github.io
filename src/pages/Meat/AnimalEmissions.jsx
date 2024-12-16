@@ -14,6 +14,7 @@ import useTitle from "../../hooks/useTitle";
 
 function AnimalEmissions() {
   useTitle("Animal Emissions");
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
 
   const onStepEnter = ({ data }) => {
@@ -56,7 +57,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -79,7 +80,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -96,7 +97,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -115,16 +116,17 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
                       <p>
-                        Accounting for just the total food emissions the carbon
-                        budgets of 1.5°C and 2.0°C there is little left for
-                        anything else. Without cuts to total food emissions
-                        reaching the 1.5°C limit set by the Paris Climate Accord
-                        are out of reach.
+                        Accounting for just the total food emissions alone the
+                        carbon budgets for staying under 1.5°C is out of reach.
+                        While there is hardly anything left for anything else
+                        under 2°C. Without cuts to total food emissions reaching
+                        the 1.5°C limit set by the Paris Climate Accord is
+                        fundamentally impossible.
                       </p>
                     </div>
                   </Step>
@@ -132,7 +134,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "50vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -141,8 +143,10 @@ function AnimalEmissions() {
                         assuming that there was 67% chance to avoid 2.0°C. There
                         would only be 49 Gt remaining for non-food based
                         emissions. In 2022 global energy emissions alone reached
-                        a new high of 53.8 Gt. As it currently stands breaking
-                        2.0°C could happen as early as the 2040s.
+                        a new high of 53.8 Gt. On the current trajectory we
+                        could break 2.0°C could happen as early as the 2040s.
+                        With food and especially animal related emissions
+                        contributing a significant factor to this.
                       </p>
                     </div>
                   </Step>
@@ -150,7 +154,7 @@ function AnimalEmissions() {
                     <div
                       style={{
                         padding: "40vh 0",
-                        margin: "65vh 0",
+                        margin: "30vh 0",
                         opacity: 0.99,
                       }}
                     >
@@ -158,16 +162,89 @@ function AnimalEmissions() {
                         Is it really possible to stay under the 1.5°C limit set
                         by the Paris Climate Accord? By the mid 21st century we
                         could use up the remaining 1816 Gts of our carbon budget
-                        left for a 50% chance to stay under 2.0°C. As it stands
-                        currently the world is getting hotter at an
-                        unsustainable rate. Without any change to current
-                        emission rates the average world temperature could
-                        easily surpace 3-4°C by the year 2100.
+                        left for a 50% chance to stay under 2.0°C. The world is
+                        getting warmer at anunsustainable rate. Without any
+                        change to current emission rates the average world
+                        temperature could easily surpace 3-4°C by the year 2100.
                       </p>
                     </div>
                   </Step>
                 </Scrollama>
               </div>
+            </div>
+            <div
+              style={{
+                padding: "40vh 0 0 0",
+                margin: "40vh 0 0 0",
+              }}
+            >
+              <p>
+                Globally it's estimated that food production is responsible for
+                one-quarter of the world's greenhouse gas emissions. With
+                animals being responsible for approximately 37% of all
+                human-caused methane emissions and 65% of all agriculturally
+                related nitrogen emissions. More than half of all food related
+                emissions are related to the use of animals.
+              </p>
+              <div className="flex items-center justify-center pb-8">
+                <img
+                  src={`${imagePath}/series/animal-emissions/food-emissions.png`}
+                  className="object-cover w-3/4 card"
+                ></img>
+              </div>
+
+              <p>
+                It shouldn't be too suprising to see that in comparison to the
+                vast majority of crops emissions from animals such as cows and
+                chickens to fish and seafood contribute so heavily towards
+                greenhouse gas emissions. There can be other issues as well such
+                as overfishing that is already an issue in many parts of the
+                world. But even considering this emissions of livestock can be
+                unequal.
+              </p>
+
+              <div className="flex items-center justify-center pb-8">
+                <img
+                  src={`${imagePath}/series/animal-emissions/food-emissions-supply-chain.png`}
+                  className="object-cover w-3/4 card"
+                ></img>
+              </div>
+
+              <p>
+                When we take a look at total greenhouse emissions per kg of beef
+                something interesting to note is how much of a difference
+                developing countries had in emissions in comparison to more
+                developed ones. In a study from 2013 we see places such as Latin
+                America emissions for beef production were producing almost two
+                times more emissions per kg of beef. For those in with even less
+                developed infrastructure the amount changes to as much as ten
+                times the amount of emissions.
+              </p>
+
+              <div className="flex items-center justify-center pb-8">
+                <img
+                  src={`${imagePath}/series/animal-emissions/beef-emissions.png`}
+                  className="object-cover w-3/4 card"
+                ></img>
+              </div>
+
+              <p>
+                Issues like these are important to point out especially
+                considering the needs of developing economies. The production of
+                beef like many other meats is expected to increase considerably
+                according to projections done by groups like the FAO. But the
+                emissions for many of these animals aren't as simple as they
+                seem and reducing emissions is an issue that should concern us
+                all to reduce the impacts of climate change.
+              </p>
+
+              <p>
+                For many of these countries a transition can be unaffordable. In
+                many cases while the number of animals is increasing as a result
+                of growing populations. However, it's still important to note
+                issues such as sampling biases and to note that the study in
+                question is more than a decade old now.
+              </p>
             </div>
           </div>
         </div>

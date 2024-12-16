@@ -20,12 +20,12 @@ function SolarSystem({index}) {
         w: width / 2
     },
     {
-        name: "1.5* C Budget (67% Chance)",
+        name: "1.5°C Budget (67% Chance)",
         value: "500",
         w: width * 2
     },
     {
-        name: "1.5* C Budget (50% Chance)",
+        name: "1.5°C Budget (50% Chance)",
         value: "705",
         w: width * 3
     },
@@ -40,12 +40,12 @@ function SolarSystem({index}) {
         w: width * 5
     },
     {
-        name: "2.0* C Budget (67% Chance)",
+        name: "2.0°C Budget (67% Chance)",
         value: "1405",
         w: width * 6
     },
     {
-        name: "2.0* C Budget (50% Chance)",
+        name: "2.0°C Budget (50% Chance)",
         value: "1816",
         w: width * 7
     },    
