@@ -1,18 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 
-import greenEarth from '../assets/greenEarth.svg';
-import yellowEarth from '../assets/yellowEarth.svg';
-import orangeEarth from '../assets/orangeEarth.svg';
-import redEarth from '../assets/redEarth.svg';
-
 import './SolarSystem.css'
 
 function SolarSystem({index}) {
+  const imagePath = import.meta.env.VITE_IMAGE_PATH;
   const svgRef = useRef(null);
   const [prevIndex, setPrevIndex] = useState(-1);
   const [initialized, setInitialized] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
   const height = 1080;
   const width = 1080;
@@ -64,6 +61,7 @@ function SolarSystem({index}) {
 
     const svg = d3.select(svgRef.current);
     const systemScale = d3.scaleLinear().domain([50, 1816]).range([100, 350]);
+    
 
     if (prevIndex !== index && initialized) {
       const g = svg.select("g");
@@ -156,7 +154,7 @@ function SolarSystem({index}) {
           return "none";
         }
 
-        return "white";
+        return "black";
       });
 
       setData(tempData);
@@ -171,7 +169,7 @@ function SolarSystem({index}) {
                       .join("line")
                       .attr("class", "top")
                       .attr("stroke", function(d) {
-                        return "white";
+                        return "black";
                       })
                       .attr("x1", function(d){
                         return d.w;
@@ -191,7 +189,7 @@ function SolarSystem({index}) {
                       .join("line")
                       .attr("class", "bottom")
                       .attr("stroke", function(d) {
-                        return "white";
+                        return "black";
                       })
                       .attr("x1", function(d){
                         return d.w;                       
@@ -227,7 +225,7 @@ function SolarSystem({index}) {
                 .attr("font-family", "Arial")
                 .attr("font-size", "16px")
                 .attr("stroke", "none")
-                .attr("fill", "white")                
+                .attr("fill", "black")                
                 .attr("x", function(d) {
                   return d.w;                       
                 })
@@ -263,13 +261,13 @@ function SolarSystem({index}) {
                 })
                 .attr("href", function(d,i) {
                   if (i == 0) {
-                    return './greenEarth.svg';
+                    return `${imagePath}/series/animal-emissions/greenEarth.svg`;
                   } else if (i <= 2 && i >= 1) {
-                    return './yellowEarth.svg';
+                    return `${imagePath}/series/animal-emissions/yellowEarth.svg`;
                   } else if (i == 4 || i == 3){
-                    return './orangeEarth.svg';
+                    return `${imagePath}/series/animal-emissions/orangeEarth.svg`;
                   } else if (i > 4) {
-                    return './redEarth.svg';
+                    return `${imagePath}/series/animal-emissions/redEarth.svg`;
                   }
                 });
     
@@ -301,34 +299,20 @@ function SolarSystem({index}) {
             return "none";
           }
 
-          return "white";
+          return "black";
         })
-
-    if (windowWidth > 1300) {
-      g.selectAll("line.legend")
-      .data(textToShow)
-      .enter()
-      .append("line")
-        .attr("class", "legend")
-        .attr('x1', function(d){ return xCircle + size(d) } )
-        .attr('x2', xLabel)
-        .attr('y1', function(d){ return yCircle - size(d) } )
-        .attr('y2', function(d){ return yCircle - size(d) } )
-        .attr('stroke', 'white')
-        .style('stroke-dasharray', ('2,2'))
 
     g.selectAll("text.legend")
       .data(textToShow)
       .enter()
       .append("text")
         .attr("class", "legend")
-        .attr('x', xLabel)
-        .attr('y', function(d){ return yCircle - size(d) } )
-        .text( function(d){ return d })
+        .attr('x', xCircle - 15)
+        .attr('y', function(d){ return yCircle - size(d) * 2 - 7.5} )
+        .text( function(d){ return d +  " Gt."})
         .style("font-size", 10)
         .attr('alignment-baseline', 'middle')
-        .attr("fill", "white")        
-    }
+        .attr("fill", "black")        
 
     setInitialized(true);
 

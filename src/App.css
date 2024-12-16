@@ -111,3 +111,10 @@
 .scroll-table {
     max-height: 480px;
 }
+
+
+.sticky {
+    top:0;
+    position: -webkit-sticky; 
+    position: sticky;    
+  }

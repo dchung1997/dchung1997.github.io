@@ -1,0 +1,10 @@
+.horizontalContainer {
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+}
+
+.horizontalContainer svg {
+    height: 100%;
+    width: 100%;
+}
