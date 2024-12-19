@@ -8,6 +8,7 @@ import Manufacturing from "./pages/Food-Affordability/Manufacturing";
 import Debt from "./pages/Food-Affordability/Debt";
 
 import AnimalEmissions from "./pages/Meat/AnimalEmissions";
+import MeatConsumption from "./pages/Meat/MeatConsumption";
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         </Route>
         <Route path="/meat">
           <Route index={true} element={<AnimalEmissions/>}></Route>
+          <Route path="consumption" element={<MeatConsumption/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,1134 @@
+[
+  { "region": "Africa", "category": "Low", "type": "Beef", "value": 0.0 },
+  {
+    "region": "Africa",
+    "category": "Low",
+    "type": "Fish and Seafood",
+    "value": 0.0
+  },
+  { "region": "Africa", "category": "Low", "type": "Other Meat", "value": 0.0 },
+  { "region": "Africa", "category": "Low", "type": "Pig", "value": 0.0 },
+  { "region": "Africa", "category": "Low", "type": "Poultry", "value": 0.0 },
+  {
+    "region": "Africa",
+    "category": "Low",
+    "type": "Sheep and Goat",
+    "value": 0.0
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Beef",
+    "value": 42654868.7700000033
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 608027878.7000000477
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 160979618.7300000191
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Pig",
+    "value": 60038301.5399999991
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Poultry",
+    "value": 77665066.7200000137
+  },
+  {
+    "region": "Africa",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 19379671.6999999993
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Beef",
+    "value": 1993738462.0
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Fish and Seafood",
+    "value": 2797638388.3000001907
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Other Meat",
+    "value": 532071249.2599999905
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Pig",
+    "value": 1069903311.9500000477
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Poultry",
+    "value": 1207960479.2899999619
+  },
+  {
+    "region": "Africa",
+    "category": "low",
+    "type": "Sheep and Goat",
+    "value": 1256589402.9500000477
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 3695618766.2699999809
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 8916292659.3099994659
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 801800766.810000062
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 893533551.9800000191
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 5404736773.5
+  },
+  {
+    "region": "Africa",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 1634147079.4100000858
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 1095821576.2200000286
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 656103631.1800000668
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 123370958.2800000012
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 366792422.7900000215
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 2984750844.5
+  },
+  {
+    "region": "Africa",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 254790815.1599999964
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Beef",
+    "value": 784519586.4600000381
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 771406552.7599999905
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 20355033.7600000016
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Pig",
+    "value": 797474892.5199999809
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Poultry",
+    "value": 1420249984.4400000572
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 280971281.6700000167
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 7824299.2799999993
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 57330623.6599999964
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 89434.02
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 16625627.4600000009
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 39570920.3100000024
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 836831.3300000001
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 3354139.9500000002
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 27387445.25
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 0.0
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 3015907.3500000001
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 30328189.8000000007
+  },
+  {
+    "region": "Australia - Oceania",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 5026512.25
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Beef",
+    "value": 72012049.849999994
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 112143874.2100000083
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 4547511.4399999995
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Pig",
+    "value": 75442838.349999994
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Poultry",
+    "value": 329209829.0799999833
+  },
+  {
+    "region": "Central America",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 3553404.5899999999
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 124074415.2699999958
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 138516607.4099999964
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 6470945.7300000004
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 162186438.9200000167
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 500406353.1500000358
+  },
+  {
+    "region": "Central America",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 7173754.0199999996
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 469430713.469999969
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 450500001.1499999762
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 31180277.3400000036
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 465824346.7900000215
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 1716266239.7999999523
+  },
+  {
+    "region": "Central America",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 14635989.8099999987
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 1227713685.4500000477
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 133067790.0600000024
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 28039228.799999997
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 21350471.3399999999
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 278268442.7699999809
+  },
+  {
+    "region": "Central Asia",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 273624040.8000000119
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 669757165.7699999809
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 84830039.6300000101
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 141038143.1200000048
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 169424453.6599999964
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 434660088.030000031
+  },
+  {
+    "region": "Central Asia",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 287744552.6899999976
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Beef",
+    "value": 2687238880.1599998474
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 9725488972.4799995422
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 33907777.2199999988
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Pig",
+    "value": 6019205924.3000001907
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Poultry",
+    "value": 5700593924.6899995804
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 153404653.0400000215
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Beef",
+    "value": 20665088.0
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Fish and Seafood",
+    "value": 297318953.6000000238
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Other Meat",
+    "value": 130448368.0
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Pig",
+    "value": 113916297.599999994
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Poultry",
+    "value": 49596211.200000003
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "low",
+    "type": "Sheep and Goat",
+    "value": 14723875.1999999993
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 1313151137.6199998856
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 10539386203.9899997711
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 397934540.4000000358
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 4917956089.9099998474
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 4550135530.3299999237
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 288631100.4599999785
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 11648163925.3500003815
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 71736687842.8399963379
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 678246152.1700000763
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 48495352191.5000076294
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 30500215878.1599998474
+  },
+  {
+    "region": "East Asia/Southeast Asia",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 5479921068.2100000381
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Beef",
+    "value": 7819528320.7700004578
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 12211799172.9799995422
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 511957100.3500000238
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Pig",
+    "value": 20188585377.7700004578
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Poultry",
+    "value": 12760297893.3099994659
+  },
+  {
+    "region": "Europe",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 896767302.2000000477
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 277347357.6000000238
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 603689832.0
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 18810625.1999999993
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 773860371.6000000238
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 1039396406.3999999762
+  },
+  {
+    "region": "Europe",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 12248779.1999999993
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 2269350634.6999998093
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 3438779709.5799999237
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 542962702.5299999714
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 5163044244.0600004196
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 5269464828.8500003815
+  },
+  {
+    "region": "Europe",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 281544033.7799999714
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Beef",
+    "value": 764222867.2799999714
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 990046794.6600000858
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 156048086.2099999785
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Pig",
+    "value": 41673082.7899999991
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Poultry",
+    "value": 2896900527.7899999619
+  },
+  {
+    "region": "Middle East",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 412458533.8000000119
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Beef",
+    "value": 150423028.5300000012
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Fish and Seafood",
+    "value": 114005995.2899999917
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Other Meat",
+    "value": 6802161.21
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Pig",
+    "value": 4584698.7899999991
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Poultry",
+    "value": 457559021.6999999881
+  },
+  {
+    "region": "Middle East",
+    "category": "low",
+    "type": "Sheep and Goat",
+    "value": 283459074.8999999762
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 524210974.5199999809
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 1135357473.6600000858
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 8493671.5899999999
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 3581601.1899999999
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 2439227607.3400001526
+  },
+  {
+    "region": "Middle East",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 320311597.2400000095
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 1797085186.3100001812
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 655394455.7599999905
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 6605164.9699999997
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 108882527.450000003
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 2385547017.1500000954
+  },
+  {
+    "region": "Middle East",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 620384156.4500000477
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Beef",
+    "value": 13650157408.2099990845
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 8269159279.3999996185
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 329446735.5200000405
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Pig",
+    "value": 10658037255.25
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Poultry",
+    "value": 20869718031.3199996948
+  },
+  {
+    "region": "North America",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 275857000.3899999857
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 1985662407.75
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 1805976235.7699999809
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 79426496.3100000024
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 2636699262.75
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 5009077562.3699998856
+  },
+  {
+    "region": "North America",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 109374191.6400000006
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Beef",
+    "value": 668247923.7300000191
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Fish and Seafood",
+    "value": 316502602.5
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Other Meat",
+    "value": 22835281.1000000015
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Pig",
+    "value": 551825010.6599999666
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Poultry",
+    "value": 807645879.1399999857
+  },
+  {
+    "region": "South America",
+    "category": "high",
+    "type": "Sheep and Goat",
+    "value": 9776174.7599999998
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 252698094.8100000024
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 31748946.3000000007
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 21048375.5100000016
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 112649965.0199999958
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 498340868.2200000286
+  },
+  {
+    "region": "South America",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 36687671.2800000012
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 11164309327.9899997711
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 3777523376.2999997139
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 177471139.599999994
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 4643138021.4800004959
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 17176055542.8000011444
+  },
+  {
+    "region": "South America",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 248234568.1000000238
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Beef",
+    "value": 112399242.0
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Fish and Seafood",
+    "value": 13113244.9000000004
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Other Meat",
+    "value": 11239924.1999999993
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Pig",
+    "value": 749328.28
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Poultry",
+    "value": 57323613.4200000018
+  },
+  {
+    "region": "South Asia",
+    "category": "low",
+    "type": "Sheep and Goat",
+    "value": 146493678.7400000095
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Beef",
+    "value": 5749522269.9200000763
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Fish and Seafood",
+    "value": 16049608303.7500019073
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Other Meat",
+    "value": 4763620.6799999997
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Pig",
+    "value": 344158223.3100000024
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Poultry",
+    "value": 5797077686.0799999237
+  },
+  {
+    "region": "South Asia",
+    "category": "lower-middle",
+    "type": "Sheep and Goat",
+    "value": 1677286297.5699999332
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Beef",
+    "value": 3637128.3900000001
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Fish and Seafood",
+    "value": 31421507.6700000018
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Other Meat",
+    "value": 31253.52
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Pig",
+    "value": 257841.54
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Poultry",
+    "value": 6875774.4000000004
+  },
+  {
+    "region": "South Asia",
+    "category": "upper-middle",
+    "type": "Sheep and Goat",
+    "value": 453176.04
+  }
+]

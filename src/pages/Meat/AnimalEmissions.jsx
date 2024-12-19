@@ -15,7 +15,7 @@ import useTitle from "../../hooks/useTitle";
 function AnimalEmissions() {
   useTitle("Animal Emissions");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
-  const citedSources = ["https://ourworldindata.org/food-ghg-emissions", "https://www.science.org/doi/10.1126/science.aaq0216", "https://ourworldindata.org/environmental-impacts-of-food", "https://www.pnas.org/doi/10.1073/pnas.1308149110"]
+  const citedSources = ["https://www.fao.org/family-farming/detail/en/c/1634679/", "https://ourworldindata.org/food-ghg-emissions", "https://www.science.org/doi/10.1126/science.aaq0216", "https://ourworldindata.org/environmental-impacts-of-food", "https://www.pnas.org/doi/10.1073/pnas.1308149110"]
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
 
   const onStepEnter = ({ data }) => {
