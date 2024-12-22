@@ -33,30 +33,34 @@ function MeatConsumption() {
           <div className="prose max-w-none pb-8 pt-10">
             <p>
               Livestock emissions play a large role for issues such as climate
-              change. However, the largest consumers of these goods tends to
-              come from wealthier countries. While it's gradually changing and
-              is expected to change in the decades to come it's important to
-              think about how much meat is being consumed throughout the world.
-              As it stands in 2024 High and Upper-Middle Income countries
+              change. As of 2022 High and Upper-Middle Income countries
               currently consume more than 80% of all meat produced globally.
+              They are the largest consumers and emittors. While this has been
+              gradually changing and is expected to change in the decades to
+              come it's important to think about how much meat is being consumed
+              throughout the world and its impact on climate change.
             </p>
             <ChartWrapper>
               <h2>Total Annual Meat Consumption by Kilogram</h2>
               <h3>Income Group, World, 2023</h3>
               <TreeMap data={meat_consumption} group={"type"} />
               <span className="source">
-                Source: Food and Agriculture Organization (2023)
+                Source: Food and Agriculture Organization (2023) | FAOSTAT
               </span>
             </ChartWrapper>
             <p>
               High income countries consumed more than seven times the meat per
               capita of low income countries. With high income countries
               consuming around 102kg more annually than those of low income
-              ones. That's more than 220 pounds! While the jump from
-              upper-middle to lower-middle income countries was around 63kg or
-              138lbs. An interesting thing to note is that as countries grew
-              wealthier the amount of Poultry, Beef, and Seafood grew
-              exponentially.
+              ones. Even upper-middle countries consumed 63kgs more than
+              lower-income ones. The gap between the meat consumption of rich
+              and poor countries is large. A reduction in meat consumption by
+              wealthier countries would be a positive step towards reducing
+              emissions. Considering how much food is wasted, however, this can
+              be a complex process and wouldn't necessarily be as simple as
+              increasing a tax. While this could be a simple way of reducing
+              emissions it likely would result in less favourable views towards
+              climate change.
             </p>
             <ChartWrapper>
               <img
@@ -76,8 +80,14 @@ function MeatConsumption() {
               implications of their own.
             </p>
 
+            <p>
+              For the vast majority of Low/Lower Middle Income countries they
+              consume far less beef than other more wealthier nations.
+            </p>
+
             <ChartWrapper>
               <h2>Greenhouse Gas Emissions Beef Production </h2>
+              <h3>CO2 Equivalent Emissions to Beef, World, 2013</h3>
               <img
                 src={`${imagePath}/series/animal-emissions/beef-emissions.png`}
               ></img>
@@ -111,13 +121,18 @@ function MeatConsumption() {
               least that emissions of some animals can get stuck.
             </p>
 
+            <ChartWrapper>
+              <h2>TODO: GRAPHIC HERE </h2>
+            </ChartWrapper>
+
             <p>
               So what's the big deal? For many countries it's believed that
-              naturally overt time as food systems develop emissions of meat
+              naturally over time as food systems develop emissions of meat
               products is expected to decrease. But looking at the data it shows
               that in many ways they can get stuck. This can be problematic in a
               lot of different ways especially for countries that struggle with
-              food insecurity which is a considerable number of them.
+              food insecurity which is a considerable number of them. Let's look
+              at some FAO projections on meat production in the decades to come.
             </p>
           </div>
         </div>
