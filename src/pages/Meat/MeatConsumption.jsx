@@ -54,14 +54,11 @@ function MeatConsumption() {
               consuming around 102kg more annually than those of low income
               ones. Even upper-middle countries consumed 63kgs more than
               lower-income ones. The gap between the meat consumption of rich
-              and poor countries is large. A reduction in meat consumption by
-              wealthier countries would be a positive step towards reducing
-              emissions. Considering how much food is wasted, however, this can
-              be a complex process and wouldn't necessarily be as simple as
-              increasing a tax. While this could be a simple way of reducing
-              emissions it likely would result in less favourable views towards
-              climate change.
+              and poor countries is large. Wealthier countries are largely
+              responsible for the majority of greenhouse emissions as it stands
+              currently. But the total number of animals by region is changing.
             </p>
+
             <ChartWrapper>
               <img
                 src={`${imagePath}/series/meat-consumption/per-capita-consumption-meat-type.png`}
@@ -73,16 +70,10 @@ function MeatConsumption() {
               countries of animals had significantly higher amounts of CO2 per
               Kg in comparison to more developed countries. Such as for beef,
               but is it necessarily an issue? Not necessarily. While there are
-              outliers such as India which humanely treat cows maybe a bit too
-              much. For many countries as they develop the emissions of animals
+              outliers such as India. For many countries as they develop the emissions of animals
               is generally expected to decrease. Though there are caveats to
               this and the transition towards this also can have many
               implications of their own.
-            </p>
-
-            <p>
-              For the vast majority of Low/Lower Middle Income countries they
-              consume far less beef than other more wealthier nations.
             </p>
 
             <ChartWrapper>
