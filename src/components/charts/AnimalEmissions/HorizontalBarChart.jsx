@@ -27,6 +27,7 @@ const HorizontalBarChart = ({ data, id }) => {
             x: "placement", 
             y: -5, // Adjust y-position as needed
             text: d => d.category, 
+            fontFamily:"sans-serif",
             fill: "black", 
             textAnchor: "start",
             fontSize: "4.5em"
@@ -35,6 +36,7 @@ const HorizontalBarChart = ({ data, id }) => {
             x: "placement", 
             y: -5, // Adjust y-position as needed
             text: d => d.category, 
+            fontFamily:"sans-serif",
             fill: "black", 
             textAnchor: "end",
             fontSize: "4.5em"
@@ -44,6 +46,7 @@ const HorizontalBarChart = ({ data, id }) => {
             y: 0, // Adjust y-position as needed
             dy: -15,
             text: d => "Total Population: " + d.population.toLocaleString() + " (" + d.percent + ")", 
+            fontFamily:"sans-serif",
             fill: "black", 
             textAnchor: "start",
             fontSize: "3.5em"
@@ -53,6 +56,7 @@ const HorizontalBarChart = ({ data, id }) => {
             y: 0, // Adjust y-position as needed
             dy: -15,
             text: d => "Total Population: " + d.population.toLocaleString()  + " (" + d.percent + ")", 
+            fontFamily:"sans-serif",
             fill: "black", 
             textAnchor: "end",
             fontSize: "3.5em"
