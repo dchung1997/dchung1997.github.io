@@ -43,6 +43,7 @@ function MeatConsumption() {
             <ChartWrapper>
               <h2>Total Annual Meat Consumption by Kilogram</h2>
               <h3>Income Group, World, 2023</h3>
+              <p>TODO: ADD Horizontal Chart Here to Showcase Population Differences. Add Percentages to Treemap </p>
               <TreeMap data={meat_consumption} group={"type"} />
               <span className="source">
                 Source: Food and Agriculture Organization (2023) | FAOSTAT
@@ -55,8 +56,16 @@ function MeatConsumption() {
               ones. Even upper-middle countries consumed 63kgs more than
               lower-income ones. The gap between the meat consumption of rich
               and poor countries is large. Wealthier countries are largely
-              responsible for the majority of greenhouse emissions as it stands
-              currently. But the total number of animals by region is changing.
+              responsible for the majority of greenhouse emissions.
+            </p>
+
+            <p>
+              A reduction in meat consumption by wealthier countries would be a
+              positive step towards reducing emissions. Considering how much
+              food is wasted, however, this can be a complex process and
+              wouldn't necessarily be as simple as increasing a tax. While this
+              could be a simple way of reducing emissions it likely would result
+              in less favourable views towards climate change.
             </p>
 
             <ChartWrapper>
@@ -70,10 +79,11 @@ function MeatConsumption() {
               countries of animals had significantly higher amounts of CO2 per
               Kg in comparison to more developed countries. Such as for beef,
               but is it necessarily an issue? Not necessarily. While there are
-              outliers such as India. For many countries as they develop the emissions of animals
-              is generally expected to decrease. Though there are caveats to
-              this and the transition towards this also can have many
-              implications of their own.
+              outliers such as India. For many countries as they develop the
+              emissions of animals is generally expected to decrease. Though
+              there are caveats to this and the transition towards this also can
+              have many implications of their own. We'll be talking about these
+              here.
             </p>
 
             <ChartWrapper>
@@ -125,6 +135,8 @@ function MeatConsumption() {
               food insecurity which is a considerable number of them. Let's look
               at some FAO projections on meat production in the decades to come.
             </p>
+
+            <h2>TODO: Add Burning Meat Component Refactor Remove Circles and use TreeMaps, remove scenarios and use only business as usual.</h2>
           </div>
         </div>
       </main>
