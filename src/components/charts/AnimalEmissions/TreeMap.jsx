@@ -11,9 +11,11 @@ function TreeMap({ data, group }) {
         value: (d) => d.value, // size of each node (file); null for internal nodes (folders)
         group: (d) => d.category, // e.g., "animate" in "flare.animate.Easing"; for color
         label: (d, n) =>
+
           [
             d.category,
             n.value.toLocaleString("en"),
+            d.percent
           ].join("\n"),
         title: (d, n) => `${d.category}\n${n.value.toLocaleString("en")}`, // text to show on hover
         width: 1152,
@@ -176,22 +178,20 @@ function TreeMap({ data, group }) {
         .append("rect")
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0);
-
+      
       node
         .append("text")
-        .attr(
-          "clip-path",
-          (d, i) => `url(${new URL(`#${uid}-clip-${i}`, location)})`
-        )
         .selectAll("tspan")
-        .data((d, i) => `${L[i]}`.split(/\n/g))
+        .data((d, i) => {
+            return `${L[i]}`.split(/\n/g);
+        }
+        )
         .join("tspan")
-        .attr("x", 3)
+        .attr("x", 5)
         .attr(
           "y",
-          (d, i, D) => `${(i === D.length - 1) * 0.3 + 1.1 + i * 0.9}em`
+          (d, i, D) => `${1.1 + i * 1.33}em`
         )
-        .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
         .text((d) => d);
     }
 

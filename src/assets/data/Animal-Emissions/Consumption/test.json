@@ -1,6 +1,6 @@
 [
-  { "category": "High", "value": 146039966019.0700073242 },
-  { "category": "Low", "value": 10842723099.3099994659 },
-  { "category": "Lower-Middle", "value": 84108620729.7600097656 },
-  { "category": "Upper-Middle", "value": 250419290988.2300109863 }
+  { "category": "High", "value": 146039966019.0700073242, "percent": "29.72%" },
+  { "category": "Low", "value": 10842723099.3099994659, "percent": "2.21%" },
+  { "category": "Lower-Middle", "value": 84108620729.7600097656, "percent": "17.11%" },
+  { "category": "Upper-Middle", "value": 250419290988.2300109863, "percent": "50.96%" }
 ]
