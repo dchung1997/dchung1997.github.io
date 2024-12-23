@@ -11,10 +11,28 @@ import TreeMap from "../../components/charts/AnimalEmissions/TreeMap";
 import meat_consumption from "../../assets/data/Animal-Emissions/Consumption/test.json";
 
 import useTitle from "../../hooks/useTitle";
+import HorizontalBarChart from "../../components/charts/AnimalEmissions/HorizontalBarChart";
 
 function MeatConsumption() {
   useTitle("Meat Consumption");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
+  const populationData = [
+    {
+      y:"",
+      category: "High Income Countries",
+      population: 4217329972,
+      percent: "52.5%",
+      placement: 0
+    },
+    {
+      y:"",
+      category: "Low Income Countries",
+      population: 3816245175,
+      percent: "47.5%",
+      placement: 4217329972 + 3816245175,
+    },
+  ];
+
   const citedSources = [
     "https://www.fao.org/family-farming/detail/en/c/1634679/",
     "https://ourworldindata.org/food-ghg-emissions",
@@ -43,7 +61,7 @@ function MeatConsumption() {
             <ChartWrapper>
               <h2>Total Annual Meat Consumption by Kilogram</h2>
               <h3>Income Group, World, 2023</h3>
-              <p>TODO: ADD Horizontal Chart Here to Showcase Population Differences. Add Percentages to Treemap </p>
+              <HorizontalBarChart data={populationData} />
               <TreeMap data={meat_consumption} group={"type"} />
               <span className="source">
                 Source: Food and Agriculture Organization (2023) | FAOSTAT
