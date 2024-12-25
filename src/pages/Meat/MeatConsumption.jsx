@@ -6,12 +6,13 @@ import ArticleHeader from "../../components/ui/ArticleHeader/ArticleHeader";
 import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 import Sources from "../../components/ui/Sources/Sources";
 
+import HorizontalBarChart from "../../components/charts/AnimalEmissions/HorizontalBarChart";
+import BarChart from "../../components/charts/AnimalEmissions/BarChart";
 import TreeMap from "../../components/charts/AnimalEmissions/TreeMap";
 
 import meat_consumption from "../../assets/data/Animal-Emissions/Consumption/test.json";
 
 import useTitle from "../../hooks/useTitle";
-import HorizontalBarChart from "../../components/charts/AnimalEmissions/HorizontalBarChart";
 
 function MeatConsumption() {
   useTitle("Meat Consumption");
@@ -31,6 +32,52 @@ function MeatConsumption() {
       percent: "47.5%",
       placement: 4217329972 + 3816245175,
     },
+  ];
+
+  const meatYields = [
+    {
+      value: 146.5,
+      country: "China",
+      year: "2013"
+    },
+    {
+      value: 148.4,
+      country: "China",
+      year: "2023"
+    },
+    {
+      value: 232.6,
+      country: "Brazil",
+      year: "2013"
+    },  
+    {
+      value: 245.0,
+      country: "Brazil",
+      year: "2023"
+    }
+  ];
+
+  const meatProduction = [
+    {
+      value: 6130000,
+      country: "China",
+      year: "2013"
+    },  
+    {
+      value: 7530000,
+      country: "China",
+      year: "2023"
+    },  
+    {
+      value: 10000000,
+      country: "Brazil",
+      year: "2013"
+    },
+    {
+      value: 10500000,
+      country: "Brazil",
+      year: "2023"
+    }
   ];
 
   const citedSources = [
@@ -141,7 +188,10 @@ function MeatConsumption() {
             </p>
 
             <ChartWrapper>
-              <h2>TODO: GRAPHIC HERE </h2>
+              <h2>Beef Yield and Production</h2>
+              <h3>China and Brazile, 2012, 2022</h3>
+              <BarChart meatYield={meatYields} meatProduction={meatProduction} id={"yields"}/>
+              <span className="source">Source: Food and Agriculture Organization (2023) | FAOSTAT</span>
             </ChartWrapper>
 
             <p>
