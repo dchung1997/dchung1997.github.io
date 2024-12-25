@@ -38,6 +38,7 @@ const BarChart = ({ meatYield, meatProduction, id }) => {
           grid: true,
           label: "Meat Production (Million Metric Tons)",
           insetTop: 40,
+          tickPadding: -0.001,
           tickFormat: (d) => d / 1000000 + "m",
           ticks: 5
         },

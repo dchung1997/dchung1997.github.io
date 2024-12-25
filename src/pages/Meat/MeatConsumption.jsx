@@ -189,7 +189,7 @@ function MeatConsumption() {
 
             <ChartWrapper>
               <h2>Beef Yield and Production</h2>
-              <h3>China and Brazile, 2012, 2022</h3>
+              <h3>China and Brazil, 2012, 2022</h3>
               <BarChart meatYield={meatYields} meatProduction={meatProduction} id={"yields"}/>
               <span className="source">Source: Food and Agriculture Organization (2023) | FAOSTAT</span>
             </ChartWrapper>
