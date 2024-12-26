@@ -12,6 +12,7 @@ const BarChart = ({ meatYield, meatProduction, id }) => {
         y: {
           grid: true,
           label: "Meat Yield (kg)",
+          domain: [0,300],
           insetTop: 40,
           ticks: 5
         },
