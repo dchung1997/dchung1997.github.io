@@ -118,3 +118,10 @@
     position: -webkit-sticky; 
     position: sticky;    
   }
+
+  
+.sticky-mid {
+    top:25vh;
+    position: -webkit-sticky; 
+    position: sticky;    
+  }

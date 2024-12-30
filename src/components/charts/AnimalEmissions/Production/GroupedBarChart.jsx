@@ -12,9 +12,11 @@ export default function GroupedBarChart({data, name, domain}) {
         const max2012 = d3.max(data.filter((d) => d.Year === 2012), (d) => d.Value);
 
         const plot = Plot.plot({
-          marginLeft: 10,
+          marginLeft: 60,
+          marginBottom: 50,
+          style: { fontSize: "2em" }, // Set font size for the entire plot
           x: {axis: null, domain: ['Stratified Societies', 'Business As Usual', 'Toward Sustainability']},
-          y: {tickFormat: "s", grid: true, label:name + " Meat Yield (kg)", domain: domain},
+          y: {tickFormat: "s", grid: true, label:name + " Meat Yield (kg)", domain: domain, labelOffset: -575},
           fx: {padding: 0, label: null, tickSize: 6},
           width: 1000,
           height: 400,

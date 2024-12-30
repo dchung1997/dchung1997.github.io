@@ -66,32 +66,32 @@ function MeatLayout({data, yearData, extents}) {
         
         const axisTop = g => g
           .call(d3.axisTop(xScale))
-          .attr('transform', "translate(-110, 50)")
-          .attr('font-size', "1em")
+          .attr('transform', "translate(-105, 50)")
+          .attr('font-size', "1.75em")
           .call(g => g.select('.domain').remove()); 
 
         const axisCowSub = g => g
           .call(d3.axisTop(abrevScale))
           .attr('transform', "translate(105.5, 80)")
-          .attr('font-size', "0.75em")
+          .attr('font-size', "1.5em")
           .call(g => g.select('.domain').remove());           
 
         const axisChickenSub = g => g
           .call(d3.axisTop(abrevScale))
           .attr('transform', "translate(560.5, 80)")
-          .attr('font-size', "0.75em")
+          .attr('font-size', "1.5em")
           .call(g => g.select('.domain').remove());    
           
         const axisPigSub = g => g
           .call(d3.axisTop(abrevScale))
           .attr('transform', "translate(1065.5, 80)")
-          .attr('font-size', "0.75em")
+          .attr('font-size', "1.5em")
           .call(g => g.select('.domain').remove());              
 
         const axisGoatSub = g => g
           .call(d3.axisTop(abrevScale))
           .attr('transform', "translate(1527.5, 80)")
-          .attr('font-size', "0.75em")
+          .attr('font-size', "1.5em")
           .call(g => g.select('.domain').remove());              
 
         gAxis.call(axisTop);

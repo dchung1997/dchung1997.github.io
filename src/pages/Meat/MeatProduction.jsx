@@ -5,14 +5,14 @@ import * as d3 from "d3";
 import MeatLayout from "../../components/charts/AnimalEmissions/Production/MeatLayout";
 import HorizontalBarChart from "../../components/charts/AnimalEmissions/Production/HorizontalBarChart";
 import GroupedBarChart from "../../components/charts/AnimalEmissions/Production/GroupedBarChart";
-import Swatch from '../../components/charts/AnimalEmissions/Production/Swatch';
+import Swatch from "../../components/charts/AnimalEmissions/Production/Swatch";
 
 import population from "../../assets/data/Animal-Emissions/Consumption/UNPopulationProjections.json";
 import projections from "../../assets/data/Animal-Emissions/Consumption/FAOLivestockProjections.json";
 import yearItemSums from "../../assets/data/Animal-Emissions/Consumption/yearItemSums.json";
 import medians from "../../assets/data/Animal-Emissions/Consumption/faoprojections2050median.json";
 
-import "./Production.css";
+import ChartWrapper from "../../components/ui/ChartWrapper/ChartWrapper";
 
 function MeatProduction() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
@@ -31,10 +31,10 @@ function MeatProduction() {
   function abbreviateLine(line) {
     // Split the line at any word separators (spaces, hyphens, or forward slashes)
     const words = line.split(/\s|\/|-/);
-  
+
     // Create the abbreviation by taking the first letter of each word
-    const abbreviation = words.map(word => word[0]).join("");
-  
+    const abbreviation = words.map((word) => word[0]).join("");
+
     return abbreviation.toUpperCase(); // Convert abbreviation to uppercase
   }
 
@@ -159,12 +159,12 @@ function MeatProduction() {
       pig_median,
       goat_median,
       sheep_median,
-    ].map(function(d){
-      return d.map(function(e) {
+    ].map(function (d) {
+      return d.map(function (e) {
         if (e.Region !== e.Region.toLocaleUpperCase()) {
           e.Region = abbreviateLine(e.Region);
         }
-        return e;       
+        return e;
       });
     });
 
@@ -274,61 +274,98 @@ function MeatProduction() {
 
   return (
     <div id="production">
-    <figure className="sticky">
-      <div className="flex flex-row">
-        <div className="hidden xxl:block xxl:w-1/12"></div> {/* Equivalent to Col lg={0} xxl={1} */}
-        <div className="flex-grow"> {/* Equivalent to Col */}
-          <div className="flex flex-row justify-between items-center">
-            <h1 className="text-2xl md:text-3xl font-bold">UN Food Projections: 2012 to 2050</h1>
-            <h1 className="text-2xl md:text-3xl font-bold">{currentStepIndex ? years[currentStepIndex] : years[0]}</h1>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-row mt-4"> {/* Equivalent to Row className="vis" with margin top */}
-        <div className="hidden xxl:block xxl:w-1/12"></div> {/* Equivalent to Col lg={0} xxl={1} */}
-        <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/2"> {/* Equivalent to Col md={12} lg={6} xxl={6} */}
-          <MeatLayout data={livestockData} extents={extents} yearData={yearSumData} />
-          <div className="mt-4">
-            <HorizontalBarChart data={populationData} />
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/3 ml-4"> {/* Equivalent to Col md={12} lg={6} xxl={4} className="data" with left margin */}
-          <div className="mb-4"> {/* Equivalent to Row className="swatch" with margin bottom */}
-            <Swatch />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4"> {/* Equivalent to nested Rows and Cols with grid */}
-            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
-              <div className=""> {/* Equivalent to Row className="efficency" */}
-                <GroupedBarChart
-                  data={liveStockEfficency ? liveStockEfficency[0] : null}
-                  domain={[0, 350]}
-                  name="Cattle"
-                />
-              </div>
-            </div>
-            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
-              <div className=""> {/* Equivalent to Row className="efficency" */}
-                <GroupedBarChart
-                  data={liveStockEfficency ? liveStockEfficency[2] : null}
-                  domain={[0, 2]}
-                  name="Poultry"
-                />
-              </div>
-            </div>
-            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
-              <div className=""> {/* Equivalent to Row className="efficency" */}
-                <GroupedBarChart
-                  data={liveStockEfficency ? liveStockEfficency[3] : null}
-                  domain={[0, 100]}
-                  name="Pig"
-                />
+        <figure className="sticky-mid">
+        <div className="card chart">
+          <div className="flex flex-row">
+            <div className="hidden xxl:block xxl:w-1/12"></div>{" "}
+            {/* Equivalent to Col lg={0} xxl={1} */}
+            <div className="flex-grow">
+              {" "}
+              {/* Equivalent to Col */}
+              <div className="flex flex-row justify-between items-center">
+                <h1 className="text-2xl md:text-3xl font-bold">
+                  Meat Production Projections
+                </h1>
+                <h1 className="text-2xl md:text-3xl font-bold">
+                  Year {currentStepIndex ? years[currentStepIndex] : years[0]}
+                </h1>
               </div>
             </div>
           </div>
-        </div>
-        <div className="hidden lg:block lg:w-1/12 xxl:block xxl:w-1/12"></div>{/* Equivalent to Col lg={1} xxl={1} */}
-      </div>
-    </figure>
+          <div className="flex flex-row mt-4">
+            {" "}
+            {/* Equivalent to Row className="vis" with margin top */}
+            <div className="hidden xxl:block xxl:w-1/12"></div>{" "}
+            {/* Equivalent to Col lg={0} xxl={1} */}
+            <div className="w-full md:w-1/2 lg:w-4/5 xxl:w-4/5">
+              {" "}
+              {/* Equivalent to Col md={12} lg={6} xxl={6} */}
+              <MeatLayout
+                data={livestockData}
+                extents={extents}
+                yearData={yearSumData}
+              />
+              <div className="mt-4">
+                <HorizontalBarChart data={populationData} />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/3 ml-4">
+              {" "}
+              {/* Equivalent to Col md={12} lg={6} xxl={4} className="data" with left margin */}
+              <div className="mb-4">
+                {" "}
+                {/* Equivalent to Row className="swatch" with margin bottom */}
+                <Swatch />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+                {" "}
+                {/* Equivalent to nested Rows and Cols with grid */}
+                <div className="">
+                  {" "}
+                  {/* Equivalent to Col sm={12} md={6} lg={12} */}
+                  <div className="">
+                    {" "}
+                    {/* Equivalent to Row className="efficency" */}
+                    <GroupedBarChart
+                      data={liveStockEfficency ? liveStockEfficency[0] : null}
+                      domain={[0, 350]}
+                      name="Cattle"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  {" "}
+                  {/* Equivalent to Col sm={12} md={6} lg={12} */}
+                  <div className="">
+                    {" "}
+                    {/* Equivalent to Row className="efficency" */}
+                    <GroupedBarChart
+                      data={liveStockEfficency ? liveStockEfficency[2] : null}
+                      domain={[0, 2]}
+                      name="Poultry"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  {" "}
+                  {/* Equivalent to Col sm={12} md={6} lg={12} */}
+                  <div className="">
+                    {" "}
+                    {/* Equivalent to Row className="efficency" */}
+                    <GroupedBarChart
+                      data={liveStockEfficency ? liveStockEfficency[3] : null}
+                      domain={[0, 100]}
+                      name="Pig"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden lg:block lg:w-1/12 xxl:block xxl:w-1/12"></div>
+            {/* Equivalent to Col lg={1} xxl={1} */}
+          </div>
+          </div>
+        </figure>
       <div className="sampleScroller">
         <Scrollama offset={0.5} onStepEnter={onStepEnter}>
           <Step data={0} key={0}>
@@ -339,12 +376,14 @@ function MeatProduction() {
               }}
             >
               <p>
-                What does it mean to reduce food emissions in the decades to come? 
-                In order to reduce carbon emissions in regards to the Paris Accords how exactly would
-                a countries expected contribution be in reducing climate change? In 2012 the UN's FAO released
-                data on possible pathways towards different scenarios. While they may not be entirely accurate 
-                it gives us a glimpse into possible sustainable pathways entering into the mid 21st century and climate
-                change.
+                What does it mean to reduce food emissions in the decades to
+                come? In order to reduce carbon emissions in regards to the
+                Paris Accords how exactly would a countries expected
+                contribution be in reducing climate change? In 2012 the UN's FAO
+                released data on possible pathways towards different scenarios.
+                While they may not be entirely accurate it gives us a glimpse
+                into possible sustainable pathways entering into the mid 21st
+                century and climate change.
               </p>
             </div>
           </Step>
@@ -356,12 +395,14 @@ function MeatProduction() {
               }}
             >
               <p>
-                In 2012 you can see that regions such as East Asia and the Pacifics along with South Asia are some of the largest 
-                producers of various livestock. Often with High Income Countries lagging right behind them. It makes sense as these are 
-                some of the most heavily populated areas. 
+                In 2012 you can see that regions such as East Asia and the
+                Pacifics along with South Asia are some of the largest producers
+                of various livestock. Often with High Income Countries lagging
+                right behind them. It makes sense as these are some of the most
+                heavily populated areas.
               </p>
             </div>
-          </Step>    
+          </Step>
           <Step data={0} key={2}>
             <div
               style={{
@@ -370,12 +411,15 @@ function MeatProduction() {
               }}
             >
               <p>
-                Some things that stick out are regions such as Latin America and the Caribbeans. Which have a suprisingly
-                large number of cattle and poultry. Along with in East Asia and the Pacifics with China and its large production of
-                both Poultry and Pigs. In which both regions see only a small percentage of exports for meats with the majority consumed internally.
+                Some things that stick out are regions such as Latin America and
+                the Caribbeans. Which have a suprisingly large number of cattle
+                and poultry. Along with in East Asia and the Pacifics with China
+                and its large production of both Poultry and Pigs. In which both
+                regions see only a small percentage of exports for meats with
+                the majority consumed internally.
               </p>
             </div>
-          </Step>                    
+          </Step>
           <Step data={1} key={3}>
             <div
               style={{
@@ -384,11 +428,13 @@ function MeatProduction() {
               }}
             >
               <p>
-                By the year 2030 the population of East Asia and the Pacific peaks. 
-                In other places such South Asia and Sub-Saharan Africa we see large population growth.
-                In every single scenario the total number of animals each region produces increases. 
-                Sub-Saharan Africa seeing the largest gains with it going from the last producer of Poultry to fourth. 
-                Efficency of Meat Yields increase all regions and scenarios. But in many gaps begin to form.
+                By the year 2030 the population of East Asia and the Pacific
+                peaks. In other places such South Asia and Sub-Saharan Africa we
+                see large population growth. In every single scenario the total
+                number of animals each region produces increases. Sub-Saharan
+                Africa seeing the largest gains with it going from the last
+                producer of Poultry to fourth. Efficency of Meat Yields increase
+                all regions and scenarios. But in many gaps begin to form.
               </p>
             </div>
           </Step>
@@ -401,11 +447,12 @@ function MeatProduction() {
               }}
             >
               <p>
-                In the 2040s total populations of animals for many regions
-                begin to slow down as population growth sees little to no change.
-                Yields of the poultry and pig meat stagnate in Sub-Saharan Africa and South Asia. 
-                Across multiple regions we see meat yields of all scenarios reach a similar baseline to
-                high income countries in the 2010s.
+                In the 2040s total populations of animals for many regions begin
+                to slow down as population growth sees little to no change.
+                Yields of the poultry and pig meat stagnate in Sub-Saharan
+                Africa and South Asia. Across multiple regions we see meat
+                yields of all scenarios reach a similar baseline to high income
+                countries in the 2010s.
               </p>
             </div>
           </Step>
@@ -418,10 +465,12 @@ function MeatProduction() {
               }}
             >
               <p>
-                While gaps persist in some regions due to varying religious beliefs such as the Middle East and Northern Africa.
-                In other regions such as South Asia and Sub-Saharan Africa large population growth continues to contribute to
-                stagnant yield growth. While the total number of Goats, Sheep, Cattle continue to grow at rapid rates
-                in these regions. 
+                While gaps persist in some regions due to varying religious
+                beliefs such as the Middle East and Northern Africa. In other
+                regions such as South Asia and Sub-Saharan Africa large
+                population growth continues to contribute to stagnant yield
+                growth. While the total number of Goats, Sheep, Cattle continue
+                to grow at rapid rates in these regions.
               </p>
             </div>
           </Step>
@@ -434,9 +483,12 @@ function MeatProduction() {
               }}
             >
               <p>
-                By the 2050s Sub-Saharan Africa surpases High Income Countries in Poultry production. For South Asia and Sub-Saharan Africa in many scenarios growth rates for meat yields continue to be stagnant. 
-                High Income countries continue to remain as one of the largest producers of Poultry and Pigs while
-                only accounting for 13% of the World Population.
+                By the 2050s Sub-Saharan Africa surpases High Income Countries
+                in Poultry production. For South Asia and Sub-Saharan Africa in
+                many scenarios growth rates for meat yields continue to be
+                stagnant. High Income countries continue to remain as one of the
+                largest producers of Poultry and Pigs while only accounting for
+                13% of the World Population.
               </p>
             </div>
           </Step>
@@ -449,12 +501,14 @@ function MeatProduction() {
               }}
             >
               <p>
-                In regions such as South Asia and Sub-Saharan Africa billions of people are stuck working in subsistance farming.
-                While other regions industrialize South Asia and Sub-Saharan Africa are left behind. Due to the methods involved
-                in subsistance farming they are often some of the worst greenhouse emitters. 
+                In regions such as South Asia and Sub-Saharan Africa billions of
+                people are stuck working in subsistance farming. While other
+                regions industrialize South Asia and Sub-Saharan Africa are left
+                behind. Due to the methods involved in subsistance farming they
+                are often some of the worst greenhouse emitters.
               </p>
             </div>
-          </Step>     
+          </Step>
           <Step data={3} key={8}>
             <div
               style={{
@@ -464,9 +518,11 @@ function MeatProduction() {
               }}
             >
               <p>
-                Developments in all scenarios showcase a level of inequality in who is producing the most.
-                Wealthier nations are producing far more meat per capita than others. While in developing economies
-                it is the poorest who are left in poverty like conditions struggling to survive.
+                Developments in all scenarios showcase a level of inequality in
+                who is producing the most. Wealthier nations are producing far
+                more meat per capita than others. While in developing economies
+                it is the poorest who are left in poverty like conditions
+                struggling to survive.
               </p>
             </div>
           </Step>
@@ -479,13 +535,16 @@ function MeatProduction() {
               }}
             >
               <p>
-                The rate of efficency for meat yields for many regions have increased to rates similar to those of developed economies in 2012.
-                This comes with additional costs often not seen due to the rise of factory farming in these regions. 
-                While it can allow for the intermobility of many of these farmers into working class jobs it often sets up
-                inhumane conditions for animals in these farms.
+                The rate of efficency for meat yields for many regions have
+                increased to rates similar to those of developed economies in
+                2012. This comes with additional costs often not seen due to the
+                rise of factory farming in these regions. While it can allow for
+                the intermobility of many of these farmers into working class
+                jobs it often sets up inhumane conditions for animals in these
+                farms.
               </p>
             </div>
-          </Step> 
+          </Step>
           <Step data={3} key={10}>
             <div
               style={{
@@ -495,13 +554,14 @@ function MeatProduction() {
               }}
             >
               <p>
-                Is it really possible to reduce the amount of animal emissions? For the world to 
-                stay under the 1.5°C limit it would require a significant shift in many parts of the world.
-                While many parts of the world could reduce the amount of animals they produce 
-                for others it can be a case of starvation and food security.
+                Is it really possible to reduce the amount of animal emissions?
+                For the world to stay under the 1.5°C limit it would require a
+                significant shift in many parts of the world. While many parts
+                of the world could reduce the amount of animals they produce for
+                others it can be a case of starvation and food security.
               </p>
             </div>
-          </Step>                                           
+          </Step>
         </Scrollama>
       </div>
     </div>
