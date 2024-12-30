@@ -31,7 +31,7 @@ function Swatch({data}) {
    .data(regions)
    .join("text")
    .attr("font-size", "1.5em")
-   .attr("fill", "white")
+   .attr("fill", "black")
    .attr("x", (d,i) => xTextScale(d))
    .attr("y", 30)
    .text((d) => d)

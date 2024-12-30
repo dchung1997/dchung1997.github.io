@@ -53,7 +53,7 @@ export default function HorizontalBarChart({data}) {
                 x: "value",
                 textAnchor: "end",
                 dx: -3,
-                fill: "white",
+                fill: "black",
                 render: (i, s, v, d, c, next) => {
                   const g = next(i, s, v, d, c);
                   c.ownerSVGElement.updateText = (values) =>

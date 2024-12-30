@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import * as d3 from "d3";
 
-import MeatLayout from "../components/MeatLayout";
-import HorizontalBarChart from "../components/HorizontalBarChart";
-import GroupedBarChart from "../components/GroupedBarChart";
-import Swatch from '../components/Swatch';
+import MeatLayout from "../../components/charts/AnimalEmissions/Production/MeatLayout";
+import HorizontalBarChart from "../../components/charts/AnimalEmissions/Production/HorizontalBarChart";
+import GroupedBarChart from "../../components/charts/AnimalEmissions/Production/GroupedBarChart";
+import Swatch from '../../components/charts/AnimalEmissions/Production/Swatch';
 
-import population from "../assets/UNPopulationProjections.json";
-import projections from "../assets/FAOLivestockProjections.json";
-import yearItemSums from "../assets/yearItemSums.json";
-import medians from "../assets/faoprojections2050median.json";
+import population from "../../assets/data/Animal-Emissions/Consumption/UNPopulationProjections.json";
+import projections from "../../assets/data/Animal-Emissions/Consumption/FAOLivestockProjections.json";
+import yearItemSums from "../../assets/data/Animal-Emissions/Consumption/yearItemSums.json";
+import medians from "../../assets/data/Animal-Emissions/Consumption/faoprojections2050median.json";
 
 import "./Production.css";
 
-function Production() {
-  const [currentStepIndex, setCurrentStepIndex] = useState(null);
+function MeatProduction() {
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [livestockData, setLivestockData] = useState(null);
   const [yearSumData, setYearSumData] = useState(null);
   const [populationData, setPopulationData] = useState(null);
@@ -273,64 +273,62 @@ function Production() {
   }, [currentStepIndex]);
 
   return (
-    <Container fluid id="production">
-      <figure className="sticky">
-        <Row>
-          <Col lg={0} xxl={1}></Col>
-          <Col>
-            <h1>UN Food Projections: 2012 to 2050 </h1>
-            <h1 className="right">{currentStepIndex ? years[currentStepIndex] : years[0]}</h1>
-          </Col>
-        </Row>
-        <Row className="vis">
-          <Col lg={0} xxl={1}></Col>
-          <Col md={12} lg={6} xxl={6}>
-            <MeatLayout
-              data={livestockData}
-              extents={extents}
-              yearData={yearSumData}
-            />
-            <Row>
-              <HorizontalBarChart data={populationData} />
-            </Row>            
-          </Col>
-          <Col md={12} lg={6} xxl={4} className="data">
-            <Row className="swatch">
-              <Swatch/>
-            </Row>  
-            <Row>
-              <Col sm={12} md={6} lg={12}>
-                <Row className="efficency" >
-                  <GroupedBarChart
-                    data={liveStockEfficency ? liveStockEfficency[0] : null}
-                    domain={[0, 350]}
-                    name="Cattle"
-                  />
-                </Row>
-              </Col>
-              <Col sm={12} md={6} lg={12}>
-                <Row className="efficency">
-                  <GroupedBarChart
-                    data={liveStockEfficency ? liveStockEfficency[2] : null}
-                    domain={[0, 2]}
-                    name="Poultry"
-                  />
-                </Row>
-              </Col>
-              <Col sm={12} md={6} lg={12}>
-                <Row className="efficency">
-                  <GroupedBarChart
-                    data={liveStockEfficency ? liveStockEfficency[3] : null}
-                    domain={[0, 100]}
-                    name="Pig"
-                  />
-                </Row>   
-              </Col>
-            </Row>                   
-          </Col>
-          <Col lg={1} xxl={1}></Col>
-        </Row>
-      </figure>
+    <div id="production">
+    <figure className="sticky">
+      <div className="flex flex-row">
+        <div className="hidden xxl:block xxl:w-1/12"></div> {/* Equivalent to Col lg={0} xxl={1} */}
+        <div className="flex-grow"> {/* Equivalent to Col */}
+          <div className="flex flex-row justify-between items-center">
+            <h1 className="text-2xl md:text-3xl font-bold">UN Food Projections: 2012 to 2050</h1>
+            <h1 className="text-2xl md:text-3xl font-bold">{currentStepIndex ? years[currentStepIndex] : years[0]}</h1>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row mt-4"> {/* Equivalent to Row className="vis" with margin top */}
+        <div className="hidden xxl:block xxl:w-1/12"></div> {/* Equivalent to Col lg={0} xxl={1} */}
+        <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/2"> {/* Equivalent to Col md={12} lg={6} xxl={6} */}
+          <MeatLayout data={livestockData} extents={extents} yearData={yearSumData} />
+          <div className="mt-4">
+            <HorizontalBarChart data={populationData} />
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/3 ml-4"> {/* Equivalent to Col md={12} lg={6} xxl={4} className="data" with left margin */}
+          <div className="mb-4"> {/* Equivalent to Row className="swatch" with margin bottom */}
+            <Swatch />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4"> {/* Equivalent to nested Rows and Cols with grid */}
+            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
+              <div className=""> {/* Equivalent to Row className="efficency" */}
+                <GroupedBarChart
+                  data={liveStockEfficency ? liveStockEfficency[0] : null}
+                  domain={[0, 350]}
+                  name="Cattle"
+                />
+              </div>
+            </div>
+            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
+              <div className=""> {/* Equivalent to Row className="efficency" */}
+                <GroupedBarChart
+                  data={liveStockEfficency ? liveStockEfficency[2] : null}
+                  domain={[0, 2]}
+                  name="Poultry"
+                />
+              </div>
+            </div>
+            <div className=""> {/* Equivalent to Col sm={12} md={6} lg={12} */}
+              <div className=""> {/* Equivalent to Row className="efficency" */}
+                <GroupedBarChart
+                  data={liveStockEfficency ? liveStockEfficency[3] : null}
+                  domain={[0, 100]}
+                  name="Pig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:block lg:w-1/12 xxl:block xxl:w-1/12"></div>{/* Equivalent to Col lg={1} xxl={1} */}
+      </div>
+    </figure>
       <div className="sampleScroller">
         <Scrollama offset={0.5} onStepEnter={onStepEnter}>
           <Step data={0} key={0}>
@@ -506,8 +504,8 @@ function Production() {
           </Step>                                           
         </Scrollama>
       </div>
-    </Container>
+    </div>
   );
 }
 
-export default Production;
+export default MeatProduction;

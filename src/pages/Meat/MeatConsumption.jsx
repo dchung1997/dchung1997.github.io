@@ -14,6 +14,8 @@ import meat_consumption from "../../assets/data/Animal-Emissions/Consumption/tes
 
 import useTitle from "../../hooks/useTitle";
 
+import MeatProduction from "./MeatProduction";
+
 function MeatConsumption() {
   useTitle("Meat Consumption");
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
@@ -203,8 +205,7 @@ function MeatConsumption() {
               food insecurity which is a considerable number of them. Let's look
               at some FAO projections on meat production in the decades to come.
             </p>
-
-            <h2>TODO: Add Burning Meat Component Refactor Remove Circles and use TreeMaps, remove scenarios and use only business as usual.</h2>
+            <MeatProduction/>
           </div>
         </div>
       </main>
