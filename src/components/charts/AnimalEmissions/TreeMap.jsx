@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-function TreeMap({ data, group, id, w, h, fontSize, unit }) {
+function TreeMap({ data, group, id, w, h, fontSize, unit, domain }) {
   const svgRef = useRef(null);
   
   function formatNumber(n) {
@@ -30,6 +30,7 @@ function TreeMap({ data, group, id, w, h, fontSize, unit }) {
         title: (d, n) => `${d[group]}\n${n.value.toLocaleString("en")}`, // text to show on hover
         width: w ? w : 1152,
         height: h ? h : 1152,
+        zDomain: domain ? domain : null
       });
     }
   }, [data]);

@@ -97,11 +97,19 @@ function MeatConsumption() {
       setProjectedValues(currentProjectedValues);
       hasCalledOnce.current = true;
     }
-  },[projections])
-
+  }, [projections]);
 
   const meat2012 = projectedValues.filter((d) => d.Year == 2012);
-  const meat2050 = projectedValues.filter((d) => d.Year == 2050);    
+  const meat2050 = projectedValues.filter((d) => d.Year == 2050);
+  const domain = [
+    "SSA",
+    "LAC",
+    "MENA",
+    "ECA",
+    "South Asia",
+    "EAP",
+    "High-income",
+  ];
 
   const citedSources = [
     "https://www.fao.org/family-farming/detail/en/c/1634679/",
@@ -257,8 +265,8 @@ function MeatConsumption() {
               <div className="flex justify-center">
                 <div className="m-4 text-center">
                   <span>Cattle</span>
-                  <br/>
-                  <span>2012</span>  
+                  <br />
+                  <span>2012</span>
                   <TreeMap
                     data={meat2012.filter(
                       (d) => d.Item == "Total Number of Cattle"
@@ -269,22 +277,23 @@ function MeatConsumption() {
                     h={200}
                     fontSize={10}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2012.reduce((accumulator, currentObject) => {
+                    {meat2012
+                      .reduce((accumulator, currentObject) => {
                         if (currentObject.Item == "Total Number of Cattle") {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
+                      .toLocaleString()}
                   </b>
                 </div>
                 <div className="m-4 text-center">
                   <span>Cattle</span>
-                  <br/>
-                  <span>2050</span>    
+                  <br />
+                  <span>2050</span>
                   <TreeMap
                     data={meat2050.filter(
                       (d) => d.Item == "Total Number of Cattle"
@@ -295,22 +304,23 @@ function MeatConsumption() {
                     h={275}
                     fontSize={10}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2050.reduce((accumulator, currentObject) => {
+                    {meat2050
+                      .reduce((accumulator, currentObject) => {
                         if (currentObject.Item == "Total Number of Cattle") {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
+                      .toLocaleString()}
                   </b>
                 </div>
                 <div className="m-4 text-center">
                   <span>Goats and Sheep</span>
-                  <br/>
-                  <span>2012</span>                  
+                  <br />
+                  <span>2012</span>
                   <TreeMap
                     data={meat2012.filter(
                       (d) => d.Item == "Total Number of Goats and Sheep"
@@ -321,22 +331,26 @@ function MeatConsumption() {
                     h={275}
                     fontSize={10}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2012.reduce((accumulator, currentObject) => {
-                        if (currentObject.Item == "Total Number of Goats and Sheep") {
+                    {meat2012
+                      .reduce((accumulator, currentObject) => {
+                        if (
+                          currentObject.Item ==
+                          "Total Number of Goats and Sheep"
+                        ) {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
-                  </b>                  
+                      .toLocaleString()}
+                  </b>
                 </div>
                 <div className="m-4 text-center">
                   <span>Goats and Sheep</span>
-                  <br/>
-                  <span>2050</span>    
+                  <br />
+                  <span>2050</span>
                   <TreeMap
                     data={meat2050.filter(
                       (d) => d.Item == "Total Number of Goats and Sheep"
@@ -347,24 +361,28 @@ function MeatConsumption() {
                     h={500}
                     fontSize={10}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2050.reduce((accumulator, currentObject) => {
-                        if (currentObject.Item == "Total Number of Goats and Sheep") {
+                    {meat2050
+                      .reduce((accumulator, currentObject) => {
+                        if (
+                          currentObject.Item ==
+                          "Total Number of Goats and Sheep"
+                        ) {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
-                  </b>                        
-                </div>                
+                      .toLocaleString()}
+                  </b>
+                </div>
               </div>
               <div className="flex justify-center mt-8">
                 <div className="m-4 text-center">
                   <span>Poultry</span>
-                  <br/>
-                  <span>2012</span>    
+                  <br />
+                  <span>2012</span>
                   <TreeMap
                     data={meat2012.filter(
                       (d) => d.Item == "Total Number of Poultry"
@@ -375,24 +393,25 @@ function MeatConsumption() {
                     h={1000}
                     fontSize={20}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2012.reduce((accumulator, currentObject) => {
+                    {meat2012
+                      .reduce((accumulator, currentObject) => {
                         if (currentObject.Item == "Total Number of Poultry") {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
-                  </b>                        
+                      .toLocaleString()}
+                  </b>
                 </div>
               </div>
               <div className="flex justify-center">
                 <div className="m-4 text-center">
                   <span>Poultry</span>
-                  <br/>
-                  <span>2050</span>    
+                  <br />
+                  <span>2050</span>
                   <TreeMap
                     data={meat2050.filter(
                       (d) => d.Item == "Total Number of Poultry"
@@ -403,17 +422,18 @@ function MeatConsumption() {
                     h={1400}
                     fontSize={20}
                     unit={true}
+                    domain={domain}
                   />
                   <b>
-                    {(
-                      meat2050.reduce((accumulator, currentObject) => {
+                    {meat2050
+                      .reduce((accumulator, currentObject) => {
                         if (currentObject.Item == "Total Number of Poultry") {
                           return accumulator + currentObject.value;
                         }
                         return accumulator;
                       }, 0)
-                    ).toLocaleString()}
-                  </b>                        
+                      .toLocaleString()}
+                  </b>
                 </div>
               </div>
               <span className="source">Source: UNFAO </span>
