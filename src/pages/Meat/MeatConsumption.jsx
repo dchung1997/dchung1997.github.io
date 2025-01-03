@@ -83,8 +83,13 @@ function MeatConsumption() {
     },
   ];
 
-  const meat2012 = projections.filter((d) => d.Year == 2012);
-  const meat2050 = projections.filter((d) => d.Year == 2050);
+
+  const projectedValues = projections.map((d) => {
+    d.value = d.value * 1000;
+    return d;
+  });
+  const meat2012 = projectedValues.filter((d) => d.Year == 2012);
+  const meat2050 = projectedValues.filter((d) => d.Year == 2050);
 
   const citedSources = [
     "https://www.fao.org/family-farming/detail/en/c/1634679/",
@@ -234,92 +239,163 @@ function MeatConsumption() {
               scenarios we see that the total amount of Cattle, Poultry, and
               Goats and Sheep increase dramatically.
             </p>
-            <div className="flex justify-center">
-              <div className="m-4">
-                <p className="center">Test</p>
-                <TreeMap
-                  data={meat2012.filter(
-                    (d) => d.Item == "Total Number of Cattle"
-                  )}
-                  id={"cattle-pre"}
-                  group={"Region"}
-                  w={150}
-                  h={200}
-                  fontSize={12}
-                />
+            <div className="card chart">
+              <h2>Total Animal Livestock Production</h2>
+              <h3>Global, Projections 2012 to 2050</h3>
+              <div className="flex justify-center">
+                <div className="m-4 text-center">
+                  <span>Cattle</span>
+                  <br/>
+                  <span>2012</span>  
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Cattle"
+                    )}
+                    id={"cattle-pre"}
+                    group={"Region"}
+                    w={150}
+                    h={200}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2012.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Cattle") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>
+                </div>
+                <div className="m-4 text-center">
+                  <span>Cattle</span>
+                  <br/>
+                  <span>2050</span>    
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Cattle"
+                    )}
+                    id={"cattle-post"}
+                    group={"Region"}
+                    w={200}
+                    h={275}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2050.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Cattle") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>
+                </div>
+                <div className="m-4 text-center">
+                  <span>Goats and Sheep</span>
+                  <br/>
+                  <span>2012</span>                  
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Goats and Sheep"
+                    )}
+                    id={"goat-sheep-pre"}
+                    group={"Region"}
+                    w={200}
+                    h={275}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2012.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Goats and Sheep") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>                  
+                </div>
+                <div className="m-4 text-center">
+                  <span>Goats and Sheep</span>
+                  <br/>
+                  <span>2050</span>    
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Goats and Sheep"
+                    )}
+                    id={"goat-sheep-post"}
+                    group={"Region"}
+                    w={350}
+                    h={500}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2050.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Goats and Sheep") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>                        
+                </div>                
               </div>
-              <div className="m-4">
-                <p>Test 2</p>
-                <TreeMap
-                  data={meat2050.filter(
-                    (d) => d.Item == "Total Number of Cattle"
-                  )}
-                  id={"cattle-post"}
-                  group={"Region"}
-                  w={200}
-                  h={275}
-                  fontSize={12}
-                />
+              <div className="flex justify-center mt-8">
+                <div className="m-4 text-center">
+                  <p className="center">Poultry 2012</p>
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Poultry"
+                    )}
+                    id={"poultry-pre"}
+                    group={"Region"}
+                    w={800}
+                    h={1000}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2012.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Poultry") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>                        
+                </div>
               </div>
+              <div className="flex justify-center">
+                <div className="m-4 text-center">
+                  <p className="center">Poultry 2050</p>
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Poultry"
+                    )}
+                    id={"poultry-post"}
+                    group={"Region"}
+                    w={1200}
+                    h={1400}
+                    fontSize={12}
+                  />
+                  <b>
+                    {(
+                      meat2050.reduce((accumulator, currentObject) => {
+                        if (currentObject.Item == "Total Number of Poultry") {
+                          return accumulator + currentObject.value;
+                        }
+                        return accumulator;
+                      }, 0)
+                    ).toLocaleString()}
+                  </b>                        
+                </div>
+              </div>
+              <span className="source">Source: UNFAO </span>
             </div>
-            <div className="flex justify-center">
-              <div className="m-4">
-                <p className="center">Goats and Sheep 2012</p>
-                <TreeMap
-                  data={meat2012.filter(
-                    (d) => d.Item == "Total Number of Goats and Sheep"
-                  )}
-                  id={"goat-sheep-pre"}
-                  group={"Region"}
-                  w={200}
-                  h={275}
-                  fontSize={12}
-                />
-              </div>
-              <div className="m-4">
-                <p>Goats and Sheep 2050</p>
-                <TreeMap
-                  data={meat2050.filter(
-                    (d) => d.Item == "Total Number of Goats and Sheep"
-                  )}
-                  id={"goat-sheep-post"}
-                  group={"Region"}
-                  w={600}
-                  h={800}
-                  fontSize={12}
-                />
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="m-4">
-                <p className="center">Poultry 2012</p>
-                <TreeMap
-                  data={meat2012.filter(
-                    (d) => d.Item == "Total Number of Poultry"
-                  )}
-                  id={"poultry-pre"}
-                  group={"Region"}
-                  w={800}
-                  h={1000}
-                  fontSize={12}
-                />
-              </div>
-            </div> 
-            <div className="flex justify-center">
-              <div className="m-4">
-                <p className="center">Poultry 2050</p>
-                <TreeMap
-                  data={meat2050.filter(
-                    (d) => d.Item == "Total Number of Poultry"
-                  )}
-                  id={"poultry-pre"}
-                  group={"Region"}
-                  w={1200}
-                  h={1400}
-                  fontSize={12}
-                />
-              </div>
-            </div>                          
           </div>
         </div>
       </main>
