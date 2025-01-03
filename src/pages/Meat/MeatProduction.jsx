@@ -305,9 +305,7 @@ function MeatProduction() {
                 extents={extents}
                 yearData={yearSumData}
               />
-              <div className="mt-4">
-                <HorizontalBarChart data={populationData} />
-              </div>
+              <HorizontalBarChart data={populationData} />
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 xxl:w-1/3 ml-4">
               {" "}
@@ -548,8 +546,8 @@ function MeatProduction() {
           <Step data={3} key={10}>
             <div
               style={{
-                padding: "40vh 0",
-                margin: "25vh 0",
+                padding: "50vh 0",
+                margin: "10vh 0",
                 opacity: 0.99,
               }}
             >
@@ -559,7 +557,7 @@ function MeatProduction() {
                 significant shift in many parts of the world. While many parts
                 of the world could reduce the amount of animals they produce for
                 others it can be a case of starvation and food security.
-              </p>
+              </p>            
             </div>
           </Step>
         </Scrollama>

@@ -1,0 +1,338 @@
+[
+    {
+        "Region": "EAP",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 203121.259
+    },
+    {
+        "Region": "EAP",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 450832.163
+    },
+    {
+        "Region": "EAP",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 547213.748
+    },
+    {
+        "Region": "EAP",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 8774998.0
+    },
+    {
+        "Region": "EAP",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 254315.47799999997
+    },
+    {
+        "Region": "EAP",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 513024.207
+    },
+    {
+        "Region": "EAP",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 627513.188
+    },
+    {
+        "Region": "EAP",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 10731108.0
+    },
+    {
+        "Region": "EAC",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 72530.918
+    },
+    {
+        "Region": "EAC",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 148880.154
+    },
+    {
+        "Region": "EAC",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 41493.555
+    },
+    {
+        "Region": "EAC",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 1298855.0
+    },
+    {
+        "Region": "EAC",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 119070.794
+    },
+    {
+        "Region": "EAC",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 181367.459
+    },
+    {
+        "Region": "EAC",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 53461.886000000006
+    },
+    {
+        "Region": "EAC",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 1812218.0
+    },
+    {
+        "Region": "High-income",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 257234.742
+    },
+    {
+        "Region": "High-income",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 252778.99599999998
+    },
+    {
+        "Region": "High-income",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 256298.214
+    },
+    {
+        "Region": "High-income",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 4831351.0
+    },
+    {
+        "Region": "High-income",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 250124.755
+    },
+    {
+        "Region": "High-income",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 296917.849
+    },
+    {
+        "Region": "High-income",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 289771.75
+    },
+    {
+        "Region": "High-income",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 6253309.0
+    },
+    {
+        "Region": "LAC",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 388112.279
+    },
+    {
+        "Region": "LAC",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 103111.531
+    },
+    {
+        "Region": "LAC",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 83870.51
+    },
+    {
+        "Region": "LAC",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 3097666.0
+    },
+    {
+        "Region": "LAC",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 545832.468
+    },
+    {
+        "Region": "LAC",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 137018.952
+    },
+    {
+        "Region": "LAC",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 122218.185
+    },
+    {
+        "Region": "LAC",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 4187001.0
+    },
+    {
+        "Region": "MENA",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 28866.742000000002
+    },
+    {
+        "Region": "MENA",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 209293.179
+    },
+    {
+        "Region": "MENA",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 37.668
+    },
+    {
+        "Region": "MENA",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 1798861.0
+    },
+    {
+        "Region": "MENA",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 46251.195
+    },
+    {
+        "Region": "MENA",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 284354.391
+    },
+    {
+        "Region": "MENA",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 39.063
+    },
+    {
+        "Region": "MENA",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 2295710.0
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 415863.852
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 380405.474
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 11541.464
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 1462247.0
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 473605.51100000006
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 571420.54
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 13743.32
+    },
+    {
+        "Region": "South Asia",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 2402626.0
+    },
+    {
+        "Region": "SSA",
+        "Year": 2012,
+        "Item": "Total Number of Cattle",
+        "value": 289774.297
+    },
+    {
+        "Region": "SSA",
+        "Year": 2012,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 615181.204
+    },
+    {
+        "Region": "SSA",
+        "Year": 2012,
+        "Item": "Total Number of Pigs",
+        "value": 32366.288
+    },
+    {
+        "Region": "SSA",
+        "Year": 2012,
+        "Item": "Total Number of Poultry",
+        "value": 1278294.0
+    },
+    {
+        "Region": "SSA",
+        "Year": 2050,
+        "Item": "Total Number of Cattle",
+        "value": 683173.013
+    },
+    {
+        "Region": "SSA",
+        "Year": 2050,
+        "Item": "Total Number of Goats and Sheep",
+        "value": 1484661.246
+    },
+    {
+        "Region": "SSA",
+        "Year": 2050,
+        "Item": "Total Number of Pigs",
+        "value": 107485.12
+    },
+    {
+        "Region": "SSA",
+        "Year": 2050,
+        "Item": "Total Number of Poultry",
+        "value": 7080558.0
+    }
+]

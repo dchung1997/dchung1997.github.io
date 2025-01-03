@@ -11,6 +11,7 @@ import BarChart from "../../components/charts/AnimalEmissions/BarChart";
 import TreeMap from "../../components/charts/AnimalEmissions/TreeMap";
 
 import meat_consumption from "../../assets/data/Animal-Emissions/Consumption/test.json";
+import projections from "../../assets/data/Animal-Emissions/Consumption/FAORegionalLivestockProjectionsBAU.json";
 
 import useTitle from "../../hooks/useTitle";
 
@@ -21,14 +22,14 @@ function MeatConsumption() {
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
   const populationData = [
     {
-      y:"",
+      y: "",
       category: "High Income Countries",
       population: 4217329972,
       percent: "52.5%",
-      placement: 0
+      placement: 0,
     },
     {
-      y:"",
+      y: "",
       category: "Low Income Countries",
       population: 3816245175,
       percent: "47.5%",
@@ -40,47 +41,50 @@ function MeatConsumption() {
     {
       value: 146.5,
       country: "China",
-      year: "2013"
+      year: "2013",
     },
     {
       value: 148.4,
       country: "China",
-      year: "2023"
+      year: "2023",
     },
     {
       value: 232.6,
       country: "Brazil",
-      year: "2013"
-    },  
+      year: "2013",
+    },
     {
       value: 245.0,
       country: "Brazil",
-      year: "2023"
-    }
+      year: "2023",
+    },
   ];
 
   const meatProduction = [
     {
       value: 6130000,
       country: "China",
-      year: "2013"
-    },  
+      year: "2013",
+    },
     {
       value: 7530000,
       country: "China",
-      year: "2023"
-    },  
+      year: "2023",
+    },
     {
       value: 10000000,
       country: "Brazil",
-      year: "2013"
+      year: "2013",
     },
     {
       value: 10500000,
       country: "Brazil",
-      year: "2023"
-    }
+      year: "2023",
+    },
   ];
+
+  const meat2012 = projections.filter((d) => d.Year == 2012);
+  const meat2050 = projections.filter((d) => d.Year == 2050);
 
   const citedSources = [
     "https://www.fao.org/family-farming/detail/en/c/1634679/",
@@ -111,7 +115,7 @@ function MeatConsumption() {
               <h2>Total Annual Meat Consumption by Kilogram</h2>
               <h3>Income Group, World, 2023</h3>
               <HorizontalBarChart data={populationData} />
-              <TreeMap data={meat_consumption} group={"type"} />
+              <TreeMap data={meat_consumption} group={"category"} />
               <span className="source">
                 Source: Food and Agriculture Organization (2023) | FAOSTAT
               </span>
@@ -192,8 +196,14 @@ function MeatConsumption() {
             <ChartWrapper>
               <h2>Beef Yield and Production</h2>
               <h3>China and Brazil, 2012, 2022</h3>
-              <BarChart meatYield={meatYields} meatProduction={meatProduction} id={"yields"}/>
-              <span className="source">Source: Food and Agriculture Organization (2023) | FAOSTAT</span>
+              <BarChart
+                meatYield={meatYields}
+                meatProduction={meatProduction}
+                id={"yields"}
+              />
+              <span className="source">
+                Source: Food and Agriculture Organization (2023) | FAOSTAT
+              </span>
             </ChartWrapper>
 
             <p>
@@ -205,7 +215,107 @@ function MeatConsumption() {
               food insecurity which is a considerable number of them. Let's look
               at some FAO projections on meat production in the decades to come.
             </p>
-            <MeatProduction/>
+
+            <MeatProduction />
+
+            <p>
+              What we're seeing is that the total number of animals being raised
+              in countries is increasing and continuing to increase in
+              developing ones. However, efficiency of yields in many regions is
+              stagnating or only increasing by small amounts. While yields of
+              high income countries continue to grow. There are still gaps
+              between them and the yields of those from other regions even when
+              compared to the year 2012.
+            </p>
+
+            <p>
+              Even considering this the total amount of animals being raised is
+              dramatically increasing. Looking at the Business as Usual
+              scenarios we see that the total amount of Cattle, Poultry, and
+              Goats and Sheep increase dramatically.
+            </p>
+            <div className="card chart">
+              <div className="flex">
+                <div className="m-4">
+                  <p className="center">Test</p>
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Cattle"
+                    )}
+                    id={"cattle-pre"}
+                    group={"Region"}
+                    w={150}
+                    h={200}
+                    fontSize={12}
+                  />
+                </div>
+                <div className="m-4">
+                  <p>Test 2</p>
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Cattle"
+                    )}
+                    id={"cattle-post"}
+                    group={"Region"}
+                    w={300}
+                    h={400}
+                    fontSize={12}
+                  />
+                </div>
+                <div className="m-4">
+                  <p className="center">Test</p>
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Goats and Sheep"
+                    )}
+                    id={"goats-pre"}
+                    group={"Region"}
+                    w={150}
+                    h={200}
+                    fontSize={12}
+                  />
+                </div>
+                <div className="m-4">
+                  <p>Test 2</p>
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Goats and Sheep"
+                    )}
+                    id={"goats-post"}
+                    group={"Region"}
+                    w={300}
+                    h={400}
+                    fontSize={12}
+                  />
+                </div>
+                <div className="m-4">
+                  <p className="center">Test</p>
+                  <TreeMap
+                    data={meat2012.filter(
+                      (d) => d.Item == "Total Number of Poultry"
+                    )}
+                    id={"poultry-pre"}
+                    group={"Region"}
+                    w={150}
+                    h={200}
+                    fontSize={12}
+                  />
+                </div>
+                <div className="m-4">
+                  <p>Test 2</p>
+                  <TreeMap
+                    data={meat2050.filter(
+                      (d) => d.Item == "Total Number of Poultry"
+                    )}
+                    id={"poultry-post"}
+                    group={"Region"}
+                    w={300}
+                    h={400}
+                    fontSize={12}
+                  />
+                </div>                                
+              </div>
+            </div>
           </div>
         </div>
       </main>

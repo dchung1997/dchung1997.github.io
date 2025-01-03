@@ -1,25 +1,26 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-function TreeMap({ data, group }) {
+function TreeMap({ data, group, id, w, h, fontSize }) {
   const svgRef = useRef(null);
 
   useEffect(() => {
     if (data && data.length > 0 && svgRef.current) {
+      console.log(data);
       Treemap(data, {
-        path: (d) => d.category, // e.g., "flare/animate/Easing"
+        path: (d) => d[group], // e.g., "flare/animate/Easing"
         value: (d) => d.value, // size of each node (file); null for internal nodes (folders)
-        group: (d) => d.category, // e.g., "animate" in "flare.animate.Easing"; for color
+        group: (d) => d[group], // e.g., "animate" in "flare.animate.Easing"; for color
         label: (d, n) =>
 
           [
-            d.category,
+            d[group],
             n.value.toLocaleString("en"),
-            d.percent
+            d.percent ? d.percent : ""
           ].join("\n"),
-        title: (d, n) => `${d.category}\n${n.value.toLocaleString("en")}`, // text to show on hover
-        width: 1152,
-        height: 1152,
+        title: (d, n) => `${d[group]}\n${n.value.toLocaleString("en")}`, // text to show on hover
+        width: w ? w : 1152,
+        height: h ? h : 1152,
       });
     }
   }, [data]);
@@ -143,7 +144,7 @@ function TreeMap({ data, group }) {
       .attr("height", height)
       .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
       .attr("font-family", "sans-serif")
-      .attr("font-size", 20);
+      .attr("font-size", fontSize ? fontSize : 20);
 
     const node = svg
       .selectAll("a")
@@ -200,7 +201,7 @@ function TreeMap({ data, group }) {
 
   return (
     <div className="treeMapContainer">
-      <svg ref={svgRef}></svg>
+      <svg ref={svgRef} id={id}></svg>
     </div>
   );
 }
