@@ -234,88 +234,92 @@ function MeatConsumption() {
               scenarios we see that the total amount of Cattle, Poultry, and
               Goats and Sheep increase dramatically.
             </p>
-            <div className="card chart">
-              <div className="flex">
-                <div className="m-4">
-                  <p className="center">Test</p>
-                  <TreeMap
-                    data={meat2012.filter(
-                      (d) => d.Item == "Total Number of Cattle"
-                    )}
-                    id={"cattle-pre"}
-                    group={"Region"}
-                    w={150}
-                    h={200}
-                    fontSize={12}
-                  />
-                </div>
-                <div className="m-4">
-                  <p>Test 2</p>
-                  <TreeMap
-                    data={meat2050.filter(
-                      (d) => d.Item == "Total Number of Cattle"
-                    )}
-                    id={"cattle-post"}
-                    group={"Region"}
-                    w={300}
-                    h={400}
-                    fontSize={12}
-                  />
-                </div>
-                <div className="m-4">
-                  <p className="center">Test</p>
-                  <TreeMap
-                    data={meat2012.filter(
-                      (d) => d.Item == "Total Number of Goats and Sheep"
-                    )}
-                    id={"goats-pre"}
-                    group={"Region"}
-                    w={150}
-                    h={200}
-                    fontSize={12}
-                  />
-                </div>
-                <div className="m-4">
-                  <p>Test 2</p>
-                  <TreeMap
-                    data={meat2050.filter(
-                      (d) => d.Item == "Total Number of Goats and Sheep"
-                    )}
-                    id={"goats-post"}
-                    group={"Region"}
-                    w={300}
-                    h={400}
-                    fontSize={12}
-                  />
-                </div>
-                <div className="m-4">
-                  <p className="center">Test</p>
-                  <TreeMap
-                    data={meat2012.filter(
-                      (d) => d.Item == "Total Number of Poultry"
-                    )}
-                    id={"poultry-pre"}
-                    group={"Region"}
-                    w={150}
-                    h={200}
-                    fontSize={12}
-                  />
-                </div>
-                <div className="m-4">
-                  <p>Test 2</p>
-                  <TreeMap
-                    data={meat2050.filter(
-                      (d) => d.Item == "Total Number of Poultry"
-                    )}
-                    id={"poultry-post"}
-                    group={"Region"}
-                    w={300}
-                    h={400}
-                    fontSize={12}
-                  />
-                </div>                                
+            <div className="flex justify-center">
+              <div className="m-4">
+                <p className="center">Test</p>
+                <TreeMap
+                  data={meat2012.filter(
+                    (d) => d.Item == "Total Number of Cattle"
+                  )}
+                  id={"cattle-pre"}
+                  group={"Region"}
+                  w={150}
+                  h={200}
+                  fontSize={12}
+                />
+              </div>
+              <div className="m-4">
+                <p>Test 2</p>
+                <TreeMap
+                  data={meat2050.filter(
+                    (d) => d.Item == "Total Number of Cattle"
+                  )}
+                  id={"cattle-post"}
+                  group={"Region"}
+                  w={200}
+                  h={275}
+                  fontSize={12}
+                />
               </div>
             </div>
+            <div className="flex justify-center">
+              <div className="m-4">
+                <p className="center">Goats and Sheep 2012</p>
+                <TreeMap
+                  data={meat2012.filter(
+                    (d) => d.Item == "Total Number of Goats and Sheep"
+                  )}
+                  id={"goat-sheep-pre"}
+                  group={"Region"}
+                  w={200}
+                  h={275}
+                  fontSize={12}
+                />
+              </div>
+              <div className="m-4">
+                <p>Goats and Sheep 2050</p>
+                <TreeMap
+                  data={meat2050.filter(
+                    (d) => d.Item == "Total Number of Goats and Sheep"
+                  )}
+                  id={"goat-sheep-post"}
+                  group={"Region"}
+                  w={600}
+                  h={800}
+                  fontSize={12}
+                />
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="m-4">
+                <p className="center">Poultry 2012</p>
+                <TreeMap
+                  data={meat2012.filter(
+                    (d) => d.Item == "Total Number of Poultry"
+                  )}
+                  id={"poultry-pre"}
+                  group={"Region"}
+                  w={800}
+                  h={1000}
+                  fontSize={12}
+                />
+              </div>
+            </div> 
+            <div className="flex justify-center">
+              <div className="m-4">
+                <p className="center">Poultry 2050</p>
+                <TreeMap
+                  data={meat2050.filter(
+                    (d) => d.Item == "Total Number of Poultry"
+                  )}
+                  id={"poultry-pre"}
+                  group={"Region"}
+                  w={1200}
+                  h={1400}
+                  fontSize={12}
+                />
+              </div>
+            </div>                          
           </div>
         </div>
       </main>
