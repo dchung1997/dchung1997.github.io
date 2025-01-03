@@ -16,9 +16,13 @@ import projections from "../../assets/data/Animal-Emissions/Consumption/FAORegio
 import useTitle from "../../hooks/useTitle";
 
 import MeatProduction from "./MeatProduction";
+import { useEffect, useState, useRef } from "react";
 
 function MeatConsumption() {
   useTitle("Meat Consumption");
+  const [projectedValues, setProjectedValues] = useState([]);
+  const hasCalledOnce = useRef(false);
+
   const imagePath = import.meta.env.VITE_IMAGE_PATH;
   const populationData = [
     {
@@ -83,13 +87,21 @@ function MeatConsumption() {
     },
   ];
 
+  useEffect(() => {
+    if (!hasCalledOnce.current) {
+      console.log("called");
+      const currentProjectedValues = projections.map((d) => {
+        d.value = d.value * 1000;
+        return d;
+      });
+      setProjectedValues(currentProjectedValues);
+      hasCalledOnce.current = true;
+    }
+  },[projections])
 
-  const projectedValues = projections.map((d) => {
-    d.value = d.value * 1000;
-    return d;
-  });
+
   const meat2012 = projectedValues.filter((d) => d.Year == 2012);
-  const meat2050 = projectedValues.filter((d) => d.Year == 2050);
+  const meat2050 = projectedValues.filter((d) => d.Year == 2050);    
 
   const citedSources = [
     "https://www.fao.org/family-farming/detail/en/c/1634679/",
@@ -255,7 +267,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={150}
                     h={200}
-                    fontSize={12}
+                    fontSize={10}
+                    unit={true}
                   />
                   <b>
                     {(
@@ -280,7 +293,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={200}
                     h={275}
-                    fontSize={12}
+                    fontSize={10}
+                    unit={true}
                   />
                   <b>
                     {(
@@ -305,7 +319,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={200}
                     h={275}
-                    fontSize={12}
+                    fontSize={10}
+                    unit={true}
                   />
                   <b>
                     {(
@@ -330,7 +345,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={350}
                     h={500}
-                    fontSize={12}
+                    fontSize={10}
+                    unit={true}
                   />
                   <b>
                     {(
@@ -346,7 +362,9 @@ function MeatConsumption() {
               </div>
               <div className="flex justify-center mt-8">
                 <div className="m-4 text-center">
-                  <p className="center">Poultry 2012</p>
+                  <span>Poultry</span>
+                  <br/>
+                  <span>2012</span>    
                   <TreeMap
                     data={meat2012.filter(
                       (d) => d.Item == "Total Number of Poultry"
@@ -355,7 +373,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={800}
                     h={1000}
-                    fontSize={12}
+                    fontSize={20}
+                    unit={true}
                   />
                   <b>
                     {(
@@ -371,7 +390,9 @@ function MeatConsumption() {
               </div>
               <div className="flex justify-center">
                 <div className="m-4 text-center">
-                  <p className="center">Poultry 2050</p>
+                  <span>Poultry</span>
+                  <br/>
+                  <span>2050</span>    
                   <TreeMap
                     data={meat2050.filter(
                       (d) => d.Item == "Total Number of Poultry"
@@ -380,7 +401,8 @@ function MeatConsumption() {
                     group={"Region"}
                     w={1200}
                     h={1400}
-                    fontSize={12}
+                    fontSize={20}
+                    unit={true}
                   />
                   <b>
                     {(

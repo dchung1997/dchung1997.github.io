@@ -1,12 +1,21 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-function TreeMap({ data, group, id, w, h, fontSize }) {
+function TreeMap({ data, group, id, w, h, fontSize, unit }) {
   const svgRef = useRef(null);
+  
+  function formatNumber(n) {
+    if (n >= 1000000000) { // Billion
+      return (n / 1000000000).toFixed(1) + "B"; 
+    } else if (n >= 1000000) { // Million
+      return (n / 1000000).toFixed(1) + "M";
+    } else {
+      return n;
+    }
+  }
 
   useEffect(() => {
     if (data && data.length > 0 && svgRef.current) {
-      console.log(data);
       Treemap(data, {
         path: (d) => d[group], // e.g., "flare/animate/Easing"
         value: (d) => d.value, // size of each node (file); null for internal nodes (folders)
@@ -15,7 +24,7 @@ function TreeMap({ data, group, id, w, h, fontSize }) {
 
           [
             d[group],
-            n.value.toLocaleString("en"),
+            unit ? formatNumber(n.value) : n.value.toLocaleString("en"),
             d.percent ? d.percent : ""
           ].join("\n"),
         title: (d, n) => `${d[group]}\n${n.value.toLocaleString("en")}`, // text to show on hover
@@ -180,20 +189,35 @@ function TreeMap({ data, group, id, w, h, fontSize }) {
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0);
       
-      node
+        node
         .append("text")
-        .selectAll("tspan")
-        .data((d, i) => {
-            return `${L[i]}`.split(/\n/g);
-        }
-        )
-        .join("tspan")
-        .attr("x", 5)
-        .attr(
-          "y",
-          (d, i, D) => `${1.1 + i * 1.33}em`
-        )
-        .text((d) => d);
+        .each(function(d, i) {
+            const textElement = d3.select(this);
+            const lines = `${L[i]}`.split(/\n/g);
+            const maxWidth = d.x1 - d.x0 - 25;
+            let yOffset = 1.1; // Initial y offset
+    
+            lines.forEach((line) => {
+                const tempText = textElement.append("text")
+                    .attr("class", "temp-text")
+                    .text(line);
+    
+                const textWidth = tempText.node().getComputedTextLength();
+                tempText.remove(); // Remove immediately after measurement
+    
+                if (textWidth <= maxWidth) {
+                    // Only append the tspan if it fits
+                    textElement.append("tspan")
+                        .attr("x", 5)
+                        .attr("y", `${yOffset}em`)
+                        .text(line);
+                    yOffset += 1.33; // Increment yOffset for the next line
+                } else {
+                    // Skip the line if it's too wide
+                    console.log(`Skipping line: "${line}" in node ${i} as it exceeds maxWidth`);
+                }
+            });
+        });
     }
 
     return Object.assign(svg.node(), { scales: { color } });
