@@ -420,7 +420,7 @@ function MeatConsumption() {
                     group={"Region"}
                     w={1200}
                     h={1400}
-                    fontSize={20}
+                    fontSize={24}
                     unit={true}
                     domain={domain}
                   />
@@ -438,6 +438,48 @@ function MeatConsumption() {
               </div>
               <span className="source">Source: UNFAO </span>
             </div>
+
+            <p className="mt-8">
+              From 2012 to 2050 we see a total increase of 50% across various
+              livestock groups. But that doesn't necessarily translate to a
+              total increase of emissions over this period of 50%. How emissions
+              are set is constantly changing and based on new information. And
+              the information presented could already be out of date.
+            </p>
+
+            <p>
+              The main point however I am making is that animal emissions are
+              likely expected to increase especially considering the context in
+              which many of these livestock are being raised in. While in many
+              places agriculture and livestock farming is reaching a level of
+              maturity and modernization in other places such as Sub-Saharan
+              Africa where the largest growths are taking place this isn't the
+              necessarily case.
+            </p>
+
+            <p>
+              The total number of goats and sheep in Sub-Saharan Africa is
+              expected to increase from 615.2 million in 2012 to 1.5 billion by
+              2050. For cattle this number is expected to rise to 683.2 million
+              from 269 million. That's an increase of around two and half times
+              by the mid century.
+            </p>
+
+            <ChartWrapper>
+              TODO: Graphic Here.
+            </ChartWrapper>
+
+            <p>
+              It's a lot. But to put this into context during the same period
+              Africa's total population is expected to double to 2 billion
+              during that same time period. The vast majority of these animals are being
+              used by Africans to survive. While some forms of modernization exists with things like factory farms
+              the majority of African farmers are subsistance farmers.
+            </p>
+
+            <ChartWrapper>
+              TODO: Graphic Here.
+            </ChartWrapper>
           </div>
         </div>
       </main>
