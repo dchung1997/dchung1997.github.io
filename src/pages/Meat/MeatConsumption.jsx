@@ -448,7 +448,7 @@ function MeatConsumption() {
             </p>
 
             <p>
-              The main point however I am making is that animal emissions are
+              However, the main point I am making is that animal emissions are
               likely expected to increase especially considering the context in
               which many of these livestock are being raised in. While in many
               places agriculture and livestock farming is reaching a level of
@@ -465,21 +465,55 @@ function MeatConsumption() {
               by the mid century.
             </p>
 
-            <ChartWrapper>
-              TODO: Graphic Here.
-            </ChartWrapper>
-
             <p>
               It's a lot. But to put this into context during the same period
               Africa's total population is expected to double to 2 billion
-              during that same time period. The vast majority of these animals are being
-              used by Africans to survive. While some forms of modernization exists with things like factory farms
-              the majority of African farmers are subsistance farmers.
+              during that same time period. The vast majority of these animals
+              are being used by Africans to survive. While some forms of
+              modernization exists with things like factory farms the majority
+              of African farmers are subsistance farmers.
             </p>
 
-            <ChartWrapper>
-              TODO: Graphic Here.
-            </ChartWrapper>
+            <ChartWrapper>TODO: Graphic Here.</ChartWrapper>
+
+            <p>
+              Per Capita Consumption of Meat in Africa isn't increasing by much.
+              However, when we consider how much meat is being produced it adds
+              up. It is ethically wrong to expect a reduction of meat
+              consumption from countries that already consume a small amount of
+              meat.
+            </p>
+
+            <p>
+              Expecting an individual continent or region to reduce the amount
+              of meat consumed is unrealistic. However, changes need to be made
+              in order to reduce greenhouse emissions. It's important to think
+              about the equitable and humane transitions that could be made in
+              helping reduce climate change.
+            </p>
+
+            <ChartWrapper>TODO: Graphic Here.</ChartWrapper>
+
+            <p>
+              Helping with additional aid towards modernizing agriculture
+              infrastructure could help in the transition away from subsistance
+              farming. But many issues still arise as often, the people who end
+              up being able to afford the goods that are provided are a small
+              subset of people. Additional measure would be required to ensure
+              that this food is equitably distributed in order to prevent issues
+              such as malnutrition and stunting.
+            </p>
+
+            <p>
+              Overall, reducing the amount of meat we consume is something we as
+              a society need to do better at. For many countries however the
+              reality can be one that requires additional changes which come
+              with costs which they may or may not be able to afford. While
+              currently wealthier countries are contributing the most towards
+              these issues and can make the transition away for many other
+              countries still developing these transitions can take decades to
+              complete without additional aid.
+            </p>
           </div>
         </div>
       </main>
